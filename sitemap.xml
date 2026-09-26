@@ -2,4 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://paperkites.app/</loc></url>
   <url><loc>https://paperkites.app/privacy</loc></url>
+  <url><loc>https://paperkites.app/docs/</loc></url>
+  <url><loc>https://paperkites.app/docs/getting-started</loc></url>
+  <url><loc>https://paperkites.app/docs/writing</loc></url>
+  <url><loc>https://paperkites.app/docs/todos</loc></url>
+  <url><loc>https://paperkites.app/docs/finding</loc></url>
+  <url><loc>https://paperkites.app/docs/people</loc></url>
+  <url><loc>https://paperkites.app/docs/graph</loc></url>
+  <url><loc>https://paperkites.app/docs/sidebar-and-split</loc></url>
+  <url><loc>https://paperkites.app/docs/settings</loc></url>
+  <url><loc>https://paperkites.app/docs/themes</loc></url>
+  <url><loc>https://paperkites.app/docs/your-files</loc></url>
+  <url><loc>https://paperkites.app/docs/keys-and-commands</loc></url>
+  <url><loc>https://paperkites.app/docs/faq</loc></url>
+  <url><loc>https://paperkites.app/docs/coming-soon</loc></url>
 </urlset>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-799TZZK33V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-799TZZK33V');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Todos — Paperkites docs</title>
+<meta name="description" content="Todos in Paperkites: checkboxes in any note, seven states, and the keys that change them.">
+<link rel="canonical" href="https://paperkites.app/docs/todos">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="../index.html#join" class="btn btn-ghost btn-sm">Coming soon</a>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="index.html">Overview</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="writing.html">Writing</a></li>
+<li><a href="todos.html" aria-current="page">Todos</a></li>
+<li><a href="finding.html">Finding things</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="graph.html">The graph</a></li>
+<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="themes.html">Themes</a></li>
+<li><a href="your-files.html">Your files</a></li>
+<li><a href="keys-and-commands.html">Keys and commands</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / todos</div>
+    <h1>Todos<span class="dot">.</span></h1>
+<p>A todo is a list item with a box: <code>- [ ] buy milk</code>. You write todos in notes like any other text, and the file stays plain markdown.</p>
+<h2 id="the-seven-states">The seven states</h2>
+<p>Each state has its own marker, the character inside the box.</p>
+<div class="table-wrap"><table><thead><tr><th>Marker</th><th>State</th><th>Shown as</th></tr></thead><tbody><tr><td><code>[ ]</code></td><td>open</td><td>an empty box</td></tr><tr><td><code>[x]</code></td><td>done</td><td>struck through</td></tr><tr><td><code>[-]</code></td><td>cancelled</td><td>greyed and labelled</td></tr><tr><td><code>[&gt;]</code></td><td>moved</td><td>greyed and labelled</td></tr><tr><td><code>[&lt;]</code></td><td>scheduled</td><td>its own marker</td></tr><tr><td><code>[/]</code></td><td>in progress</td><td>its own marker</td></tr><tr><td><code>[!]</code></td><td>priority</td><td>its own marker</td></tr></tbody></table></div>
+<p>Any other character in the box is left as plain text.</p>
+<h2 id="changing-a-state">Changing a state</h2>
+<div class="table-wrap"><table><thead><tr><th>Key or action</th><th>Does</th></tr></thead><tbody><tr><td>click the marker</td><td>toggle open ↔ done</td></tr><tr><td><kbd>⌘↩</kbd> on the line</td><td>toggle open ↔ done</td></tr><tr><td><kbd>⌘⇧↩</kbd> on the line</td><td>open a picker of all seven states</td></tr><tr><td>alt-click or right-click the marker</td><td>open the same picker</td></tr></tbody></table></div>
+<p>In the picker, one key sets the state. Every change is one undo step.</p>
+<h2 id="writing-todos">Writing todos</h2>
+<ul><li><strong>Start a box:</strong> type <code>[]</code> then a space at the start of a list item, and it becomes an empty box.</li><li><strong>Keep going:</strong> <kbd>⏎</kbd> after a todo starts the next one with an empty box.</li><li><strong>Stop:</strong> <kbd>⏎</kbd> on an empty todo ends the list with a blank line, so what you type next is a paragraph of its own, not part of the last todo.</li></ul>
+<pre><code>- [x] pull last week's queue logs
+- [/] try a second lane for batch jobs
+- [-] ask for a bigger quota
+- [ ] re-run the bench</code></pre>
+<h2 id="in-lists">In lists</h2>
+<p>A note's preview in the list draws its todos as <code>[ ]</code> and <code>[x]</code>, so you can see what's open without opening the note.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="writing.html"><span>previous</span>Writing</a><a class="next" href="finding.html"><span>next</span>Finding things</a></nav>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/todos.md</span>
+  <span class="gap"></span>
+  <a href="../index.html">home</a>
+  <a href="../privacy.html">privacy</a>
+</footer>
+
+</body>
+</html>

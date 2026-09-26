@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-799TZZK33V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-799TZZK33V');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docs — Paperkites</title>
+<meta name="description" content="How to use Paperkites, a keyboard-first notes app that keeps your notes as plain markdown files.">
+<link rel="canonical" href="https://paperkites.app/docs/">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="../index.html#join" class="btn btn-ghost btn-sm">Coming soon</a>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="index.html" aria-current="page">Overview</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="writing.html">Writing</a></li>
+<li><a href="todos.html">Todos</a></li>
+<li><a href="finding.html">Finding things</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="graph.html">The graph</a></li>
+<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="themes.html">Themes</a></li>
+<li><a href="your-files.html">Your files</a></li>
+<li><a href="keys-and-commands.html">Keys and commands</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs</div>
+    <h1>Paperkites docs<span class="dot">.</span></h1>
+<p>Paperkites is a place to put things down before they drift off: a thought on the train, a line from a meeting, the name of a book someone mentioned. It's a desktop app for notes and the small thoughts that come before them, and you drive it from the keyboard.</p>
+<p>Most of what's worth keeping starts small, and most apps ask you to decide where it goes before you let yourself write it. Paperkites doesn't. You write first. The connections come later, from the <code>#tags</code>, <code>[[links]]</code> and <code>@mentions</code> you add as you go.</p>
+<p>Paperkites is in development and not released yet. These pages describe the app as it is built today.</p>
+<h2 id="the-ideas">The ideas</h2>
+<p><strong>Plain files you own.</strong> Every note is a plain markdown file in a folder on your disk. There's no database to export from and no account to sign in to. Git, grep, sync tools and other editors all work on your notes.</p>
+<p><strong>Keyboard first.</strong> Every action has a key. Paperkites borrows from vim: you move around in NORMAL mode, write in INSERT mode, and <code>:</code> opens a command line. If you'd rather not use vim keys, you can turn them off. The mouse works too.</p>
+<p><strong>Capture first.</strong> Paperkites opens on the capture box. Save a thought as a short fragment with <kbd>⌘↩</kbd>, or turn it into a full note with <kbd>⌘E</kbd>. Nothing you type there is thrown away.</p>
+<p><strong>A quiet screen.</strong> One column of text with a narrow gutter of details beside it. There's no toolbar, no tabs and no status bar. Messages appear in a small pill at the bottom of the window, and everything else is summoned from the keyboard.</p>
+<h2 id="pages">Pages</h2>
+<ul class="cards">
+<li><a href="getting-started.html"><strong>Getting started</strong>First launch, the welcome notes, the three modes and your first capture.</a></li>
+<li><a href="writing.html"><strong>Writing</strong>The capture box, fragments and notes, the editor, tags, links, images and the format bar.</a></li>
+<li><a href="todos.html"><strong>Todos</strong>Checkboxes in any note, their seven states, and the keys that change them.</a></li>
+<li><a href="finding.html"><strong>Finding things</strong>The list, ⌘K summon, / search, tag pages, backlinks and pins.</a></li>
+<li><a href="people.html"><strong>People</strong>Person notes, @mentions, the person page and renaming.</a></li>
+<li><a href="graph.html"><strong>The graph</strong>A live map of your notes, tags and people.</a></li>
+<li><a href="sidebar-and-split.html"><strong>Sidebar and split</strong>The floating sidebar and two columns side by side.</a></li>
+<li><a href="settings.html"><strong>Settings</strong>Appearance, reading, writing and your vault.</a></li>
+<li><a href="themes.html"><strong>Themes</strong>The built-in themes, and how to make your own.</a></li>
+<li><a href="your-files.html"><strong>Your files</strong>The vault, front matter, other tools, the trash and pins.</a></li>
+<li><a href="keys-and-commands.html"><strong>Keys and commands</strong>Every key and every <code>:</code> command, in one place.</a></li>
+<li><a href="faq.html"><strong>FAQ</strong>Short answers to common questions.</a></li>
+</ul>
+<h2 id="coming-soon">Coming soon</h2>
+<div class="soon"><p><span class="tag">coming soon</span><strong>Sync.</strong> Sync built into Paperkites is on the way, with notes encrypted at rest and in sync, and the key staying with you. It isn't in the app yet.</p><p>Today your notes are plain files in a folder, so you can already sync them yourself with git, iCloud Drive, Dropbox or anything else that syncs folders. See <a href="coming-soon.html">Coming soon</a> for how.</p></div>
+<h2 id="help-inside-the-app">Help inside the app</h2>
+<p><code>:keys</code> shows the full keymap from anywhere. It's built into the app, so it's there even if you edit or delete the welcome notes.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="next" href="getting-started.html"><span>next</span>Getting started</a></nav>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/readme.md</span>
+  <span class="gap"></span>
+  <a href="../index.html">home</a>
+  <a href="../privacy.html">privacy</a>
+</footer>
+
+</body>
+</html>

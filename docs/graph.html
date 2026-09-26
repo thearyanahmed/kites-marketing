@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-799TZZK33V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-799TZZK33V');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The graph — Paperkites docs</title>
+<meta name="description" content="The Paperkites graph: a live canvas of your notes, tags and people.">
+<link rel="canonical" href="https://paperkites.app/docs/graph">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="../index.html#join" class="btn btn-ghost btn-sm">Coming soon</a>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="index.html">Overview</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="writing.html">Writing</a></li>
+<li><a href="todos.html">Todos</a></li>
+<li><a href="finding.html">Finding things</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="graph.html" aria-current="page">The graph</a></li>
+<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="themes.html">Themes</a></li>
+<li><a href="your-files.html">Your files</a></li>
+<li><a href="keys-and-commands.html">Keys and commands</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / graph</div>
+    <h1>The graph<span class="dot">.</span></h1>
+<p><code>:graph</code>, or <kbd>gr</kbd> in a note, opens a live canvas of your notes and the links between them. People are rings and tags are rounded squares.</p>
+<h2 id="with-the-mouse">With the mouse</h2>
+<div class="table-wrap"><table><thead><tr><th>Action</th><th>Does</th></tr></thead><tbody><tr><td>scroll</td><td>zoom at the cursor</td></tr><tr><td>drag the background</td><td>pan</td></tr><tr><td>drag a node</td><td>move it; the rest follow</td></tr><tr><td>hover a node</td><td>highlight its neighbourhood</td></tr><tr><td>click a note</td><td>open it</td></tr><tr><td>click a tag</td><td>show its notes</td></tr><tr><td>double-click a tag</td><td>open its tag page</td></tr></tbody></table></div>
+<h2 id="with-the-keys">With the keys</h2>
+<div class="table-wrap"><table><thead><tr><th>Key</th><th>Does</th></tr></thead><tbody><tr><td><kbd>h</kbd> <kbd>j</kbd> <kbd>k</kbd> <kbd>l</kbd></td><td>pan</td></tr><tr><td><kbd>+</kbd> / <kbd>-</kbd></td><td>zoom in / out</td></tr><tr><td><kbd>0</kbd></td><td>fit everything</td></tr><tr><td><kbd>n</kbd> / <kbd>N</kbd></td><td>step through notes, most linked first</td></tr><tr><td><kbd>⏎</kbd></td><td>open the selected note</td></tr><tr><td><kbd>t</kbd></td><td>hide or show tags</td></tr></tbody></table></div>
+<h2 id="tags-as-nodes">Tags as nodes</h2>
+<p>Every tag is a node. Child tags hang off their parent (<code>#projectlighthouse</code> → <code>#projectlighthouse/api</code>), and each note hangs off every tag it carries, so a note under two tags sits between them. Press <kbd>t</kbd> to hide tags and see only links.</p>
+<h2 id="people">People</h2>
+<p>People are rings. <kbd>gr</kbd> on a person shows who and what is within two links of them.</p>
+<h2 id="labels-and-layout">Labels and layout</h2>
+<p>The most linked notes are labelled from a moderate zoom, and the rest fade in as you zoom closer. Paperkites lays the graph out in the background, when it starts and shortly after you stop writing, so the page opens already settled.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="people.html"><span>previous</span>People</a><a class="next" href="sidebar-and-split.html"><span>next</span>Sidebar and split</a></nav>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/graph.md</span>
+  <span class="gap"></span>
+  <a href="../index.html">home</a>
+  <a href="../privacy.html">privacy</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-799TZZK33V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-799TZZK33V');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your files — Paperkites docs</title>
+<meta name="description" content="Where Paperkites keeps your notes, what it writes into them, working with git and other tools, the trash and pins.">
+<link rel="canonical" href="https://paperkites.app/docs/your-files">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="../index.html#join" class="btn btn-ghost btn-sm">Coming soon</a>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="index.html">Overview</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="writing.html">Writing</a></li>
+<li><a href="todos.html">Todos</a></li>
+<li><a href="finding.html">Finding things</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="graph.html">The graph</a></li>
+<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="themes.html">Themes</a></li>
+<li><a href="your-files.html" aria-current="page">Your files</a></li>
+<li><a href="keys-and-commands.html">Keys and commands</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / your-files</div>
+    <h1>Your files<span class="dot">.</span></h1>
+<p>Your notes are plain markdown files in a folder on your disk, called the vault. That folder is the whole of your data. Paperkites keeps an index of it, and rebuilds that index from the files every time it starts.</p>
+<h2 id="the-vault">The vault</h2>
+<p>The vault is <code>~/notes</code> unless you choose another folder.</p>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:vault</code></td><td>shows which folder Paperkites is using</td></tr><tr><td><code>:vault ~/somewhere/else</code></td><td>points Paperkites at another folder</td></tr></tbody></table></div>
+<p>Switching copies and moves nothing. The old folder stays exactly where it was, and you can switch back. In <code>:settings</code>, under Vault, you can show the folder in Finder.</p>
+<h2 id="whats-in-the-folder">What's in the folder</h2>
+<pre><code>~/notes/
+  Welcome.md
+  Reading list.md
+  2026-09-24.md
+  Pics/
+    photo.png
+  fragments/
+  people/
+    dasha.md
+  .trash/</code></pre>
+<div class="table-wrap"><table><thead><tr><th>Where</th><th>What</th></tr></thead><tbody><tr><td><code>&lt;Title&gt;.md</code></td><td>a note, named after its title. Renaming the note renames the file.</td></tr><tr><td><code>fragments/</code></td><td>one file per fragment</td></tr><tr><td><code>people/</code></td><td>person notes, named after their username (see <a href="people.html">People</a>)</td></tr><tr><td><code>.trash/</code></td><td>notes you've deleted; never indexed, so never in lists or search</td></tr></tbody></table></div>
+<p>Images can live anywhere in the vault; a note refers to them by path, such as <code>![alt](Pics/photo.png)</code>.</p>
+<h2 id="front-matter">Front matter</h2>
+<p>A note can start with a block of front matter between two <code>---</code> lines. Paperkites leaves it alone, apart from three lines:</p>
+<pre><code>---
+created: 2026-09-24T08:15:00Z
+id: 01J8Z3K4QW7T9V2N5M6B1C0D8E
+pinned: true
+---</code></pre>
+<div class="table-wrap"><table><thead><tr><th>Key</th><th>What Paperkites does with it</th></tr></thead><tbody><tr><td><code>created</code></td><td>when the note was made; shown in the gutter</td></tr><tr><td><code>id</code></td><td>the note's identity, a ULID. A rename keeps it.</td></tr><tr><td><code>pinned</code></td><td>added when you pin a note and taken out when you unpin it, so the file comes back byte for byte</td></tr></tbody></table></div>
+<p>Person notes also use <code>type</code>, <code>username</code> and <code>aliases</code>. Anything else you put in front matter stays as you wrote it.</p>
+<h2 id="pinning">Pinning</h2>
+<p>Pinning keeps a note at the top of the lists. <code>:pin</code> and <code>:unpin</code> work in a note, and <kbd>x</kbd> works on a row in any list. <code>:pinned</code> lists everything pinned. On disk, pinning is just the <code>pinned: true</code> line above.</p>
+<h2 id="editing-outside-paperkites">Editing outside Paperkites</h2>
+<p>Anything that works on files works on your notes: git, grep, sync tools, any editor. Paperkites watches the folder while it runs, so a file added, edited, renamed or deleted elsewhere shows up within a moment.</p>
+<p>If that note is open in Paperkites:</p>
+<ul><li><strong>With nothing unsaved</strong>, it takes the new text.</li><li><strong>With unsaved edits</strong>, it asks you to choose:</li></ul>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:reload</code></td><td>take the file's version</td></tr><tr><td><code>:w</code></td><td>write your version over it</td></tr></tbody></table></div>
+<h2 id="working-with-other-tools">Working with other tools</h2>
+<ul><li><strong>Git:</strong> <code>cd ~/notes &amp;&amp; git init</code>, and commit whenever you like.</li><li><strong>grep:</strong> <code>grep -ri "soil" ~/notes</code> searches the same text <code>/</code> does.</li><li><strong>Any editor:</strong> open a note in vim or VS Code, change it, and Paperkites picks it up.</li><li><strong>Sync:</strong> keep the folder in anything that syncs folders, and point Paperkites at it with <code>:vault</code>. See <a href="coming-soon.html#sync-it-yourself-today">Coming soon</a>.</li></ul>
+<h2 id="the-trash">The trash</h2>
+<p><code>:delete</code> (or <code>:rm</code>) in a note moves it to <code>.trash/</code> in your vault. Nothing is deleted for good until you say so.</p>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:trash</code></td><td>lists trashed notes</td></tr><tr><td><kbd>⏎</kbd> on a trashed note</td><td>puts it back where it lived</td></tr><tr><td><code>:trash empty</code></td><td>deletes everything in the trash for good</td></tr></tbody></table></div>
+<p>The trash is also in <code>:settings</code>, under Vault. It's an ordinary folder; its name starts with a dot, so some file browsers hide it.</p>
+<h2 id="settings-and-themes-live-elsewhere">Settings and themes live elsewhere</h2>
+<p>Your settings are kept on this device, in the app's data folder, outside the vault. Theme files live in <code>~/.kites/themes/</code>. See <a href="settings.html">Settings</a> and <a href="themes.html">Themes</a>.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="themes.html"><span>previous</span>Themes</a><a class="next" href="keys-and-commands.html"><span>next</span>Keys and commands</a></nav>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/your-files.md</span>
+  <span class="gap"></span>
+  <a href="../index.html">home</a>
+  <a href="../privacy.html">privacy</a>
+</footer>
+
+</body>
+</html>

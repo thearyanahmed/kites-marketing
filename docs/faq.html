@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-799TZZK33V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-799TZZK33V');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Paperkites docs</title>
+<meta name="description" content="Short answers to common questions about Paperkites.">
+<link rel="canonical" href="https://paperkites.app/docs/faq">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="../index.html#join" class="btn btn-ghost btn-sm">Coming soon</a>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="index.html">Overview</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="writing.html">Writing</a></li>
+<li><a href="todos.html">Todos</a></li>
+<li><a href="finding.html">Finding things</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="graph.html">The graph</a></li>
+<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="themes.html">Themes</a></li>
+<li><a href="your-files.html">Your files</a></li>
+<li><a href="keys-and-commands.html">Keys and commands</a></li>
+<li><a href="faq.html" aria-current="page">FAQ</a></li>
+<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / faq</div>
+    <h1>FAQ<span class="dot">.</span></h1>
+<h2 id="where-are-my-notes">Where are my notes?</h2>
+<p>In <code>~/notes</code>, unless you've chosen another folder. Run <code>:vault</code> to see which folder Paperkites is using. Each note is a <code>.md</code> file named after its title; fragments are in <code>fragments/</code> and people in <code>people/</code>. See <a href="your-files.html">Your files</a>.</p>
+<h2 id="is-there-sync">Is there sync?</h2>
+<p>Not built in yet; it's <a href="coming-soon.html">coming</a>. Your notes are ordinary files, so you can keep the folder in git, iCloud Drive, Dropbox or anything else that syncs folders, and point Paperkites at it with <code>:vault &lt;folder&gt;</code>. Your settings stay on each device.</p>
+<h2 id="can-i-edit-my-notes-in-another-editor">Can I edit my notes in another editor?</h2>
+<p>Yes. Paperkites watches the folder while it runs, so changes made elsewhere show up within a moment. If the note is open in Paperkites with edits you haven't saved, it asks you to choose: <code>:reload</code> takes the file's version, and <code>:w</code> writes yours over it.</p>
+<h2 id="do-i-need-to-save">Do I need to save?</h2>
+<p>No. Paperkites saves as you write. <code>:w</code> is only for the case above.</p>
+<h2 id="where-did-my-draft-go">Where did my draft go?</h2>
+<p>It's still in the capture box. Esc never discards, and the draft survives a reload and a quit. Press <kbd>gh</kbd> for home, then <kbd>i</kbd>.</p>
+<h2 id="and-type-into-my-note"><code>:</code> and <code>/</code> type into my note.</h2>
+<p>You're in INSERT mode. Press <kbd>esc</kbd> first to reach NORMAL, then <kbd>:</kbd> or <kbd>/</kbd>.</p>
+<h2 id="how-do-i-undo-a-rename">How do I undo a rename?</h2>
+<ul><li><strong>A tag or a username</strong> renamed with <kbd>⌃r</kbd> in ⌘K: run <code>:undo</code>. It puts every file back as one operation.</li><li><strong>A note's title:</strong> change the title back. The file is renamed with it.</li></ul>
+<h2 id="i-deleted-a-note-by-mistake">I deleted a note by mistake.</h2>
+<p><code>:delete</code> moves a note to the trash, not away for good. Run <code>:trash</code>, select the note, and press <kbd>⏎</kbd> to put it back where it lived. Only <code>:trash empty</code> deletes for good.</p>
+<h2 id="how-do-i-find-notes-i-havent-tagged">How do I find notes I haven't tagged?</h2>
+<p>Run <code>:tag empty_kite</code>, type <code>#empty</code> in ⌘K, or open <strong>Untagged</strong> in the sidebar. Every note and fragment without a tag shows up there. The tag is never written into your files.</p>
+<h2 id="is-there-a-list-of-all-my-tags-or-people">Is there a list of all my tags or people?</h2>
+<p>Yes: ⌘K. Type <code>#</code> first for tags, or <code>@</code> first for people. The sidebar (<kbd>⌘\</kbd>) lists both too.</p>
+<h2 id="a-mention-has-a-dotted-underline">A mention has a dotted underline.</h2>
+<p>No person note has that username or alias. Make one with <kbd>⌃n</kbd> in the <code>@</code> completion list, or add the name to an existing person's <code>aliases</code>. See <a href="people.html">People</a>.</p>
+<h2 id="can-i-stop-using-vim-keys">Can I stop using vim keys?</h2>
+<p>Yes. In <code>:settings</code>, under Writing, turn vim keys off, or run <code>:vim off</code>. The editor is then always writing.</p>
+<h2 id="my-theme-isnt-showing">My theme isn't showing.</h2>
+<p>A theme with a mistake isn't used; paper stands in, and the status pill shows the file, line and problem. Fix it and save, or run <code>:theme reload</code>. Check that the first line says <code>/* kites-theme: light */</code> or <code>dark</code>, so it's listed in the right row. See <a href="themes.html#when-a-theme-has-a-mistake">Themes</a>.</p>
+<h2 id="can-i-use-a-different-folder">Can I use a different folder?</h2>
+<p>Yes. <code>:vault ~/somewhere/else</code> switches to another folder. Nothing is copied or moved, and you can switch back the same way.</p>
+<h2 id="can-i-delete-the-welcome-notes">Can I delete the welcome notes?</h2>
+<p>Yes. They're ordinary notes and nothing depends on them. <code>:keys</code> still shows every key.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="keys-and-commands.html"><span>previous</span>Keys and commands</a><a class="next" href="coming-soon.html"><span>next</span>Coming soon</a></nav>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/faq.md</span>
+  <span class="gap"></span>
+  <a href="../index.html">home</a>
+  <a href="../privacy.html">privacy</a>
+</footer>
+
+</body>
+</html>

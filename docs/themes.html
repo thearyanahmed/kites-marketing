@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-799TZZK33V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-799TZZK33V');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Themes — Paperkites docs</title>
+<meta name="description" content="The built-in Paperkites themes, and how to make your own theme file.">
+<link rel="canonical" href="https://paperkites.app/docs/themes">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="../index.html#join" class="btn btn-ghost btn-sm">Coming soon</a>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="index.html">Overview</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="writing.html">Writing</a></li>
+<li><a href="todos.html">Todos</a></li>
+<li><a href="finding.html">Finding things</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="graph.html">The graph</a></li>
+<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="themes.html" aria-current="page">Themes</a></li>
+<li><a href="your-files.html">Your files</a></li>
+<li><a href="keys-and-commands.html">Keys and commands</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / themes</div>
+    <h1>Themes<span class="dot">.</span></h1>
+<p>A theme recolours Paperkites and can restyle its type. It never changes the layout, beyond a few layout words described below. You pick themes in <code>:settings</code>: one for light mode and one for dark. See <a href="settings.html#appearance">Settings</a>.</p>
+<h2 id="the-built-in-themes">The built-in themes</h2>
+<div class="table-wrap"><table><thead><tr><th>Theme</th><th>Kind</th><th>What it is</th></tr></thead><tbody><tr><td>Paper</td><td>light</td><td>the default: warm paper, serif notes</td></tr><tr><td>Daylight</td><td>light</td><td>white page, cool greys, blue links</td></tr><tr><td>Fjord</td><td>light</td><td>cold, airy, frost accents</td></tr><tr><td>Studio</td><td>light</td><td>pure white page, neutral greys, sans notes and mono meta</td></tr><tr><td>Pine</td><td>dark</td><td>soft green-grey night, parchment ink; the default dark theme</td></tr></tbody></table></div>
+<h2 id="making-your-own">Making your own</h2>
+<p>Your themes live in <code>~/.kites/themes/</code>, never in your notes folder. Any <code>.css</code> file there is a theme, and its name is the file name without <code>.css</code>.</p>
+<ol><li>Save a file into <code>~/.kites/themes/</code> under a new name, such as <code>ink.css</code>. A built-in's name, such as <code>pine.css</code>, is taken: that file isn't listed.</li><li>Say which row it belongs in on its first line: <code>/* kites-theme: light */</code> or <code>/* kites-theme: dark */</code>. Without it, Paperkites judges by your <code>ground</code> colour.</li><li>Change what you want, and pick it in <code>:settings</code>.</li></ol>
+<p>The folder is watched: a theme shows in <code>:settings</code> the moment it's saved. <code>:theme reload</code> reads the files again.</p>
+<p>The easiest start is <a href="#paper-css">paper.css</a>, the built-in look spelled out. You can delete any line you don't change: anything a theme leaves out keeps paper's value. A dark theme has to recolour every surface and every ink it puts text on, so a dark theme usually sets every colour.</p>
+<h2 id="what-a-theme-file-is">What a theme file is</h2>
+<p>A theme uses CSS syntax, so your editor highlights it, but it isn't CSS. Paperkites reads it, checks every line, and turns it into colours and fonts. Nothing in it reaches the page as written.</p>
+<pre><code>/* kites-theme: light */
+@format 1;
+
+/* the palette: paper's colours and fonts, by name */
+:root {
+  ground: #faf9f5;
+  ink: #1f1e1b;
+  accent-text: #94461a;
+  font-ui: 'Inter', system-ui, sans-serif;
+}
+
+/* named parts of the app, for fine-tuning */
+.page .title { font-family: 'Iowan Old Style', Georgia, serif; font-weight: 700; }
+.list .title { color: accent-text; }
+.pill        { color: ink; background: fill; }</code></pre>
+<p>A file has two levels. Most themes only need the first.</p>
+<ol><li><strong>The palette</strong> (<code>:root</code>) holds colours and fonts by name, as <a href="#paper-css">paper.css</a> lists them, plus the ground pattern and the layout words. Changing a colour there changes everything built on it.</li><li><strong>Named parts</strong> fine-tune one place, when it should differ from the palette.</li></ol>
+<p><code>@format 1;</code> is optional; a file without it is format 1.</p>
+<h2 id="named-parts">Named parts</h2>
+<p>A named part is a name, not a CSS selector. <code>.page .title</code> names the page title; which element draws it is Paperkites' business. That's why the app can change without breaking your theme, and why a theme can't reach anything that isn't on this list.</p>
+<div class="table-wrap"><table><thead><tr><th>Part</th><th>Accepts</th><th>What it is</th></tr></thead><tbody><tr><td><code>.page .title</code></td><td><code>color</code>, <code>font-family</code>, <code>font-weight</code>, <code>font-style</code></td><td>the title of every page: a note, a person, a tag, search</td></tr><tr><td><code>.note .body</code></td><td><code>color</code></td><td>the text of a note, and of the capture box</td></tr><tr><td><code>.list .title</code></td><td><code>color</code>, <code>font-family</code>, <code>font-weight</code>, <code>font-style</code></td><td>a note's title in a list, search results and backlinks</td></tr><tr><td><code>.list .preview</code></td><td><code>color</code>, <code>font-style</code>, <code>font-size</code></td><td>the lines of a note's text under its title in a list</td></tr><tr><td><code>.gutter .date</code></td><td><code>color</code></td><td>the date in the gutter (today keeps the accent)</td></tr><tr><td><code>.pill</code></td><td><code>color</code>, <code>background</code></td><td>the status pill: messages and the command line</td></tr><tr><td><code>.formatbar</code></td><td><code>color</code>, <code>background</code></td><td>the format bar over a selection</td></tr></tbody></table></div>
+<h2 id="layout-words">Layout words</h2>
+<p>Besides colours and fonts, a theme picks a few layout words in <code>:root</code>. Paper's value comes first. Leave one out to keep paper's.</p>
+<div class="table-wrap"><table><thead><tr><th>Word</th><th>Values</th><th>What it sets</th></tr></thead><tbody><tr><td><code>list-layout</code></td><td><code>ledger</code> | <code>stream</code></td><td><em>ledger</em>: the date in the gutter, the note beside it. <em>stream</em>: no gutter, one card per note, the time on the right</td></tr><tr><td><code>meta-case</code></td><td><code>upper</code> | <code>lower</code></td><td>dates, section labels and counts: small caps, or lower-case mono</td></tr><tr><td><code>capture-submit</code></td><td><code>hint</code> | <code>key</code> | <code>button</code></td><td>the end of the capture box: a "⌘↩ save" hint, a ⌘↩ keycap, or a Save button</td></tr><tr><td><code>placeholder-style</code></td><td><code>normal</code> | <code>italic</code></td><td>the capture box's placeholder</td></tr><tr><td><code>chip-style</code></td><td><code>ui</code> | <code>plain</code></td><td>#tags and @people in the interface face, or in the face of the text around them</td></tr><tr><td><code>titlebar</code></td><td><code>none</code> | <code>path</code></td><td>the window's top strip: nothing, or the path (<code>~/notes</code>)</td></tr><tr><td><code>column-width</code></td><td><code>560px</code>–<code>760px</code></td><td>the reading column; your own width setting still wins</td></tr><tr><td><code>row-radius</code></td><td><code>0px</code>–<code>16px</code></td><td>the corners of list rows and the capture box together</td></tr><tr><td><code>ground-pattern</code></td><td><code>plain</code> | <code>dotted</code> | <code>dotted-edges</code></td><td>the page: plain, dots behind everything, or dots left and right of the column</td></tr></tbody></table></div>
+<p>To try a ground pattern over every theme, run <code>:theme ground plain</code>, <code>:theme ground dotted</code> or <code>:theme ground dotted-edges</code>. It lasts until the app restarts; nothing is saved.</p>
+<h2 id="values">Values</h2>
+<div class="table-wrap"><table><thead><tr><th>Where</th><th>Accepted</th></tr></thead><tbody><tr><td>a colour in <code>:root</code></td><td><code>#rgb</code> or <code>#rrggbb</code>; <code>rgba()</code> only for <code>scrim</code></td></tr><tr><td>a font in <code>:root</code></td><td>a font stack: family names, ending in a generic family (<code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, <code>system-ui</code>, <code>ui-serif</code>, <code>ui-sans-serif</code>, <code>ui-monospace</code>, <code>cursive</code>)</td></tr><tr><td><code>color</code>, <code>background</code></td><td><code>#rgb</code>, <code>#rrggbb</code>, or a palette colour's name such as <code>accent-text</code>, which follows the palette</td></tr><tr><td><code>font-family</code></td><td>a font stack, or a palette font's name such as <code>font-ui</code></td></tr><tr><td><code>font-weight</code></td><td><code>normal</code>, <code>bold</code>, <code>100</code>–<code>900</code></td></tr><tr><td><code>font-style</code></td><td><code>normal</code>, <code>italic</code></td></tr><tr><td><code>font-size</code></td><td>whole px, <code>12px</code>–<code>24px</code></td></tr></tbody></table></div>
+<p>Colour names like <code>red</code>, <code>rgb()</code>, <code>var()</code>, <code>url()</code>, selectors, <code>@import</code> and a second rule for the same part aren't accepted.</p>
+<h2 id="contrast">Contrast</h2>
+<p>Paperkites checks your palette so text stays readable:</p>
+<ul><li>Text needs 4.5:1 against every surface it sits on. The caret and focus ring need 3:1.</li><li>A part given a <code>color</code> or <code>background</code> is checked against every surface it sits on.</li><li>The ground's dots (<code>dot</code> on <code>ground</code>) must be between 1.05:1 and 1.40:1: quiet enough not to compete with the text, visible enough to be there.</li></ul>
+<h2 id="when-a-theme-has-a-mistake">When a theme has a mistake</h2>
+<p>A theme file with a mistake isn't used. Paper stands in (Pine, for dark), and the status pill shows the first problem with its file and line:</p>
+<pre><code>theme: /Users/you/.kites/themes/ink.css:12: .page .title margin: takes color, font-family, font-weight, font-style</code></pre>
+<div class="table-wrap"><table><thead><tr><th>Message</th><th>Fix</th></tr></thead><tbody><tr><td><code>not a primitive</code></td><td>only the named parts above exist, written exactly as shown</td></tr><tr><td><code>takes color, ...</code></td><td>that part doesn't accept that property</td></tr><tr><td><code>isn't a #rgb / #rrggbb colour</code></td><td>use hex, not <code>red</code>, <code>rgb()</code> or <code>var()</code></td></tr><tr><td><code>isn't a font stack ending in a generic family</code></td><td>end the list with <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, …</td></tr><tr><td><code>ink-4 on ground is 3.10:1, needs 4.5:1</code></td><td>that text would be hard to read; darken the text or lighten the surface</td></tr></tbody></table></div>
+<p>Fix the file and save it, or run <code>:theme reload</code>.</p>
+<h2 id="what-a-theme-cant-change">What a theme can't change</h2>
+<ul><li><strong>Sizes and spacing:</strong> the gutter, spacing, radii other than <code>row-radius</code>, the caret, font sizes other than the list preview, and the dot grid's size.</li><li><strong>Layout</strong>, beyond the layout words: there are no borders, there's one column, and there's no toolbar.</li></ul>
+<p>Your reading settings beat the theme. A body font chosen in <code>:settings</code> wins over the theme's <code>font-body</code>, and your column width wins over its <code>column-width</code>.</p>
+<h2 id="paper-css">paper.css</h2>
+<p>Every colour, font and layout word a theme can set, and every named part, at paper's values. Copy it into <code>~/.kites/themes/</code>, rename it, and change what you like. You can also <a href="paper.css">download it</a>.</p>
+<pre><code>@format 1;
+
+/* ~/.kites/themes/paper.css
+   The palette: every token a theme can set, with paper's values. Colours are #rgb or #rrggbb;
+   scrim alone may be rgba(). Fonts are a font stack ending in a generic family. */
+:root {
+  /* surfaces */
+  ground: #faf9f5; /* the page */
+  paper: #ffffff; /* floating surfaces: summon, peek card, picker */
+  tint-active: #f6f3ea; /* the active (raw markdown) block */
+  fill: #f4f2ec; /* code blocks, quiet panels */
+  fill-warm: #f6f1e9; /* selected row in a list or picker */
+  bar: #f2efe6; /* not drawn since the status pill; kept, tokens are never removed */
+  highlight: #f4e3cd; /* search match */
+  mention: #f2e9dd; /* unlinked mention of a note title */
+  sidebar: #ebe7dc; /* the floating sidebar */
+  sidebar-selected: #ddd7c9; /* selected sidebar row */
+  pill: #f0ece3; /* the status pill */
+  selection: #efd6c3; /* text selection */
+  switch-off: #d9d4c8; /* vim switch, off */
+  scrim: rgba(36, 34, 30, 0.26); /* behind summon */
+
+  /* ink */
+  ink: #1f1e1b; /* titles, primary UI */
+  ink-body: #26241f; /* note body prose */
+  ink-2: #56534d; /* secondary UI, inactive pane body */
+  ink-3: #67635b; /* de-emphasised prose, backlink context */
+  ink-4: #6a665e; /* SMALLEST INK THAT PASSES 4.5:1 on --k-ground */
+  muted: #9c9890; /* decorative only — never body or label text */
+  faint: #b4b0a6; /* markdown markers, list bullets, the # and / */
+  marker: #bab5a8; /* raw ** [[ ]] markers inside an active block */
+
+  /* accent */
+  accent: #c2622f; /* cursor, glyphs, dots, marks — non-text */
+  accent-text: #a3501d; /* any accent used AS TEXT (4.5:1 on ground) */
+  accent-soft: #e6cbb2; /* resting link underline */
+  mode-insert: #4f6b4a; /* INSERT badge */
+  person: #5f6a3a; /* a person: @mentions, the username on a person page */
+  formatbar: #1f1e1b; /* the format bar over a selection */
+  formatbar-ink: #f1eee6; /* ink on the format bar */
+
+  /* todos */
+  task-marker: #b0552a; /* [ ] [x] [&lt;] [/] [!] */
+  task-marker-muted: #67635a; /* [-] cancelled, [&gt;] moved */
+  task-done: #67635a; /* text of a done, cancelled or moved todo */
+  task-strike: #67635a; /* the line through a done todo */
+  task-label: #767167; /* trailing label and date chips */
+  task-hover: #efeae0; /* behind a marker under the pointer */
+
+  /* graph */
+  cluster-1: #c2622f;
+  cluster-2: #7d8a4f;
+  cluster-3: #5b7a8c;
+  cluster-4: #9c6b4f;
+  cluster-none: #cfcabf; /* orphan node */
+  edge: #e0dcd1; /* link inside a cluster */
+  edge-cross: #c4b5a2; /* link between clusters — deliberately darker */
+
+  /* ground */
+  dot: #e8e4da; /* the dot grid on the ground: 1.05 to 1.40:1 on ground, keep it quiet */
+  ground-pattern: dotted-edges; /* plain | dotted | dotted-edges */
+
+  /* type */
+  font-body: 'Source Serif 4', Georgia, serif;
+  font-ui: 'IBM Plex Sans', system-ui, sans-serif;
+  font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* layout: paper's word first; see THEMES.md › Layout */
+  list-layout: ledger; /* ledger | stream */
+  meta-case: upper; /* upper | lower */
+  capture-submit: hint; /* hint | key | button */
+  placeholder-style: normal; /* normal | italic */
+  chip-style: ui; /* ui | plain */
+  titlebar: none; /* none | path */
+  column-width: 620px; /* 560px to 760px */
+  /* row-radius: 0px to 16px, for list rows and the capture box together; paper's are 8px and 12px */
+}
+
+/* Primitives: named parts of the app, for when one place should differ from the palette.
+   A colour can name a token (ink, accent-text, ...) so it follows the palette, or be a #hex. */
+
+/* the title of every page: a note, a person, a tag, search */
+.page .title {
+  color: ink;
+  font-family: font-body;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* the text of a note, and of the capture box */
+.note .body {
+  color: ink-body;
+}
+
+/* a note's title in a list, search results and backlinks */
+.list .title {
+  color: ink;
+  font-family: font-body;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* the lines of a note's text under its title in a list */
+.list .preview {
+  color: ink-3;
+  font-style: normal;
+  font-size: 16px;
+}
+
+/* the date in the gutter (today keeps the accent) */
+.gutter .date {
+  color: ink-2;
+}
+
+/* the status pill: messages and the command line */
+.pill {
+  color: ink-4;
+  background: pill;
+}
+
+/* the format bar over a selection: bold, italic, link, tag, mention, code */
+.formatbar {
+  color: formatbar-ink;
+  background: formatbar;
+}</code></pre>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="settings.html"><span>previous</span>Settings</a><a class="next" href="your-files.html"><span>next</span>Your files</a></nav>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/themes.md</span>
+  <span class="gap"></span>
+  <a href="../index.html">home</a>
+  <a href="../privacy.html">privacy</a>
+</footer>
+
+</body>
+</html>

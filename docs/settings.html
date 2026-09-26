@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-799TZZK33V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-799TZZK33V');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings — Paperkites docs</title>
+<meta name="description" content="Paperkites settings: appearance, reading, writing and your vault.">
+<link rel="canonical" href="https://paperkites.app/docs/settings">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="../index.html#join" class="btn btn-ghost btn-sm">Coming soon</a>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="index.html">Overview</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="writing.html">Writing</a></li>
+<li><a href="todos.html">Todos</a></li>
+<li><a href="finding.html">Finding things</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="graph.html">The graph</a></li>
+<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
+<li><a href="settings.html" aria-current="page">Settings</a></li>
+<li><a href="themes.html">Themes</a></li>
+<li><a href="your-files.html">Your files</a></li>
+<li><a href="keys-and-commands.html">Keys and commands</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / settings</div>
+    <h1>Settings<span class="dot">.</span></h1>
+<p><code>:settings</code> (or <code>:set</code>) sets how Paperkites looks and how your notes read. It's also at the bottom of the <a href="sidebar-and-split.html">sidebar</a>. A live preview sits beside the settings, so you see each change as you make it.</p>
+<h2 id="moving-through-settings">Moving through settings</h2>
+<div class="table-wrap"><table><thead><tr><th>Key</th><th>Does</th></tr></thead><tbody><tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td>pick a row</td></tr><tr><td><kbd>h</kbd> / <kbd>l</kbd> (or <kbd>←</kbd> <kbd>→</kbd>)</td><td>change it</td></tr><tr><td><kbd>0</kbd></td><td>reset it</td></tr><tr><td><kbd>⏎</kbd></td><td>run a row's button</td></tr><tr><td><kbd>esc</kbd></td><td>show these keys in the pill; <kbd>esc</kbd> again goes back</td></tr></tbody></table></div>
+<p>Every control also works with <kbd>Tab</kbd> and its own keys.</p>
+<h2 id="appearance">Appearance</h2>
+<ul><li><strong>Light, Dark or Auto.</strong> Auto follows your operating system and switches when it does.</li><li><strong>The theme each mode shows:</strong> one theme for light, one for dark. See <a href="themes.html">Themes</a>.</li></ul>
+<p>The same choice works from the command line:</p>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:theme light</code></td><td>always light</td></tr><tr><td><code>:theme dark</code></td><td>always dark</td></tr><tr><td><code>:theme system</code></td><td>follow the OS</td></tr></tbody></table></div>
+<h2 id="reading">Reading</h2>
+<div class="table-wrap"><table><thead><tr><th>Setting</th><th>Choices</th></tr></thead><tbody><tr><td>Font</td><td>the theme's own, Source Serif, Charter, Georgia, Plex Sans, System or Plex Mono</td></tr><tr><td>Text size</td><td>14–24px; titles scale with it</td></tr><tr><td>Paragraph spacing</td><td>Tight, Normal or Airy</td></tr><tr><td>Column width</td><td>520–820px</td></tr></tbody></table></div>
+<h2 id="writing">Writing</h2>
+<div class="table-wrap"><table><thead><tr><th>Setting</th><th>Does</th></tr></thead><tbody><tr><td>Vim keys</td><td>on: you move in NORMAL and write after <kbd>i</kbd>. Off: the editor is always writing.</td></tr><tr><td>Spell check</td><td>check spelling as you write</td></tr><tr><td>Format bar</td><td>show the bar over selected text; <kbd>⌘B</kbd>, <kbd>⌘I</kbd> and <kbd>⌘K</kbd> work either way</td></tr></tbody></table></div>
+<p><code>:vim on</code> and <code>:vim off</code> change the same setting as the Vim keys row. Vim changes how keys behave, never the layout.</p>
+<h2 id="vault">Vault</h2>
+<ul><li><strong>The folder:</strong> shows your vault in Finder.</li><li><strong>The trash:</strong> your deleted notes. See <a href="your-files.html#the-trash">Your files</a>.</li></ul>
+<h2 id="where-settings-are-kept">Where settings are kept</h2>
+<p>Changes show at once and are saved on this device, in <code>settings.json</code> in the app's data folder (<code>~/Library/Application Support/kites</code> on macOS). They live outside your vault, so they don't travel with your notes.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="sidebar-and-split.html"><span>previous</span>Sidebar and split</a><a class="next" href="themes.html"><span>next</span>Themes</a></nav>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/settings.md</span>
+  <span class="gap"></span>
+  <a href="../index.html">home</a>
+  <a href="../privacy.html">privacy</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+@format 1;
+
+/* ~/.kites/themes/paper.css
+   The palette: every token a theme can set, with paper's values. Colours are #rgb or #rrggbb;
+   scrim alone may be rgba(). Fonts are a font stack ending in a generic family. */
+:root {
+  /* surfaces */
+  ground: #faf9f5; /* the page */
+  paper: #ffffff; /* floating surfaces: summon, peek card, picker */
+  tint-active: #f6f3ea; /* the active (raw markdown) block */
+  fill: #f4f2ec; /* code blocks, quiet panels */
+  fill-warm: #f6f1e9; /* selected row in a list or picker */
+  bar: #f2efe6; /* not drawn since the status pill; kept, tokens are never removed */
+  highlight: #f4e3cd; /* search match */
+  mention: #f2e9dd; /* unlinked mention of a note title */
+  sidebar: #ebe7dc; /* the floating sidebar */
+  sidebar-selected: #ddd7c9; /* selected sidebar row */
+  pill: #f0ece3; /* the status pill */
+  selection: #efd6c3; /* text selection */
+  switch-off: #d9d4c8; /* vim switch, off */
+  scrim: rgba(36, 34, 30, 0.26); /* behind summon */
+
+  /* ink */
+  ink: #1f1e1b; /* titles, primary UI */
+  ink-body: #26241f; /* note body prose */
+  ink-2: #56534d; /* secondary UI, inactive pane body */
+  ink-3: #67635b; /* de-emphasised prose, backlink context */
+  ink-4: #6a665e; /* SMALLEST INK THAT PASSES 4.5:1 on --k-ground */
+  muted: #9c9890; /* decorative only — never body or label text */
+  faint: #b4b0a6; /* markdown markers, list bullets, the # and / */
+  marker: #bab5a8; /* raw ** [[ ]] markers inside an active block */
+
+  /* accent */
+  accent: #c2622f; /* cursor, glyphs, dots, marks — non-text */
+  accent-text: #a3501d; /* any accent used AS TEXT (4.5:1 on ground) */
+  accent-soft: #e6cbb2; /* resting link underline */
+  mode-insert: #4f6b4a; /* INSERT badge */
+  person: #5f6a3a; /* a person: @mentions, the username on a person page */
+  formatbar: #1f1e1b; /* the format bar over a selection */
+  formatbar-ink: #f1eee6; /* ink on the format bar */
+
+  /* todos */
+  task-marker: #b0552a; /* [ ] [x] [<] [/] [!] */
+  task-marker-muted: #67635a; /* [-] cancelled, [>] moved */
+  task-done: #67635a; /* text of a done, cancelled or moved todo */
+  task-strike: #67635a; /* the line through a done todo */
+  task-label: #767167; /* trailing label and date chips */
+  task-hover: #efeae0; /* behind a marker under the pointer */
+
+  /* graph */
+  cluster-1: #c2622f;
+  cluster-2: #7d8a4f;
+  cluster-3: #5b7a8c;
+  cluster-4: #9c6b4f;
+  cluster-none: #cfcabf; /* orphan node */
+  edge: #e0dcd1; /* link inside a cluster */
+  edge-cross: #c4b5a2; /* link between clusters — deliberately darker */
+
+  /* ground */
+  dot: #e8e4da; /* the dot grid on the ground: 1.05 to 1.40:1 on ground, keep it quiet */
+  ground-pattern: dotted-edges; /* plain | dotted | dotted-edges */
+
+  /* type */
+  font-body: 'Source Serif 4', Georgia, serif;
+  font-ui: 'IBM Plex Sans', system-ui, sans-serif;
+  font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* layout: paper's word first; see THEMES.md › Layout */
+  list-layout: ledger; /* ledger | stream */
+  meta-case: upper; /* upper | lower */
+  capture-submit: hint; /* hint | key | button */
+  placeholder-style: normal; /* normal | italic */
+  chip-style: ui; /* ui | plain */
+  titlebar: none; /* none | path */
+  column-width: 620px; /* 560px to 760px */
+  /* row-radius: 0px to 16px, for list rows and the capture box together; paper's are 8px and 12px */
+}
+
+/* Primitives: named parts of the app, for when one place should differ from the palette.
+   A colour can name a token (ink, accent-text, ...) so it follows the palette, or be a #hex. */
+
+/* the title of every page: a note, a person, a tag, search */
+.page .title {
+  color: ink;
+  font-family: font-body;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* the text of a note, and of the capture box */
+.note .body {
+  color: ink-body;
+}
+
+/* a note's title in a list, search results and backlinks */
+.list .title {
+  color: ink;
+  font-family: font-body;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* the lines of a note's text under its title in a list */
+.list .preview {
+  color: ink-3;
+  font-style: normal;
+  font-size: 16px;
+}
+
+/* the date in the gutter (today keeps the accent) */
+.gutter .date {
+  color: ink-2;
+}
+
+/* the status pill: messages and the command line */
+.pill {
+  color: ink-4;
+  background: pill;
+}
+
+/* the format bar over a selection: bold, italic, link, tag, mention, code */
+.formatbar {
+  color: formatbar-ink;
+  background: formatbar;
+}
