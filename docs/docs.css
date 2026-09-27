@@ -121,8 +121,8 @@ a:hover { color: var(--ink); }
 .soon p:first-child { margin-top: 0; }
 .soon .tag { display: inline-block; margin-right: 8px; padding: 0 8px; border-radius: var(--radius-full); background: var(--kite-text); color: #ffffff; font-family: var(--font-mono); font-size: 12px; line-height: 22px; letter-spacing: 0.02em; vertical-align: 1px; }
 
-/* A warning that can't be missed: rose-400, a dashed red border, dark ink for contrast */
-.warn { margin: 24px 0 0; padding: 18px 20px; border: 2px dashed #dc2626; border-radius: var(--radius-md); background: #fb7185; color: #1f1f1f; }
+/* A warning that can't be missed: a pale rose ground, a dashed red border, dark ink */
+.warn { margin: 24px 0 0; padding: 18px 20px; border: 2px dashed #dc2626; border-radius: var(--radius-md); background: #fff1f3; color: #1f1f1f; }
 .warn p { margin: 0; color: #1f1f1f; }
 .warn strong { color: #1f1f1f; }
 
