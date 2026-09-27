@@ -66,7 +66,7 @@
 <h2 id="locking-a-note">Locking a note</h2>
 <ol><li>Open the note, and press <kbd>esc</kbd> so the caret leaves the text.</li><li>Run <code>:lock</code>.</li><li>Type a password, then the same again, and press <kbd>⏎</kbd>.</li></ol>
 <p>The note is locked at once: its text goes, and in its place is the password prompt. The images in the note are encrypted along with it.</p>
-<div class="soon"><p><strong>A forgotten password can't be recovered.</strong> Paperkites keeps no copy of it anywhere, and there's no reset. If you forget it, the note stays locked for good.</p></div>
+<div class="warn" role="note"><p><strong>A forgotten password can't be recovered.</strong> Paperkites keeps no copy of it anywhere, and there's no reset. If you forget it, the note stays locked for good.</p></div>
 <h2 id="opening-a-locked-note">Opening a locked note</h2>
 <p>A locked note opens on a padlock and a password field, with the caret already in it. Type the password and press <kbd>⏎</kbd>. Opening takes about a second, on purpose: it makes guessing passwords slow.</p>
 <div class="table-wrap"><table><thead><tr><th>Key</th><th>Does</th></tr></thead><tbody><tr><td><kbd>⏎</kbd></td><td>unlock</td></tr><tr><td><kbd>esc</kbd></td><td>leave it locked, with the keys free for <kbd>:</kbd></td></tr><tr><td><strong>show</strong> (<kbd>Tab</kbd> reaches it)</td><td>show the password as you type it, or hide it again</td></tr></tbody></table></div>
