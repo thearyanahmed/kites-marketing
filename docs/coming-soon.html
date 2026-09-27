@@ -50,6 +50,7 @@
 <li><a href="settings.html">Settings</a></li>
 <li><a href="themes.html">Themes</a></li>
 <li><a href="your-files.html">Your files</a></li>
+<li><a href="locked-notes.html">Locked notes</a></li>
 <li><a href="keys-and-commands.html">Keys and commands</a></li>
 <li><a href="faq.html">FAQ</a></li>
 <li><a href="coming-soon.html" aria-current="page" class="soon-link">Coming soon</a></li>
@@ -63,7 +64,9 @@
 <p>Paperkites is in development. Everything else in these docs is in the app today. This page is for what isn't.</p>
 <h2 id="sync">Sync</h2>
 <div class="soon"><p><span class="tag">coming soon</span>Sync built into Paperkites is on the way. Notes will be encrypted at rest and in sync, and the key stays with you.</p><p>It isn't in the app yet, and there's no date for it.</p></div>
-<p>Today, notes are plain markdown files on your disk. Paperkites doesn't encrypt them itself.</p>
+<p>Today, notes are plain markdown files on your disk. Paperkites encrypts only the notes you lock (see <a href="locked-notes.html">Locked notes</a>).</p>
+<h2 id="touch-id-and-face-id">Touch ID and Face ID</h2>
+<div class="soon"><p><span class="tag">coming soon</span>Lock a note with your fingerprint or face instead of a password. Approve a new device once from one you already use, and a note locked with Face ID on your phone opens with Touch ID on your Mac.</p><p>The two kinds never cross: a password note always needs its password, and a Touch ID note never opens with one.</p></div>
 <h2 id="sync-it-yourself-today">Sync it yourself today</h2>
 <p>You don't have to wait. Your vault is a folder of plain files, so anything that syncs folders syncs your notes.</p>
 <ol><li>Put your notes folder somewhere that syncs: an iCloud Drive or Dropbox folder, a git repository, or any other folder-syncing tool.</li><li>In Paperkites, run <code>:vault</code> followed by that folder, for example <code>:vault ~/Dropbox/notes</code>. Nothing is copied or moved; Paperkites reads the folder where it is.</li><li>Do the same on your other machines.</li></ol>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-799TZZK33V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-799TZZK33V');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Locked notes — Paperkites docs</title>
+<meta name="description" content="Lock a note with a password of its own in Paperkites: its text and images are encrypted on disk, and it opens only with that password.">
+<link rel="canonical" href="https://paperkites.app/docs/locked-notes">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="../index.html#join" class="btn btn-ghost btn-sm">Coming soon</a>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="index.html">Overview</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="writing.html">Writing</a></li>
+<li><a href="todos.html">Todos</a></li>
+<li><a href="finding.html">Finding things</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="graph.html">The graph</a></li>
+<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="themes.html">Themes</a></li>
+<li><a href="your-files.html">Your files</a></li>
+<li><a href="locked-notes.html" aria-current="page">Locked notes</a></li>
+<li><a href="keys-and-commands.html">Keys and commands</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / locked-notes</div>
+    <h1>Locked notes<span class="dot">.</span></h1>
+<p>Lock a note with a password of its own. Its text and its images are encrypted on disk, and it opens only with that password. The title stays readable, so you can still find it and link to it.</p>
+<p>Each note has its own password. Locking one note says nothing about any other.</p>
+<h2 id="locking-a-note">Locking a note</h2>
+<ol><li>Open the note, and press <kbd>esc</kbd> so the caret leaves the text.</li><li>Run <code>:lock</code>.</li><li>Type a password, then the same again, and press <kbd>⏎</kbd>.</li></ol>
+<p>The note is locked at once: its text goes, and in its place is the password prompt. The images in the note are encrypted along with it.</p>
+<div class="soon"><p><strong>A forgotten password can't be recovered.</strong> Paperkites keeps no copy of it anywhere, and there's no reset. If you forget it, the note stays locked for good.</p></div>
+<h2 id="opening-a-locked-note">Opening a locked note</h2>
+<p>A locked note opens on a padlock and a password field, with the caret already in it. Type the password and press <kbd>⏎</kbd>. Opening takes about a second, on purpose: it makes guessing passwords slow.</p>
+<div class="table-wrap"><table><thead><tr><th>Key</th><th>Does</th></tr></thead><tbody><tr><td><kbd>⏎</kbd></td><td>unlock</td></tr><tr><td><kbd>esc</kbd></td><td>leave it locked, with the keys free for <kbd>:</kbd></td></tr><tr><td><strong>show</strong> (<kbd>Tab</kbd> reaches it)</td><td>show the password as you type it, or hide it again</td></tr></tbody></table></div>
+<p>If caps lock is on, the prompt says so. A wrong password says <em>wrong password</em>, and nothing else happens.</p>
+<p>Once open, a locked note works like any other: you write, and it saves as you go, encrypted. It stays open until you lock it again with <code>:lock</code>, lock everything with <code>:lockall</code>, or quit. Every locked note is locked again the next time Paperkites starts.</p>
+<h2 id="what-stays-hidden">What stays hidden</h2>
+<p>Paperkites never reads a locked note's text into its index, even while it's open. So a locked note's words don't turn up anywhere else:</p>
+<ul><li><strong>In the list</strong> it shows its title, and where its first lines would be, two blacked-out bars.</li><li><strong>Search</strong> (<kbd>/</kbd>) doesn't look inside it.</li><li>Its <strong>#tags</strong>, <strong>[[links]]</strong> and <strong>@mentions</strong> don't count: not on tag pages, in backlinks, on person pages or in the graph.</li></ul>
+<p>Its title does stay visible: in the list, in ⌘K, in the graph, and as the file's name. Links <em>to</em> a locked note still work. Give it a title you don't mind being seen.</p>
+<h2 id="images">Images</h2>
+<ul><li>Images already in a note are encrypted when you lock it. The plain originals are removed.</li><li>An image pasted or dropped into a locked note is encrypted before it's written.</li><li>If another note shows the same image, the plain original stays for that note, and the status pill tells you.</li></ul>
+<p>An encrypted image is shown only while its note is open.</p>
+<h2 id="a-new-password">A new password</h2>
+<p>Open the note with its password, press <kbd>esc</kbd>, and run <code>:passwd</code>. Type the new password twice and press <kbd>⏎</kbd>.</p>
+<p>The note and its images get a new key as well as a new password, so the old password opens nothing written from then on. Copies made before the change, in a backup or a sync history, still open with the old one.</p>
+<h2 id="removing-a-lock">Removing a lock</h2>
+<p>Open the note with its password, press <kbd>esc</kbd>, and run <code>:unlocknote</code>. The note is a plain markdown file again, its images are plain image files again, and its tags, links and mentions count once more.</p>
+<p>A locked note's lock can't be changed or taken off without its password.</p>
+<h2 id="commands">Commands</h2>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:lock</code></td><td>lock this note with a password; on an open locked note, lock it now</td></tr><tr><td><code>:unlock</code></td><td>put the caret in this note's password field</td></tr><tr><td><code>:lockall</code></td><td>lock every open locked note</td></tr><tr><td><code>:passwd</code></td><td>a new password for this locked note</td></tr><tr><td><code>:unlocknote</code></td><td>take this note's lock off: plain files again</td></tr></tbody></table></div>
+<h2 id="on-disk">On disk</h2>
+<p>A locked note is still a markdown file with its title on top. Below it are two encrypted blocks:</p>
+<pre><code>---
+id: 01J8Z3K4QW7T9V2N5M6B1C0D8E
+created: 2026-09-24T08:15:00Z
+lock: password
+---
+# Trip
+
+-----BEGIN AGE ENCRYPTED FILE-----
+…the note's key, encrypted with your password…
+-----END AGE ENCRYPTED FILE-----
+
+-----BEGIN AGE ENCRYPTED FILE-----
+…the note's text, encrypted with that key…
+-----END AGE ENCRYPTED FILE-----</code></pre>
+<p>Its images are <code>attachments/&lt;id&gt;.age</code>, encrypted with the same key.</p>
+<p>Neither block is a key anyone can use: the first opens only with your password, and the second only with what's in the first. So a locked note is safe to sync, back up or keep in git like any other file.</p>
+<p>Both blocks are standard <a href="https://age-encryption.org" target="_blank" rel="noopener">age</a> files, so a note opens without Paperkites too: <code>age -d</code> with the password gives the note's key, and <code>age -d -i</code> with that key gives its text.</p>
+<h2 id="what-a-lock-doesnt-do">What a lock doesn't do</h2>
+<ul><li><strong>It can't reach old copies.</strong> If a note was plain before you locked it, earlier versions may still be in your sync history, a backup or git. For something secret, lock the note first and write after.</li><li><strong>It's only as strong as the password.</strong> Anyone with a copy of the file can try passwords on their own machine. A few random words make a password that can't be guessed; a short one can.</li><li><strong>The title, dates and the file's size stay visible.</strong></li><li><strong>An open note is open.</strong> While it's unlocked, its text is on your screen and in Paperkites' memory.</li></ul>
+<div class="soon"><p><span class="tag">coming soon</span><strong>Touch ID and Face ID.</strong> Notes locked with your fingerprint or face rather than a password, that open on any of your devices you've approved. A password note will always need its password, and a Touch ID note will never open with one.</p></div>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="your-files.html"><span>previous</span>Your files</a><a class="next" href="keys-and-commands.html"><span>next</span>Keys and commands</a></nav>
+    <footer class="site-footer">
+      <span>© 2026 paperkites</span>
+      <a href="https://projectlighthouse.io" target="_blank" rel="noopener">by<span>projectlighthouse</span><img src="../images/lighthouse.svg" alt="" width="9" height="28"></a>
+    </footer>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/locked-notes.md</span>
+  <span class="gap"></span>
+  <a href="../index.html">home</a>
+  <a href="../privacy.html">privacy</a>
+</footer>
+
+</body>
+</html>

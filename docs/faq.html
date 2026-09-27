@@ -50,6 +50,7 @@
 <li><a href="settings.html">Settings</a></li>
 <li><a href="themes.html">Themes</a></li>
 <li><a href="your-files.html">Your files</a></li>
+<li><a href="locked-notes.html">Locked notes</a></li>
 <li><a href="keys-and-commands.html">Keys and commands</a></li>
 <li><a href="faq.html" aria-current="page">FAQ</a></li>
 <li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
@@ -86,6 +87,12 @@
 <p>Yes. In <code>:settings</code>, under Writing, turn vim keys off, or run <code>:vim off</code>. The editor is then always writing.</p>
 <h2 id="my-theme-isnt-showing">My theme isn't showing.</h2>
 <p>A theme with a mistake isn't used; paper stands in, and the status pill shows the file, line and problem. Fix it and save, or run <code>:theme reload</code>. Check that the first line says <code>/* kites-theme: light */</code> or <code>dark</code>, so it's listed in the right row. See <a href="themes.html#when-a-theme-has-a-mistake">Themes</a>.</p>
+<h2 id="can-i-lock-a-note">Can I lock a note?</h2>
+<p>Yes, with a password of its own: <code>:lock</code> in the note. Its text and images are encrypted on disk, and it opens only with that password. See <a href="locked-notes.html">Locked notes</a>.</p>
+<h2 id="i-forgot-a-notes-password">I forgot a note's password.</h2>
+<p>It can't be recovered. Paperkites keeps no copy of the password and has no reset, so the note stays locked. Only its title can still be read.</p>
+<h2 id="is-a-locked-note-safe-to-sync">Is a locked note safe to sync?</h2>
+<p>Yes. Everything below its title is encrypted, and nothing in the file opens without the password. Anyone with a copy can try to guess the password, though, so use a long one: a few random words.</p>
 <h2 id="can-i-use-a-different-folder">Can I use a different folder?</h2>
 <p>Yes. <code>:vault ~/somewhere/else</code> switches to another folder. Nothing is copied or moved, and you can switch back the same way.</p>
 <h2 id="can-i-delete-the-welcome-notes">Can I delete the welcome notes?</h2>

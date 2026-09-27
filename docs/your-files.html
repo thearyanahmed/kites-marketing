@@ -50,6 +50,7 @@
 <li><a href="settings.html">Settings</a></li>
 <li><a href="themes.html">Themes</a></li>
 <li><a href="your-files.html" aria-current="page">Your files</a></li>
+<li><a href="locked-notes.html">Locked notes</a></li>
 <li><a href="keys-and-commands.html">Keys and commands</a></li>
 <li><a href="faq.html">FAQ</a></li>
 <li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
@@ -72,11 +73,13 @@
   2026-09-24.md
   Pics/
     photo.png
+  attachments/
+    01J8Z….age
   fragments/
   people/
     dasha.md
   .trash/</code></pre>
-<div class="table-wrap"><table><thead><tr><th>Where</th><th>What</th></tr></thead><tbody><tr><td><code>&lt;Title&gt;.md</code></td><td>a note, named after its title. Renaming the note renames the file.</td></tr><tr><td><code>fragments/</code></td><td>one file per fragment</td></tr><tr><td><code>people/</code></td><td>person notes, named after their username (see <a href="people.html">People</a>)</td></tr><tr><td><code>.trash/</code></td><td>notes you've deleted; never indexed, so never in lists or search</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>Where</th><th>What</th></tr></thead><tbody><tr><td><code>&lt;Title&gt;.md</code></td><td>a note, named after its title. Renaming the note renames the file.</td></tr><tr><td><code>fragments/</code></td><td>one file per fragment</td></tr><tr><td><code>people/</code></td><td>person notes, named after their username (see <a href="people.html">People</a>)</td></tr><tr><td><code>attachments/</code></td><td>images pasted or dropped into notes; a locked note's are encrypted, as <code>.age</code> files</td></tr><tr><td><code>.trash/</code></td><td>notes you've deleted; never indexed, so never in lists or search</td></tr></tbody></table></div>
 <p>Images can live anywhere in the vault; a note refers to them by path, such as <code>![alt](Pics/photo.png)</code>.</p>
 <h2 id="front-matter">Front matter</h2>
 <p>A note can start with a block of front matter between two <code>---</code> lines. Paperkites leaves it alone, apart from three lines:</p>
@@ -86,7 +89,7 @@ id: 01J8Z3K4QW7T9V2N5M6B1C0D8E
 pinned: true
 ---</code></pre>
 <div class="table-wrap"><table><thead><tr><th>Key</th><th>What Paperkites does with it</th></tr></thead><tbody><tr><td><code>created</code></td><td>when the note was made; shown in the gutter</td></tr><tr><td><code>id</code></td><td>the note's identity, a ULID. A rename keeps it.</td></tr><tr><td><code>pinned</code></td><td>added when you pin a note and taken out when you unpin it, so the file comes back byte for byte</td></tr></tbody></table></div>
-<p>Person notes also use <code>type</code>, <code>username</code> and <code>aliases</code>. Anything else you put in front matter stays as you wrote it.</p>
+<p>A locked note also has <code>lock: password</code>, and below its title its text is encrypted (see <a href="locked-notes.html#on-disk">Locked notes</a>). Person notes also use <code>type</code>, <code>username</code> and <code>aliases</code>. Anything else you put in front matter stays as you wrote it.</p>
 <h2 id="pinning">Pinning</h2>
 <p>Pinning keeps a note at the top of the lists. <code>:pin</code> and <code>:unpin</code> work in a note, and <kbd>x</kbd> works on a row in any list. <code>:pinned</code> lists everything pinned. On disk, pinning is just the <code>pinned: true</code> line above.</p>
 <h2 id="editing-outside-paperkites">Editing outside Paperkites</h2>
@@ -102,7 +105,7 @@ pinned: true
 <p>The trash is also in <code>:settings</code>, under Vault. It's an ordinary folder; its name starts with a dot, so some file browsers hide it.</p>
 <h2 id="settings-and-themes-live-elsewhere">Settings and themes live elsewhere</h2>
 <p>Your settings are kept on this device, in the app's data folder, outside the vault. Theme files live in <code>~/.kites/themes/</code>. See <a href="settings.html">Settings</a> and <a href="themes.html">Themes</a>.</p>
-    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="themes.html"><span>previous</span>Themes</a><a class="next" href="keys-and-commands.html"><span>next</span>Keys and commands</a></nav>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="themes.html"><span>previous</span>Themes</a><a class="next" href="locked-notes.html"><span>next</span>Locked notes</a></nav>
     <footer class="site-footer">
       <span>© 2026 paperkites</span>
       <a href="https://projectlighthouse.io" target="_blank" rel="noopener">by<span>projectlighthouse</span><img src="../images/lighthouse.svg" alt="" width="9" height="28"></a>
