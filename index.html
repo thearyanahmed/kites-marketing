@@ -198,6 +198,17 @@ input::placeholder{color:#838383;opacity:1}
 }
 /* three nav links overflow a phone: the roadmap is a scroll away there */
 @media (max-width:420px){.nav-wide{display:none}}
+
+/* obsidian: what carries over */
+.ob-table table{width:100%;min-width:640px;border-collapse:collapse;table-layout:fixed}
+.ob-table th,.ob-table td{padding:11px 24px;text-align:left;vertical-align:middle;border-bottom:1px solid #f0f0f0;font-size:15px;line-height:1.5;color:#3a3a3a}
+.ob-table td:first-child{color:#202020}
+.ob-table th{padding:12px 24px;border-bottom:1px solid #e8e8e8;font-family:var(--font-mono);font-size:12px;font-weight:400;color:#6e6e6e;text-transform:lowercase}
+.ob-table tbody tr:last-child td{border-bottom:0}
+.ob-table tbody tr:hover td{background:#f7f7f7}
+.ob-pills{display:flex;flex-wrap:wrap;gap:6px}
+.ob-pills code{padding:2px 9px;border-radius:999px;background:#f4f4f4;font-family:var(--font-mono);font-size:12.5px;color:#3a3a3a;white-space:nowrap}
+.ob-ok{display:inline-flex;gap:8px;align-items:baseline}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -414,6 +425,62 @@ people/elizabeth.md
       </div>
       <p style="margin:14px 0 0;font-size:16px;line-height:1.7;color:#424242">See <span style="color:#a8541f">[[cluster quotas]]</span>.</p>
     </div>
+  </div>
+</section>
+
+<section id="obsidian" data-file="obsidian" style="padding:96px 32px;box-sizing:border-box">
+  <div style="max-width:1120px;margin:0 auto">
+    <div data-reveal="0" style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">coming from obsidian</div>
+    <div data-reveal="60" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:24px 64px;align-items:end;margin-top:16px">
+      <h2 style="margin:0;font-size:clamp(40px,6vw,64px);font-weight:500;line-height:1.05;letter-spacing:-0.04em;text-wrap:balance">Bring your vault. Leave nothing behind<span style="color:#c2622f">.</span></h2>
+      <p style="max-width:480px;margin:0;font-size:17px;line-height:1.7;color:#6e6e6e;text-wrap:pretty">Open your Obsidian vault as it is. paperkites reads the same markdown files, with the same wiki links, embeds, callouts and properties. Nothing needs converting, and you can use both apps on the same folder.</p>
+    </div>
+    <div data-reveal="120" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:48px;padding:20px 24px;border-radius:16px;background:#f4f4f4">
+      <span style="display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:999px;box-sizing:border-box;background:#ffffff;box-shadow:var(--shadow-sm);font-size:15px;color:#202020">Obsidian</span>
+      <span aria-hidden="true" style="font-family:var(--font-mono);font-size:13px;color:#838383">→</span>
+      <span style="display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:999px;box-sizing:border-box;background:#202020;color:#fcfcfc;font-family:var(--font-mono);font-size:13px">~/Notes/vault</span>
+      <span aria-hidden="true" style="font-family:var(--font-mono);font-size:13px;color:#838383">←</span>
+      <span style="display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:999px;box-sizing:border-box;background:#ffffff;box-shadow:var(--shadow-sm);font-size:15px;color:#202020">paperkites</span>
+      <span style="font-size:15px;color:#6e6e6e">one folder, both apps, at the same time</span>
+      <span style="display:inline-flex;align-items:center;gap:12px;margin-left:auto;font-size:15px">
+        <span><span style="font-weight:500;color:#202020;font-variant-numeric:tabular-nums">24 of 24</span> <span style="color:#6e6e6e">features carry over</span></span>
+        <span aria-hidden="true" style="display:inline-block;width:96px;height:6px;border-radius:999px;background:#c2622f"></span>
+      </span>
+    </div>
+    <h3 data-reveal="140" style="margin:56px 0 0;font-size:24px;font-weight:500;letter-spacing:-0.02em">What carries over</h3>
+    <div data-reveal="160" class="ob-table" style="margin-top:24px;border:1px solid #e8e8e8;border-radius:12px;background:#ffffff;overflow-x:auto">
+      <table>
+        <colgroup><col style="width:33.3%"><col style="width:36.4%"><col style="width:30.3%"></colgroup>
+        <thead><tr><th scope="col">obsidian feature</th><th scope="col">example</th><th scope="col">in paperkites</th></tr></thead>
+        <tbody>
+        <tr><td>Wiki links</td><td><span class="ob-pills"><code>[[Note]]</code><code>[[Note&#124;alias]]</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Links to headings and blocks</td><td><span class="ob-pills"><code>[[Note#Heading]]</code><code>[[Note#^block]]</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Links by file name, path or alias</td><td><span class="ob-pills"><code>[[Folder/Note]]</code><code>aliases:</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Block ids</td><td><span class="ob-pills"><code>^block-id</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>obsidian:// links</td><td><span class="ob-pills"><code>obsidian://open?file=…</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Image embeds</td><td><span class="ob-pills"><code>![[photo.png&#124;300]]</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Found anywhere in the vault</span></td></tr>
+        <tr><td>Note embeds</td><td><span class="ob-pills"><code>![[Note#Heading]]</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Audio, video and PDF embeds</td><td><span class="ob-pills"><code>![[talk.mp4]]</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Callouts, foldable</td><td><span class="ob-pills"><code>&gt; [!tip]-</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Highlights</td><td><span class="ob-pills"><code>==text==</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Strikethrough</td><td><span class="ob-pills"><code>~~text~~</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Comments</td><td><span class="ob-pills"><code>%%hidden%%</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Footnotes</td><td><span class="ob-pills"><code>[^1]</code><code>^[inline]</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Math</td><td><span class="ob-pills"><code>$e^{iπ}$</code><code>$$…$$</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Tags and nested tags</td><td><span class="ob-pills"><code>#tag/sub</code><code>tags:</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Tasks, custom statuses too</td><td><span class="ob-pills"><code>- [ ]</code><code>- [x]</code><code>- [?]</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Properties</td><td><span class="ob-pills"><code>aliases</code><code>tags</code><code>cssclasses</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Kept as written</span></td></tr>
+        <tr><td>Syntax-highlighted code</td><td><span class="ob-pills"><code>```ts</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Mermaid diagrams</td><td><span class="ob-pills"><code>```mermaid</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Tables</td><td><span class="ob-pills"><code>&#124; a &#124; b &#124;</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>HTML</td><td><span class="ob-pills"><code>&lt;kbd&gt;</code><code>&lt;details&gt;</code><code>&lt;br&gt;</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>iframes shown as a link, never loaded</span></td></tr>
+        <tr><td>Search blocks</td><td><span class="ob-pills"><code>```query</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Supported</span></td></tr>
+        <tr><td>Dataview</td><td><span class="ob-pills"><code>```dataview</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>LIST, TABLE and TASK. DataviewJS is never run</span></td></tr>
+        <tr><td>Bases</td><td><span class="ob-pills"><code>```base</code></span></td><td><span class="ob-ok"><span aria-hidden="true" style="color:#c2622f">✓</span>Table and list views</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-reveal="180" style="margin:20px 0 0;font-size:14px;line-height:1.6;color:#6e6e6e">paperkites never rewrites your notes into its own format. The first time it sees a note, it adds an <code style="font-family:var(--font-mono);font-size:12.5px;color:#202020">id:</code> to the note&#8217;s properties so links survive renames.</p>
   </div>
 </section>
 
