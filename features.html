@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-799TZZK33V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-799TZZK33V');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Features — Paperkites</title>
+<meta name="description" content="Everything Paperkites does today, in one list: capture, notes, todos, folders, search, people, the graph, locked notes, themes and your files.">
+<link rel="canonical" href="https://paperkites.app/features">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap">
+<style>
+html,body{margin:0;background:#fcfcfc;color:#26241f;-webkit-font-smoothing:antialiased}
+a{color:#a8541f;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:#1f1e1b}
+main h2,main ul{max-width:620px}
+main h2{margin:0 0 8px 80px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;font-weight:600;color:#1f1e1b}
+main ul{margin:0 0 0 80px;padding:0 0 0 18px}
+main li{margin:2px 0}
+code{font-family:'IBM Plex Mono',monospace;font-size:0.82em;color:#424242}
+.premium{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#a8541f}
+@media (max-width:560px){main h2,main ul{margin-left:0}}
+</style>
+</head>
+<body>
+<div style="min-height:100vh;display:flex;flex-direction:column;background:#fcfcfc;font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.75">
+<main style="flex:1;width:100%;max-width:740px;margin:0 auto;padding:56px 20px 128px;box-sizing:border-box">
+  <div style="display:flex;flex-wrap:wrap">
+    <div style="flex:0 0 80px"></div>
+    <div style="flex:1 1 300px;min-width:0;max-width:620px">
+      <a href="index.html" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;font-weight:600;color:#1f1e1b;text-decoration:none">paperkites</a>
+      <h1 style="margin:88px 0 0;font-weight:600;font-size:40px;line-height:1.15;letter-spacing:-0.015em;color:#1f1e1b">Features</h1>
+      <p style="margin:16px 0 0;color:#424242">Everything Paperkites does today. <span class="premium">premium</span> marks what comes with the one-time purchase; the rest is free for good.</p>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:40px;margin-top:48px">
+  <section>
+    <h2>Capture</h2>
+    <ul>
+      <li>The app opens on the capture box. ⌘↩ keeps a thought as a fragment (a short note without a title), ⌘E opens it as a full note.</li>
+      <li>⏎ is a newline and never saves. <code>esc</code> never throws a draft away, even across a quit.</li>
+      <li>Tags render live as you type.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>The list</h2>
+    <ul>
+      <li>Everything, newest first, flat. The date shows in the gutter once per day, no headers.</li>
+      <li><code>j</code> / <code>k</code>, <code>gg</code> / <code>G</code>, <code>[d</code> / <code>]d</code> by day, ⏎ opens, <code>x</code> pins.</li>
+      <li>Previews: a note's opening lines, its todos and up to two images.</li>
+      <li>Two layouts, the theme's choice: ledger or stream.</li>
+      <li>10,000 items scroll without dropping frames.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Notes</h2>
+    <ul>
+      <li>A live-preview markdown editor with optional vim keys. Only the block you're writing in shows its markdown.</li>
+      <li>Nested tags (<code>#a/b</code>, <code>#multi word#</code>) and wiki links (<code>[[Title|alias]]</code>, <code>[[Title#Heading]]</code>). Retitling a note rewrites every link to it; <code>:undo</code> reverts.</li>
+      <li>Backlinks with the sentence each link sits in.</li>
+      <li>The gutter: created date, tags, link counts.</li>
+      <li>A format bar on selected text (⌘B, ⌘I, ⌘K).</li>
+      <li>Images: paste or drop into <code>attachments/</code>, captions, view large. Sizing images is <span class="premium">premium</span>.</li>
+      <li>Tables, Mermaid diagrams, LaTeX math, and <code>:format</code> to tidy a note's markdown.</li>
+      <li><code>gd</code> follows a link, <code>K</code> peeks at it, <code>gt</code> opens a tag, ⌃o / ⌃i go back and forward.</li>
+      <li><code>:zen</code> fades everything but what you're writing. <code>:daily</code> opens today's note.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Obsidian vaults</h2>
+    <ul>
+      <li>Links find notes by path, file name, title or alias; heading and block links; note, media and <code>.base</code> embeds.</li>
+      <li>Callouts, highlights, comments, footnotes, block ids, custom task statuses, safe HTML.</li>
+      <li>Query, Dataview and Bases blocks (a subset; DataviewJS is never run).</li>
+      <li><code>obsidian://</code> links and front matter <code>tags:</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Todos</h2>
+    <ul>
+      <li>Checkboxes in notes with seven states: open, done, cancelled, moved, scheduled, in progress, priority.</li>
+      <li><code>:todos</code>: every todo in the vault, grouped Overdue · Today · Upcoming · No date.</li>
+      <li>Task markers. <span class="premium">premium</span></li>
+      <li>Areas and projects, with Inbox, Today, Upcoming, Anytime, Someday and Logbook. <span class="premium">premium</span></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Finding things</h2>
+    <ul>
+      <li>⌘K: notes, fragments, tags and commands in one ranked list, in under 50 ms on 10,000 items.</li>
+      <li><code>/</code>: search the text of every note, grouped by note; <code>#tag</code> and <code>@name</code> narrow it. Under 100 ms on 10,000 notes.</li>
+      <li><code>:tags</code>: the tag tree. Tag pages show child tags and the tags often used with them.</li>
+      <li>⌃r renames a tag in every file at once; <code>:undo</code> puts it back.</li>
+      <li><code>#empty_kite</code> finds everything without a tag; <code>:orphans</code> finds notes nothing links to.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Folders and the sidebar</h2>
+    <ul>
+      <li>⌘\ shows the sidebar: All, Pinned and Untagged at the top, Settings at the foot, the rest scrolls.</li>
+      <li>Folders mirror the vault on disk, empty ones too, each with its note count. <code>n</code> makes a folder or a subfolder.</li>
+      <li>A folder's page lists every note in it and links to its subfolders.</li>
+      <li>A vault without folders shows the tag tree instead. People are listed under either.</li>
+      <li>Keyboard only: <code>j</code> / <code>k</code>, <code>l</code> / <code>h</code>, ⏎, <code>esc</code>. Open folders and tags are remembered.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>People <span class="premium">premium</span></h2>
+    <ul>
+      <li><code>@mentions</code> point at person notes, with aliases and <code>@</code> completion.</li>
+      <li>A page per person: every sentence that mentions them, and who and what often comes up with them.</li>
+      <li>⌃r renames a person everywhere; <code>:undo</code> reverts.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Graph <span class="premium">premium</span></h2>
+    <ul>
+      <li><code>:graph</code> or <code>gr</code>: a live canvas. Zoom, pan and drag with the mouse, or <code>h</code> <code>j</code> <code>k</code> <code>l</code>.</li>
+      <li>Tags are nodes; notes hang off the tags they carry.</li>
+      <li>Laid out in the background and cached, so it opens settled.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Locked notes <span class="premium">premium</span></h2>
+    <ul>
+      <li><code>:lock</code> encrypts a note with a password that can't be recovered. <code>:unlock</code>, <code>:lockall</code>, <code>:passwd</code>.</li>
+      <li>A locked note's text, tags, links and attachments never sit readable on disk or in the index.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Organising</h2>
+    <ul>
+      <li>Pins, the trash (restore or empty), <code>:delete</code>.</li>
+      <li>Splits: ⌃w v, ⌃w w, ⌃w q, ⌃w o.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Look</h2>
+    <ul>
+      <li>Themes: Paper, Daylight, Fjord, Studio, Pine. Themes past the default light and dark are <span class="premium">premium</span>.</li>
+      <li>Your own CSS themes in <code>~/.kites/themes/</code>, checked line by line.</li>
+      <li><code>:settings</code> with a live preview: light, dark or auto, font, size, spacing, width, vim keys, spell check, the format bar.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Your files</h2>
+    <ul>
+      <li>Plain <code>.md</code> files. Atomic saves; front matter left alone apart from <code>id</code>, <code>created</code> and <code>pinned</code>.</li>
+      <li>Edits made elsewhere (git, sync, another editor) show up while the app runs.</li>
+      <li><code>:vault</code> points at another folder. A big vault opens in the background.</li>
+      <li>Safe with iCloud on more than one Mac: the same id on every Mac, conflict copies kept.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>The app</h2>
+    <ul>
+      <li>Updates itself (<code>:update</code> now). <code>:bug</code> and <code>:logs</code> for problems.</li>
+      <li>The core restarts itself if it crashes.</li>
+      <li>No account, no analytics in the app, no telemetry.</li>
+      <li>Premium is bought once; <code>:licence</code> keys are checked offline.</li>
+    </ul>
+  </section>
+  </div>
+</main>
+<footer style="width:100%;max-width:740px;margin:0 auto;padding:0 20px 40px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6e6e6e">
+  <span>© 2026 paperkites</span>
+  <a href="https://projectlighthouse.io" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;color:#6e6e6e;text-decoration:none">by<span style="color:#202020">projectlighthouse</span><img src="images/lighthouse.svg" alt="" width="9" height="28" style="display:block;height:28px;width:auto"></a>
+</footer>
+<footer style="background:#f0f0f0;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.5;color:#56534d">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;max-width:1200px;margin:0 auto;padding:9px 20px;box-sizing:border-box">
+    <span style="padding:1px 7px;border-radius:3px;background:#a8541f;color:#fcfcfc;font-weight:500;letter-spacing:0.02em">NORMAL</span>
+    <span style="color:#1f1e1b">paperkites</span>
+    <span>features</span>
+    <span style="flex:1 1 0;min-width:0"></span>
+    <a href="index.html" style="color:#a8541f">paperkites.app</a>
+  </div>
+</footer>
+</div>
+</body>
+</html>
