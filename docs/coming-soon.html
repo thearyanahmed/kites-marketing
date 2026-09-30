@@ -69,7 +69,7 @@
 <div class="soon"><p><span class="tag">coming soon</span>Lock a note with your fingerprint or face instead of a password. Approve a new device once from one you already use, and a note locked with Face ID on your phone opens with Touch ID on your Mac.</p><p>The two kinds never cross: a password note always needs its password, and a Touch ID note never opens with one.</p></div>
 <h2 id="sync-it-yourself-today">Sync it yourself today</h2>
 <p>You don't have to wait. Your vault is a folder of plain files, so anything that syncs folders syncs your notes.</p>
-<ol><li>Put your notes folder somewhere that syncs: an iCloud Drive or Dropbox folder, a git repository, or any other folder-syncing tool.</li><li>In Paperkites, run <code>:vault</code> followed by that folder, for example <code>:vault ~/Dropbox/notes</code>. Nothing is copied or moved; Paperkites reads the folder where it is.</li><li>Do the same on your other machines.</li></ol>
+<ol><li>Put your notes folder somewhere that syncs: a git repository or any other folder-syncing tool, or, with Premium, an iCloud Drive or Dropbox folder.</li><li>In Paperkites, run <code>:vault</code> followed by that folder, for example <code>:vault ~/Dropbox/notes</code>. Nothing is copied or moved; Paperkites reads the folder where it is.</li><li>Do the same on your other machines.</li></ol>
 <p>Paperkites watches the folder while it runs, so a note that arrives from another machine shows up within a moment. If a note you're editing changes underneath you, Paperkites asks you to choose: <code>:reload</code> takes the file's version, <code>:w</code> writes yours over it.</p>
 <h3 id="with-git">With git</h3>
 <pre><code>cd ~/notes
