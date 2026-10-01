@@ -16,7 +16,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy — Paperkites</title>
-<meta name="description" content="What the Paperkites website collects: visit counts through Google Analytics. No forms, nothing you type.">
+<meta name="description" content="What Paperkites collects: visit counts on this site if you say yes, an email and order id when you buy, and nothing from the app.">
 <link rel="canonical" href="https://paperkites.app/privacy">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
@@ -26,6 +26,8 @@
 html,body{margin:0;background:#fcfcfc;color:#26241f;-webkit-font-smoothing:antialiased}
 a{color:#a8541f;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{color:#1f1e1b}
+.row p{margin:0}
+.row p+p{margin-top:16px}
 </style>
 </head>
 <body>
@@ -39,7 +41,10 @@ a:hover{color:#1f1e1b}
     </div>
   </div>
   <div style="display:flex;flex-direction:column;gap:40px;margin-top:48px">
-    <div style="display:flex;flex-wrap:wrap;row-gap:6px"><div style="flex:0 0 80px;padding-top:4px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#a8541f">what</div><p style="flex:1 1 300px;min-width:0;max-width:620px;margin:0">Visits to this site, through Google Analytics, which sets cookies to count them. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses this data</a>. There are no forms, so nothing you type is collected.</p></div>
+    <div class="row" style="display:flex;flex-wrap:wrap;row-gap:6px"><div style="flex:0 0 80px;padding-top:4px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#a8541f">website</div><div style="flex:1 1 300px;min-width:0;max-width:620px"><p>Visits to this site are counted with Google Analytics, but only after you accept cookies. Until then, and if you decline, Google Analytics sets no cookies. Your choice is kept in your browser, and you can change it any time from <button type="button" data-cookie-settings style="padding:0;border:0;background:none;font:inherit;color:#a8541f;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;cursor:pointer">cookie settings</button>. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses this data</a>. There are no forms here, so nothing you type is collected.</p></div></div>
+    <div class="row" style="display:flex;flex-wrap:wrap;row-gap:6px"><div style="flex:0 0 80px;padding-top:4px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#a8541f">purchase</div><div style="flex:1 1 300px;min-width:0;max-width:620px"><p>When you buy Premium, payment is processed by Stripe, under <a href="https://stripe.com/privacy">its own privacy policy</a>; your card details go to Stripe, never to us. We keep your email and order id, to deliver your licence key and to send it again if you lose it. Nothing else, and it is never sold or shared.</p></div></div>
+    <div class="row" style="display:flex;flex-wrap:wrap;row-gap:6px"><div style="flex:0 0 80px;padding-top:4px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#a8541f">the app</div><div style="flex:1 1 300px;min-width:0;max-width:620px"><p>Paperkites has no telemetry and no account. Your notes stay on your Mac. The app goes online only to check for updates, and to open the purchase page in your browser when you ask it to. Licence keys are checked offline.</p></div></div>
+    <div class="row" style="display:flex;flex-wrap:wrap;row-gap:6px"><div style="flex:0 0 80px;padding-top:4px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#a8541f">contact</div><div style="flex:1 1 300px;min-width:0;max-width:620px"><p>Questions, or want your purchase data deleted? <a href="mailto:support@paperkites.app">support@paperkites.app</a>.</p></div></div>
   </div>
 </main>
 <footer style="width:100%;max-width:740px;margin:0 auto;padding:0 20px 40px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6e6e6e">
