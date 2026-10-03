@@ -132,6 +132,7 @@ body {
 html,body{margin:0;background:#fcfcfc;color:#202020;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
 a{color:#a8541f;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{color:#202020}
+.climate-btn:hover{opacity:0.9}
 ::selection{background:rgba(194,98,47,0.18)}
 input::placeholder{color:#838383;opacity:1}
 [hidden]{display:none !important}
@@ -148,6 +149,7 @@ input::placeholder{color:#838383;opacity:1}
 .btn-sm{height:28px;padding:0 12px;font-size:14px}
 .btn-ghost{background:var(--surface-raised);color:var(--ink);box-shadow:var(--shadow-sm)}
 .btn-ghost:hover{color:var(--ink);box-shadow:var(--shadow-md)}
+button:disabled{opacity:0.5;cursor:not-allowed}
 
 /* Hero */
 .live{flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:#c2622f;animation:kpulse 2s ease-out infinite}
@@ -208,7 +210,7 @@ input::placeholder{color:#838383;opacity:1}
 
 <nav style="display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1120px;margin:0 auto;padding:20px 24px;box-sizing:border-box">
   <div style="display:flex;align-items:center;gap:10px;font-size:17px;font-weight:500;letter-spacing:-0.01em"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</div>
-  <div style="display:flex;align-items:center;gap:8px"><a href="docs/index.html" class="btn btn-ghost btn-sm">Docs</a><a href="#roadmap" class="btn btn-ghost btn-sm nav-wide">Roadmap</a><a href="https://github.com/thearyanahmed/paperkites-releases/releases/latest" class="btn btn-ghost btn-sm">Download</a></div>
+  <div style="display:flex;align-items:center;gap:8px"><a href="docs/index.html" class="btn btn-ghost btn-sm">Docs</a><a href="#roadmap" class="btn btn-ghost btn-sm nav-wide">Roadmap</a><button type="button" disabled class="btn btn-ghost btn-sm">Download</button></div>
 </nav>
 
 <header data-file="readme" style="max-width:1120px;margin:0 auto;padding:12vh 24px 0;box-sizing:border-box">
@@ -623,15 +625,49 @@ people/elizabeth.md
   <p data-reveal="200" style="max-width:600px;margin:24px 0 0;font-size:15px;line-height:1.7;color:#6e6e6e;text-wrap:pretty">The key is checked on your machine, never online, and lives on your Mac, for every vault you open. Your notes are plain files either way, and a locked note always opens, licence or not.</p>
 </section>
 
+<section data-file="planet" aria-label="For the planet" style="max-width:1120px;margin:160px auto 0;padding:0 24px;box-sizing:border-box">
+  <div data-reveal="0" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:48px;padding:clamp(32px,5vw,64px);border-radius:16px;border:1px solid #dbe6d4;background:linear-gradient(135deg,#f1f6ec,#e7f0df)">
+    <div style="flex:1 1 360px;max-width:680px;display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.12em;color:#3f7a35">For the planet</div>
+      <h2 style="margin:0;font-family:var(--font-serif);font-weight:500;font-size:clamp(30px,3.4vw,40px);line-height:1.15;letter-spacing:-0.015em;color:#1f3a1b">Oh, one more thing.</h2>
+      <p style="margin:0;font-family:var(--font-serif);font-size:19px;line-height:1.75;color:#3d4a39;text-wrap:pretty">Don’t forget about the planet. 1% of every purchase goes to carbon removal through <a href="https://climate.stripe.com/14dcRq" style="color:#3f7a35;text-decoration-color:#a9c79d;text-underline-offset:5px">Stripe Climate</a>.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 40px;margin-top:20px">
+        <div style="display:flex;align-items:center;gap:20px">
+          <span style="font-family:var(--font-serif);font-size:64px;line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;color:#3f7a35">1%</span>
+          <span style="font-family:var(--font-sans);font-size:15px;line-height:1.5;color:#4f5c4b">of every purchase,<br>to carbon removal</span>
+        </div>
+        <a class="climate-btn" href="https://climate.stripe.com/14dcRq" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 24px;border-radius:999px;background:#3f7a35;color:#ffffff;font-family:var(--font-sans);font-size:16px;font-weight:500;text-decoration:none">Stripe Climate <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <svg viewBox="0 0 300 260" aria-hidden="true" style="width:clamp(200px,24vw,280px);height:auto;flex:0 1 auto;margin:0 auto;display:block">
+      <defs>
+        <radialGradient id="cg-sea" cx="0.42" cy="0.36" r="0.7"><stop offset="0" stop-color="#f7faf3"/><stop offset="0.65" stop-color="#dde9d4"/><stop offset="1" stop-color="#c3d7b7"/></radialGradient>
+        <clipPath id="cg-clip"><circle cx="150" cy="118" r="92"/></clipPath>
+      </defs>
+      <ellipse cx="150" cy="242" rx="66" ry="7" fill="#d5e2cc"/>
+      <path d="M58 150 C40 168 60 192 110 194 M232 76 C262 82 268 104 236 132" fill="none" stroke="#8fae82" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round"/>
+      <circle cx="150" cy="118" r="92" fill="url(#cg-sea)"/>
+      <g clip-path="url(#cg-clip)" fill="#5e8a48">
+        <path d="M100 52c22-8 40 6 34 30-5 18-14 28-12 48 2 18-14 26-26 18-16-10-24-36-20-60 2-16 10-31 24-36z"/>
+        <path d="M200 30c18 2 34 16 32 30-2 10-14 10-28 6-16-4-26-12-24-24 2-8 10-13 20-12z"/>
+        <path d="M188 104c20-6 40 8 42 30 2 20-10 34-24 30-12-4-12-18-22-28-12-12-14-27 4-32z"/>
+        <path d="M108 180c14-6 30 2 30 18 0 14-12 22-24 20-14-2-20-12-18-22 1-8 5-13 12-16z"/>
+        <g fill="#8db477"><ellipse cx="112" cy="64" rx="9" ry="6" transform="rotate(-30 112 64)"/><ellipse cx="214" cy="42" rx="8" ry="5" transform="rotate(20 214 42)"/><ellipse cx="208" cy="122" rx="8" ry="5" transform="rotate(30 208 122)"/></g>
+      </g>
+      <g fill="#ffffff"><path d="M140 108a8 8 0 0 1 14-5 7 7 0 0 1 12 2 6 6 0 0 1 2 11h-28a5 5 0 0 1 0-8z"/><path d="M178 92a5 5 0 0 1 9-3 5 5 0 0 1 8 6h-17a3 3 0 0 1 0-3z"/><path d="M98 150a5 5 0 0 1 9-2 4 4 0 0 1 4 7h-15a3 3 0 0 1 2-5z"/></g>
+      <path d="M128 36a92 92 0 0 1 52 2" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+      <g fill="#8fae82"><path d="M238 70c8 4 10 14 4 22-6-6-8-14-4-22z"/><path d="M50 150c-4 6-2 14 4 18 4-6 2-14-4-18z"/></g>
+      <g fill="#9cba8f"><circle cx="42" cy="40" r="3"/><circle cx="252" cy="20" r="2.5"/><circle cx="262" cy="190" r="3"/><circle cx="76" cy="214" r="2"/></g>
+    </svg>
+  </div>
+</section>
+
 <section id="join" data-file="join" style="max-width:1120px;margin:96px auto 0;padding:0 24px 96px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;text-align:center">
   <h2 data-reveal="0" style="margin:0;font-size:clamp(44px,8vw,104px);font-weight:500;line-height:1;letter-spacing:-0.05em">Ready to fly<span style="color:#c2622f">.</span></h2>
   <p data-reveal="150" style="max-width:520px;margin:28px 0 0;font-size:18px;color:#6e6e6e;text-wrap:pretty">Download it, open a folder, start writing. Your notes stay plain files on your Mac.</p>
-  <a data-reveal="200" href="https://github.com/thearyanahmed/paperkites-releases/releases/latest" style="display:inline-flex;align-items:center;height:44px;margin-top:32px;padding:0 22px;border-radius:999px;background:#a8541f;color:#fcfcfc;font-family:var(--font-sans);font-size:15px;font-weight:500;text-decoration:none">Download</a>
+  <button type="button" disabled style="border:0;cursor:not-allowed;display:inline-flex;align-items:center;height:44px;margin-top:32px;padding:0 22px;border-radius:999px;background:#a8541f;color:#fcfcfc;font-family:var(--font-sans);font-size:15px;font-weight:500;text-decoration:none">Download</button>
   <p data-reveal="250" style="margin:20px 0 0;font-family:var(--font-mono);font-size:12px;line-height:1.8;color:#6e6e6e;text-wrap:balance">macOS 12+ · Apple silicon · Free, Premium is one purchase<br>Linux is coming soon.</p>
-</section>
-
-<section data-file="one-more-thing" aria-label="One more thing" style="max-width:1120px;margin:0 auto;padding:0 24px 144px;box-sizing:border-box;display:flex;justify-content:center;text-align:center">
-  <p data-reveal="0" style="max-width:460px;margin:0;font-size:15px;line-height:1.7;color:#6e6e6e;text-wrap:pretty"><span style="font-family:var(--font-serif);font-style:italic;color:#424242">Oh, one more thing.</span> Don’t forget about the planet. 1% of every purchase goes to carbon removal through <a href="https://stripe.com/climate">Stripe Climate</a>. <a href="https://climate.stripe.com/14dcRq">See our contribution</a>.</p>
+  <iframe title="Stripe Climate badge" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US" width="380" height="38" loading="lazy" style="display:block;border:0;max-width:100%;margin-top:120px"></iframe>
 </section>
 
 <footer style="max-width:1120px;margin:0 auto;padding:0 24px 88px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font-family:var(--font-mono);font-size:12px;color:#6e6e6e">
