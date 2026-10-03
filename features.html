@@ -22,6 +22,7 @@ code{font-family:'IBM Plex Mono',monospace;font-size:0.82em;color:#424242}
 .premium{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#a8541f}
 @media (max-width:560px){main h2,main ul{margin-left:0}}
 </style>
+<link rel="stylesheet" href="colophon.css">
 </head>
 <body>
 <div style="min-height:100vh;display:flex;flex-direction:column;background:#fcfcfc;font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.75">
@@ -163,10 +164,24 @@ code{font-family:'IBM Plex Mono',monospace;font-size:0.82em;color:#424242}
   </section>
   </div>
 </main>
-<footer style="width:100%;max-width:740px;margin:0 auto;padding:0 20px 40px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6e6e6e">
-  <nav aria-label="Legal and support" style="display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px"><a href="terms.html" style="color:#6e6e6e">terms</a><a href="privacy.html" style="color:#6e6e6e">privacy</a><a href="mailto:support@paperkites.app" style="color:#6e6e6e">support@paperkites.app</a></nav>
-  <span>© 2026 paperkites</span>
-  <a href="https://projectlighthouse.io" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;color:#6e6e6e;text-decoration:none">by<span style="color:#202020">projectlighthouse</span><img src="images/lighthouse.svg" alt="" width="9" height="28" style="display:block;height:28px;width:auto"></a>
+<footer data-file="colophon" class="colophon">
+  <div class="row top">
+    <a class="brand" href="./"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+    <nav aria-label="Legal and support"><a href="terms.html">terms</a><a href="privacy.html">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+  </div>
+  <div class="row bottom">
+    <div class="left">
+      <div class="badge"><iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US"></iframe></div>
+      <span class="copy">© 2026 paperkites</span>
+    </div>
+    <div class="right">
+      <div class="credit">
+        <span>a product by <a class="lh" href="https://projectlighthouse.io" target="_blank" rel="noopener">projectlighthouse</a>;</span>
+        <span>built for humans and machines.</span>
+      </div>
+      <a class="logo" href="https://projectlighthouse.io" target="_blank" rel="noopener"><img src="images/lighthouse.png" alt="projectlighthouse" width="56" height="56"></a>
+    </div>
+  </div>
 </footer>
 <footer style="background:#f0f0f0;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.5;color:#56534d">
   <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;max-width:1200px;margin:0 auto;padding:9px 20px;box-sizing:border-box">

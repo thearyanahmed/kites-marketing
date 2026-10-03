@@ -1,0 +1,24 @@
+/* The page footer (colophon), the same on every page. Its own fonts, so pages on other type still match. */
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&family=Libre+Baskerville&display=swap");
+
+.colophon { width: 100%; max-width: 1120px; margin: 0 auto; padding: 40px 24px 120px; box-sizing: border-box; display: flex; flex-direction: column; gap: 48px; text-align: left; }
+.colophon .row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.colophon .row.top { gap: 20px 40px; }
+.colophon .row.bottom { gap: 24px 40px; }
+.colophon a { color: #424242; text-decoration: none; transition: color .2s ease-out; }
+.colophon a:hover { color: #a8541f; }
+.colophon .brand { display: flex; align-items: center; gap: 12px; font-family: "Geist Mono", ui-monospace, Menlo, monospace; font-size: 14px; color: #202020; }
+.colophon .brand svg { display: block; flex: 0 0 auto; }
+.colophon nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-family: "Geist Mono", ui-monospace, Menlo, monospace; font-size: 13px; }
+.colophon .left { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; max-width: 100%; }
+.colophon .badge { margin-left: -4px; max-width: 100%; line-height: 0; }
+.colophon .copy { font-family: "Geist Mono", ui-monospace, Menlo, monospace; font-size: 12px; color: #6e6e6e; }
+.colophon .right { display: flex; align-items: center; gap: 12px; }
+.colophon .credit { display: flex; flex-direction: column; gap: 2px; text-align: right; font-family: "Libre Baskerville", Georgia, serif; font-style: normal; font-size: 15px; line-height: 1.5; }
+.colophon .credit span:first-child { color: #424242; }
+.colophon .credit span:last-child { color: #6e6e6e; }
+.colophon .credit a.lh, .colophon .credit a.lh:hover { color: #f43f5e; }
+.colophon .logo { flex: 0 0 auto; }
+.colophon .logo img { display: block; }
+@media (max-width: 760px) { .colophon .credit { text-align: left; } }
+@media (max-width: 440px) { .colophon .badge { overflow: hidden; } }

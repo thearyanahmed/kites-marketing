@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
 <link rel="stylesheet" href="docs.css">
+<link rel="stylesheet" href="../colophon.css">
 </head>
 <body>
 
@@ -101,11 +102,25 @@ lock: password
 <ul><li><strong>It can't reach old copies.</strong> If a note was plain before you locked it, earlier versions may still be in your sync history, a backup or git. For something secret, lock the note first and write after.</li><li><strong>It's only as strong as the password.</strong> Anyone with a copy of the file can try passwords on their own machine. A few random words make a password that can't be guessed; a short one can.</li><li><strong>The title, dates and the file's size stay visible.</strong></li><li><strong>An open note is open.</strong> While it's unlocked, its text is on your screen and in Paperkites' memory.</li></ul>
 <div class="soon"><p><span class="tag">coming soon</span><strong>Touch ID and Face ID.</strong> Notes locked with your fingerprint or face rather than a password, that open on any of your devices you've approved. A password note will always need its password, and a Touch ID note will never open with one.</p></div>
     <nav class="pager" aria-label="Previous and next page"><a class="prev" href="your-files.html"><span>previous</span>Your files</a><a class="next" href="keys-and-commands.html"><span>next</span>Keys and commands</a></nav>
-    <footer class="site-footer">
-      <nav class="links" aria-label="Legal and support"><a href="../terms.html">terms</a><a href="../privacy.html">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
-      <span>© 2026 paperkites</span>
-      <a href="https://projectlighthouse.io" target="_blank" rel="noopener">by<span>projectlighthouse</span><img src="../images/lighthouse.svg" alt="" width="9" height="28"></a>
-    </footer>
+    <footer data-file="colophon" class="colophon">
+  <div class="row top">
+    <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+    <nav aria-label="Legal and support"><a href="../terms.html">terms</a><a href="../privacy.html">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+  </div>
+  <div class="row bottom">
+    <div class="left">
+      <div class="badge"><iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US"></iframe></div>
+      <span class="copy">© 2026 paperkites</span>
+    </div>
+    <div class="right">
+      <div class="credit">
+        <span>a product by <a class="lh" href="https://projectlighthouse.io" target="_blank" rel="noopener">projectlighthouse</a>;</span>
+        <span>built for humans and machines.</span>
+      </div>
+      <a class="logo" href="https://projectlighthouse.io" target="_blank" rel="noopener"><img src="../images/lighthouse.png" alt="projectlighthouse" width="56" height="56"></a>
+    </div>
+  </div>
+</footer>
   </main>
 </div>
 

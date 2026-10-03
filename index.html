@@ -133,12 +133,6 @@ html,body{margin:0;background:#fcfcfc;color:#202020;-webkit-font-smoothing:antia
 a{color:#a8541f;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{color:#202020}
 .climate-btn:hover{opacity:0.9}
-.colophon a{color:#424242;text-decoration:none;transition:color .2s ease-out}
-.colophon a:hover{color:#a8541f}
-.colophon .credit a.lh,.colophon .credit a.lh:hover{color:#f43f5e}
-.colophon .credit{text-align:right}
-@media (max-width:760px){.colophon .credit{text-align:left}}
-@media (max-width:440px){.colophon .badge{overflow:hidden}}
 ::selection{background:rgba(194,98,47,0.18)}
 input::placeholder{color:#838383;opacity:1}
 [hidden]{display:none !important}
@@ -210,6 +204,7 @@ button:disabled{opacity:0.5;cursor:not-allowed}
 .ob-ok{display:inline-flex;gap:8px;align-items:baseline}
 </style>
 <script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="colophon.css">
 </head>
 <body>
 <div style="min-height:100vh;background:#fcfcfc;color:#202020;font-family:var(--font-sans);font-size:17px;line-height:1.7;padding-bottom:62px">
@@ -675,22 +670,22 @@ people/elizabeth.md
   <p data-reveal="250" style="margin:20px 0 0;font-family:var(--font-mono);font-size:12px;line-height:1.8;color:#6e6e6e;text-wrap:balance">macOS 12+ · Apple silicon · Free, Premium is one purchase<br>Linux is coming soon.</p>
 </section>
 
-<footer data-file="colophon" class="colophon" style="max-width:1120px;margin:0 auto;padding:40px 24px 120px;box-sizing:border-box;display:flex;flex-direction:column;gap:48px">
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px">
-    <a href="./" style="display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:14px;color:#202020"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
-    <nav aria-label="Legal and support" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-family:var(--font-mono);font-size:13px"><a href="terms.html">terms</a><a href="privacy.html">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+<footer data-file="colophon" class="colophon">
+  <div class="row top">
+    <a class="brand" href="./"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+    <nav aria-label="Legal and support"><a href="terms.html">terms</a><a href="privacy.html">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
   </div>
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px">
-    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;max-width:100%">
-      <div class="badge" style="margin-left:-4px;max-width:100%;line-height:0"><iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US"></iframe></div>
-      <span style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">© 2026 paperkites</span>
+  <div class="row bottom">
+    <div class="left">
+      <div class="badge"><iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US"></iframe></div>
+      <span class="copy">© 2026 paperkites</span>
     </div>
-    <div style="display:flex;align-items:center;gap:12px">
-      <div class="credit" style="display:flex;flex-direction:column;gap:2px;font-family:var(--font-serif);font-style:normal;font-size:15px;line-height:1.5">
-        <span style="color:#424242">a product by <a class="lh" href="https://projectlighthouse.io" target="_blank" rel="noopener">projectlighthouse</a>;</span>
-        <span style="color:#6e6e6e">built for humans and machines.</span>
+    <div class="right">
+      <div class="credit">
+        <span>a product by <a class="lh" href="https://projectlighthouse.io" target="_blank" rel="noopener">projectlighthouse</a>;</span>
+        <span>built for humans and machines.</span>
       </div>
-      <a href="https://projectlighthouse.io" target="_blank" rel="noopener" style="flex:0 0 auto"><img src="images/lighthouse.png" alt="projectlighthouse" width="56" height="56" style="display:block"></a>
+      <a class="logo" href="https://projectlighthouse.io" target="_blank" rel="noopener"><img src="images/lighthouse.png" alt="projectlighthouse" width="56" height="56"></a>
     </div>
   </div>
 </footer>
