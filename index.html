@@ -189,8 +189,17 @@ button:disabled{opacity:0.5;cursor:not-allowed}
   .step:not(.on){opacity:0.28}
   .wide-only{display:inline}
 }
-/* three nav links overflow a phone: the roadmap is a scroll away there */
-@media (max-width:420px){.nav-wide{display:none}}
+.nav-link{font-family:var(--font-sans);font-size:14px;color:#424242;text-decoration:none;transition:color .2s ease-out}
+.nav-link:hover{color:#a8541f}
+@media (max-width:640px){.nav-link{display:none}}
+#premium ::selection{background:#e0915f;color:#202020}
+#premium ul{display:flex;flex-direction:column;margin:0;padding:0;list-style:none}
+#premium li{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px 16px;padding:12px 0;border-top:1px solid #efefef;font-size:15px;line-height:1.5;color:#202020}
+#premium li span{font-family:var(--font-mono);font-size:12px;color:#6e6e6e}
+#premium li code{font-family:var(--font-mono);color:#a8541f}
+#premium .dark li{border-top-color:#3a3a3a;color:#f4f4f4}
+#premium .dark li span{color:#a8a8a8}
+#premium .dark li code{color:#e0915f}
 
 /* obsidian: what carries over */
 .ob-table table{width:100%;min-width:640px;border-collapse:collapse;table-layout:fixed}
@@ -211,7 +220,7 @@ button:disabled{opacity:0.5;cursor:not-allowed}
 
 <nav style="display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1120px;margin:0 auto;padding:20px 24px;box-sizing:border-box">
   <div style="display:flex;align-items:center;gap:10px;font-size:17px;font-weight:500;letter-spacing:-0.01em"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</div>
-  <div style="display:flex;align-items:center;gap:8px"><a href="docs/index.html" class="btn btn-ghost btn-sm">Docs</a><a href="#roadmap" class="btn btn-ghost btn-sm nav-wide">Roadmap</a><button type="button" disabled class="btn btn-ghost btn-sm">Download</button></div>
+  <div style="display:flex;align-items:center;gap:20px"><a href="#premium" class="nav-link">features</a><a href="docs/index.html" class="nav-link">docs</a><button type="button" disabled class="btn btn-ghost btn-sm">Download</button></div>
 </nav>
 
 <header data-file="readme" style="max-width:1120px;margin:0 auto;padding:12vh 24px 0;box-sizing:border-box">
@@ -580,28 +589,24 @@ people/elizabeth.md
   </div>
 </section>
 
-<section id="roadmap" data-file="roadmap" style="max-width:1120px;margin:160px auto 0;padding:0 24px;box-sizing:border-box">
-  <div data-reveal="0" style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">roadmap</div>
-  <h2 data-reveal="60" style="margin:16px 0 0;font-size:clamp(34px,5vw,60px);font-weight:500;line-height:1.05;letter-spacing:-0.035em">Where the kite is headed<span style="color:#c2622f">.</span></h2>
-  <p data-reveal="100" style="max-width:600px;margin:20px 0 0;font-size:18px;line-height:1.7;color:#424242;text-wrap:pretty">Notes and todos in one quiet app, across your Apple devices. Everything stays plain markdown in a folder you own, synced by iCloud Drive.</p>
-  <div data-reveal="160" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin-top:48px">
-    <div style="padding:32px;border:1.5px solid #c2622f;border-radius:12px;background:#ffffff">
-      <div style="font-family:var(--font-mono);font-size:12px;color:#a8541f">now</div>
-      <div style="margin-top:12px;font-size:32px;font-weight:500;line-height:1.1;letter-spacing:-0.03em;color:#202020">Paperkites 1.0</div>
-      <ul style="display:flex;flex-direction:column;gap:10px;margin:24px 0 0;padding:0;list-style:none;font-size:16px;line-height:1.5;color:#424242"><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Paperkites on Apple silicon Macs</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Your vault in iCloud Drive, on every Mac you own (Premium)</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Polish, from what you tell us</span></li></ul>
+<section id="premium" data-file="tiers" style="max-width:1120px;margin:160px auto 0;padding:0 24px;box-sizing:border-box">
+  <div data-reveal="0" style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">free and premium</div>
+  <h2 data-reveal="60" style="margin:16px 0 0;font-size:clamp(34px,5vw,60px);font-weight:500;line-height:1.05;letter-spacing:-0.035em">Most of it is free<span style="color:#c2622f">.</span></h2>
+  <p data-reveal="100" style="max-width:600px;margin:20px 0 0;font-size:18px;line-height:1.7;color:#424242;text-wrap:pretty">Premium gates making things, never reading them. Turn a feature off and its files still open as plain markdown.</p>
+  <div data-reveal="160" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:24px;align-items:stretch;margin-top:56px">
+    <div style="display:flex;flex-direction:column;gap:20px;border-radius:20px;padding:clamp(24px,3.5vw,40px);background:#ffffff;box-shadow:var(--shadow-sm)">
+      <div style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">free</div>
+      <div><div style="font-size:28px;line-height:1.15;font-weight:500;letter-spacing:-0.02em;color:#202020">Free, for good</div><div style="margin-top:4px;font-size:15px;line-height:1.6;color:#6e6e6e">No account, no trial.</div></div>
+      <ul><li>Live-preview markdown<span>vim keys optional</span></li><li>Zen mode<span>fade all but the line you’re on</span></li><li>Wiki links and backlinks<span>follow a retitle</span></li><li>Tags, nested and multi-word<span>rename everywhere</span></li><li>Todos in any note<span><code>[ ]</code> <code>[x]</code> <code>@date</code></span></li><li>⌘K and full-text search<span>notes, tags, commands</span></li><li>Images, tables, Mermaid, LaTeX<span>rendered live</span></li><li>Embeds and Dataview queries<span>notes, media, Bases</span></li><li>Paper and Pine themes<span>light, dark, system</span></li><li>Plain .md files<span>no account, no telemetry</span></li><li>No machine learning model training on your notes<span>not now, not ever</span></li></ul>
+      <p style="margin:auto 0 0;font-size:14px;line-height:1.6;color:#6e6e6e">And splits, pins, trash, folders, <code style="font-family:var(--font-mono);color:#a8541f">:daily</code> and the rest.</p>
     </div>
-    <div style="padding:32px;border:1px solid #e8e8e8;border-radius:12px;background:#ffffff">
-      <div style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">next</div>
-      <div style="margin-top:12px;font-size:32px;font-weight:500;line-height:1.1;letter-spacing:-0.03em;color:#202020">Notes that get things done</div>
-      <ul style="display:flex;flex-direction:column;gap:10px;margin:24px 0 0;padding:0;list-style:none;font-size:16px;line-height:1.5;color:#424242"><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Todos with dates: Today, Upcoming and Someday</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Start dates and deadlines</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Repeating todos and reminders</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Quick entry from anywhere on your Mac</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>A logbook of what you finished</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Areas and projects, for notes and todos alike</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>A faster start on big vaults</span></li></ul>
-    </div>
-    <div style="padding:32px;border:1px solid #e8e8e8;border-radius:12px;background:#ffffff">
-      <div style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">later</div>
-      <div style="margin-top:12px;font-size:32px;font-weight:500;line-height:1.1;letter-spacing:-0.03em;color:#202020">Everywhere you are</div>
-      <ul style="display:flex;flex-direction:column;gap:10px;margin:24px 0 0;padding:0;list-style:none;font-size:16px;line-height:1.5;color:#424242"><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>iOS</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>The <code style="font-family:var(--font-mono);font-size:14px">kite</code> CLI</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Linux</span></li></ul>
+    <div class="dark" style="display:flex;flex-direction:column;gap:20px;border-radius:20px;padding:clamp(24px,3.5vw,40px);background:#202020;color:#f4f4f4">
+      <div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;color:#e0915f">premium<span style="font-size:11px;line-height:1.6;color:#202020;background:#e0915f;border-radius:999px;padding:2px 8px">coming soon</span></div>
+      <div><div style="font-size:28px;line-height:1.15;font-weight:500;letter-spacing:-0.02em">One payment, kept</div><div style="margin-top:4px;font-size:15px;line-height:1.6;color:#c8c8c8">Everything in Free, plus:</div></div>
+      <ul><li>People<span><code>@mentions</code>, a page each</span></li><li>Areas and projects<span>today, upcoming, logbook</span></li><li>Task markers<span><code>[-]</code> <code>[&gt;]</code> <code>[&lt;]</code> <code>[/]</code> <code>[!]</code></span></li><li>Graph<span>a live canvas</span></li><li>Canvas mode<span>notes on a board</span></li><li>Charts<span>from tables and queries</span></li><li>OCR<span>search text in images</span></li><li>More themes<span>Daylight, Fjord, Studio, yours</span></li><li>Locked notes<span>password per note</span></li><li>CloudVaults<span>iCloud, Dropbox, Drive</span></li></ul>
+      <p style="margin:auto 0 0;font-size:14px;line-height:1.6;color:#a8a8a8">No subscription. Every 1.x release. Refunds within 7 days.</p>
     </div>
   </div>
-  <p data-reveal="200" style="max-width:600px;margin:24px 0 0;font-size:15px;line-height:1.7;color:#6e6e6e;text-wrap:pretty">No dates, on purpose: it ships when it’s right. Have an idea? <a href="https://github.com/thearyanahmed/paperkites-releases/issues" style="color:#a8541f">Tell us</a>.</p>
 </section>
 
 <!-- pricing is off for now: remove hidden (and restore the nav link) to bring it back --><section id="pricing" hidden data-file="pricing" style="max-width:1120px;margin:160px auto 0;padding:0 24px;box-sizing:border-box">
@@ -673,7 +678,7 @@ people/elizabeth.md
 <footer data-file="colophon" class="colophon">
   <div class="row top">
     <a class="brand" href="./"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
-    <nav aria-label="Legal and support"><a href="terms.html">terms</a><a href="privacy.html">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+    <nav aria-label="Legal and support"><a href="#premium">features</a><a href="docs/index.html">docs</a><a href="terms.html">terms</a><a href="privacy.html">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
   </div>
   <div class="row bottom">
     <div class="left">
