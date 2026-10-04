@@ -18,10 +18,10 @@
 <body>
 
 <nav class="nav" aria-label="Site">
-  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
   <div class="nav-links">
     <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
     <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
   </div>
 </nav>
@@ -31,21 +31,21 @@
     <div class="toc-inner">
       <p class="toc-label">docs</p>
       <ol>
-<li><a href="index.html">Overview</a></li>
-<li><a href="getting-started.html">Getting started</a></li>
-<li><a href="writing.html">Writing</a></li>
-<li><a href="todos.html">Todos</a></li>
-<li><a href="finding.html">Finding things</a></li>
-<li><a href="people.html">People</a></li>
-<li><a href="graph.html">The graph</a></li>
-<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
-<li><a href="settings.html">Settings</a></li>
-<li><a href="themes.html">Themes</a></li>
-<li><a href="your-files.html">Your files</a></li>
-<li><a href="locked-notes.html">Locked notes</a></li>
-<li><a href="keys-and-commands.html">Keys and commands</a></li>
-<li><a href="faq.html" aria-current="page">FAQ</a></li>
-<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+<li><a href="./">Overview</a></li>
+<li><a href="getting-started">Getting started</a></li>
+<li><a href="writing">Writing</a></li>
+<li><a href="todos">Todos</a></li>
+<li><a href="finding">Finding things</a></li>
+<li><a href="people">People</a></li>
+<li><a href="graph">The graph</a></li>
+<li><a href="sidebar-and-split">Sidebar and split</a></li>
+<li><a href="settings">Settings</a></li>
+<li><a href="themes">Themes</a></li>
+<li><a href="your-files">Your files</a></li>
+<li><a href="locked-notes">Locked notes</a></li>
+<li><a href="keys-and-commands">Keys and commands</a></li>
+<li><a href="faq" aria-current="page">FAQ</a></li>
+<li><a href="coming-soon" class="soon-link">Coming soon</a></li>
       </ol>
     </div>
   </aside>
@@ -54,9 +54,9 @@
     <div class="eyebrow">docs / faq</div>
     <h1>FAQ<span class="dot">.</span></h1>
 <h2 id="where-are-my-notes">Where are my notes?</h2>
-<p>In <code>~/notes</code>, unless you've chosen another folder. Run <code>:vault</code> to see which folder Paperkites is using. Each note is a <code>.md</code> file named after its title; fragments are in <code>fragments/</code> and people in <code>people/</code>. See <a href="your-files.html">Your files</a>.</p>
+<p>In <code>~/notes</code>, unless you've chosen another folder. Run <code>:vault</code> to see which folder Paperkites is using. Each note is a <code>.md</code> file named after its title; fragments are in <code>fragments/</code> and people in <code>people/</code>. See <a href="your-files">Your files</a>.</p>
 <h2 id="is-there-sync">Is there sync?</h2>
-<p>Not built in yet; it's <a href="coming-soon.html">coming</a>. Your notes are ordinary files, so you can keep the folder in git or anything else that syncs a folder on your Mac (iCloud Drive and Dropbox with Premium), and point Paperkites at it with <code>:vault &lt;folder&gt;</code>. Your settings stay on each device.</p>
+<p>Not built in yet; it's <a href="coming-soon">coming</a>. Your notes are ordinary files, so you can keep the folder in git or anything else that syncs a folder on your Mac (iCloud Drive and Dropbox with Premium), and point Paperkites at it with <code>:vault &lt;folder&gt;</code>. Your settings stay on each device.</p>
 <h2 id="can-i-edit-my-notes-in-another-editor">Can I edit my notes in another editor?</h2>
 <p>Yes. Paperkites watches the folder while it runs, so changes made elsewhere show up within a moment. If the note is open in Paperkites with edits you haven't saved, it asks you to choose: <code>:reload</code> takes the file's version, and <code>:w</code> writes yours over it.</p>
 <h2 id="do-i-need-to-save">Do I need to save?</h2>
@@ -74,13 +74,13 @@
 <h2 id="is-there-a-list-of-all-my-tags-or-people">Is there a list of all my tags or people?</h2>
 <p>Yes: ⌘K. Type <code>#</code> first for tags, or <code>@</code> first for people. The sidebar (<kbd>⌘\</kbd>) lists both too.</p>
 <h2 id="a-mention-has-a-dotted-underline">A mention has a dotted underline.</h2>
-<p>No person note has that username or alias. Make one with <kbd>⌃n</kbd> in the <code>@</code> completion list, or add the name to an existing person's <code>aliases</code>. See <a href="people.html">People</a>.</p>
+<p>No person note has that username or alias. Make one with <kbd>⌃n</kbd> in the <code>@</code> completion list, or add the name to an existing person's <code>aliases</code>. See <a href="people">People</a>.</p>
 <h2 id="can-i-stop-using-vim-keys">Can I stop using vim keys?</h2>
 <p>Yes. In <code>:settings</code>, under Writing, turn vim keys off, or run <code>:vim off</code>. The editor is then always writing.</p>
 <h2 id="my-theme-isnt-showing">My theme isn't showing.</h2>
-<p>A theme with a mistake isn't used; paper stands in, and the status pill shows the file, line and problem. Fix it and save, or run <code>:theme reload</code>. Check that the first line says <code>/* kites-theme: light */</code> or <code>dark</code>, so it's listed in the right row. See <a href="themes.html#when-a-theme-has-a-mistake">Themes</a>.</p>
+<p>A theme with a mistake isn't used; paper stands in, and the status pill shows the file, line and problem. Fix it and save, or run <code>:theme reload</code>. Check that the first line says <code>/* kites-theme: light */</code> or <code>dark</code>, so it's listed in the right row. See <a href="themes#when-a-theme-has-a-mistake">Themes</a>.</p>
 <h2 id="can-i-lock-a-note">Can I lock a note?</h2>
-<p>Yes, with a password of its own: <code>:lock</code> in the note. Its text and images are encrypted on disk, and it opens only with that password. See <a href="locked-notes.html">Locked notes</a>.</p>
+<p>Yes, with a password of its own: <code>:lock</code> in the note. Its text and images are encrypted on disk, and it opens only with that password. See <a href="locked-notes">Locked notes</a>.</p>
 <h2 id="i-forgot-a-notes-password">I forgot a note's password.</h2>
 <p>It can't be recovered. Paperkites keeps no copy of the password and has no reset, so the note stays locked. Only its title can still be read.</p>
 <h2 id="is-a-locked-note-safe-to-sync">Is a locked note safe to sync?</h2>
@@ -89,11 +89,11 @@
 <p>Yes. <code>:vault ~/somewhere/else</code> switches to another folder. Nothing is copied or moved, and you can switch back the same way.</p>
 <h2 id="can-i-delete-the-welcome-notes">Can I delete the welcome notes?</h2>
 <p>Yes. They're ordinary notes and nothing depends on them. <code>:keys</code> still shows every key.</p>
-    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="keys-and-commands.html"><span>previous</span>Keys and commands</a><a class="next" href="coming-soon.html"><span>next</span>Coming soon</a></nav>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="keys-and-commands"><span>previous</span>Keys and commands</a><a class="next" href="coming-soon"><span>next</span>Coming soon</a></nav>
     <footer data-file="colophon" class="colophon">
   <div class="row top">
     <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
-    <nav aria-label="Legal and support"><a href="../terms.html">terms</a><a href="../privacy.html">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+    <nav aria-label="Legal and support"><a href="../terms">terms</a><a href="../privacy">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
   </div>
   <div class="row bottom">
     <div class="left">
@@ -117,8 +117,8 @@
   <span class="name">paperkites</span>
   <span class="file">~/paperkites.app/docs/faq.md</span>
   <span class="gap"></span>
-  <a href="../index.html">home</a>
-  <a href="../privacy.html">privacy</a>
+  <a href="../">home</a>
+  <a href="../privacy">privacy</a>
 </footer>
 
 </body>

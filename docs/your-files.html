@@ -18,10 +18,10 @@
 <body>
 
 <nav class="nav" aria-label="Site">
-  <a class="brand" href="../index.html"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
   <div class="nav-links">
     <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-    <a href="index.html" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
     <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
   </div>
 </nav>
@@ -31,21 +31,21 @@
     <div class="toc-inner">
       <p class="toc-label">docs</p>
       <ol>
-<li><a href="index.html">Overview</a></li>
-<li><a href="getting-started.html">Getting started</a></li>
-<li><a href="writing.html">Writing</a></li>
-<li><a href="todos.html">Todos</a></li>
-<li><a href="finding.html">Finding things</a></li>
-<li><a href="people.html">People</a></li>
-<li><a href="graph.html">The graph</a></li>
-<li><a href="sidebar-and-split.html">Sidebar and split</a></li>
-<li><a href="settings.html">Settings</a></li>
-<li><a href="themes.html">Themes</a></li>
-<li><a href="your-files.html" aria-current="page">Your files</a></li>
-<li><a href="locked-notes.html">Locked notes</a></li>
-<li><a href="keys-and-commands.html">Keys and commands</a></li>
-<li><a href="faq.html">FAQ</a></li>
-<li><a href="coming-soon.html" class="soon-link">Coming soon</a></li>
+<li><a href="./">Overview</a></li>
+<li><a href="getting-started">Getting started</a></li>
+<li><a href="writing">Writing</a></li>
+<li><a href="todos">Todos</a></li>
+<li><a href="finding">Finding things</a></li>
+<li><a href="people">People</a></li>
+<li><a href="graph">The graph</a></li>
+<li><a href="sidebar-and-split">Sidebar and split</a></li>
+<li><a href="settings">Settings</a></li>
+<li><a href="themes">Themes</a></li>
+<li><a href="your-files" aria-current="page">Your files</a></li>
+<li><a href="locked-notes">Locked notes</a></li>
+<li><a href="keys-and-commands">Keys and commands</a></li>
+<li><a href="faq">FAQ</a></li>
+<li><a href="coming-soon" class="soon-link">Coming soon</a></li>
       </ol>
     </div>
   </aside>
@@ -71,7 +71,7 @@
   people/
     dasha.md
   .trash/</code></pre>
-<div class="table-wrap"><table><thead><tr><th>Where</th><th>What</th></tr></thead><tbody><tr><td><code>&lt;Title&gt;.md</code></td><td>a note, named after its title. Renaming the note renames the file.</td></tr><tr><td><code>fragments/</code></td><td>one file per fragment</td></tr><tr><td><code>people/</code></td><td>person notes, named after their username (see <a href="people.html">People</a>)</td></tr><tr><td><code>attachments/</code></td><td>images pasted or dropped into notes; a locked note's are encrypted, as <code>.age</code> files</td></tr><tr><td><code>.trash/</code></td><td>notes you've deleted; never indexed, so never in lists or search</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>Where</th><th>What</th></tr></thead><tbody><tr><td><code>&lt;Title&gt;.md</code></td><td>a note, named after its title. Renaming the note renames the file.</td></tr><tr><td><code>fragments/</code></td><td>one file per fragment</td></tr><tr><td><code>people/</code></td><td>person notes, named after their username (see <a href="people">People</a>)</td></tr><tr><td><code>attachments/</code></td><td>images pasted or dropped into notes; a locked note's are encrypted, as <code>.age</code> files</td></tr><tr><td><code>.trash/</code></td><td>notes you've deleted; never indexed, so never in lists or search</td></tr></tbody></table></div>
 <p>Images can live anywhere in the vault; a note refers to them by path, such as <code>![alt](Pics/photo.png)</code>.</p>
 <h2 id="front-matter">Front matter</h2>
 <p>A note can start with a block of front matter between two <code>---</code> lines. Paperkites leaves it alone, apart from three lines:</p>
@@ -81,7 +81,7 @@ id: 01J8Z3K4QW7T9V2N5M6B1C0D8E
 pinned: true
 ---</code></pre>
 <div class="table-wrap"><table><thead><tr><th>Key</th><th>What Paperkites does with it</th></tr></thead><tbody><tr><td><code>created</code></td><td>when the note was made; shown in the gutter</td></tr><tr><td><code>id</code></td><td>the note's identity, a ULID. A rename keeps it.</td></tr><tr><td><code>pinned</code></td><td>added when you pin a note and taken out when you unpin it, so the file comes back byte for byte</td></tr></tbody></table></div>
-<p>A locked note also has <code>lock: password</code>, and below its title its text is encrypted (see <a href="locked-notes.html#on-disk">Locked notes</a>). Person notes also use <code>type</code>, <code>username</code> and <code>aliases</code>. Anything else you put in front matter stays as you wrote it.</p>
+<p>A locked note also has <code>lock: password</code>, and below its title its text is encrypted (see <a href="locked-notes#on-disk">Locked notes</a>). Person notes also use <code>type</code>, <code>username</code> and <code>aliases</code>. Anything else you put in front matter stays as you wrote it.</p>
 <h2 id="pinning">Pinning</h2>
 <p>Pinning keeps a note at the top of the lists. <code>:pin</code> and <code>:unpin</code> work in a note, and <kbd>x</kbd> works on a row in any list. <code>:pinned</code> lists everything pinned. On disk, pinning is just the <code>pinned: true</code> line above.</p>
 <h2 id="editing-outside-paperkites">Editing outside Paperkites</h2>
@@ -90,18 +90,18 @@ pinned: true
 <ul><li><strong>With nothing unsaved</strong>, it takes the new text.</li><li><strong>With unsaved edits</strong>, it asks you to choose:</li></ul>
 <div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:reload</code></td><td>take the file's version</td></tr><tr><td><code>:w</code></td><td>write your version over it</td></tr></tbody></table></div>
 <h2 id="working-with-other-tools">Working with other tools</h2>
-<ul><li><strong>Git:</strong> <code>cd ~/notes &amp;&amp; git init</code>, and commit whenever you like.</li><li><strong>grep:</strong> <code>grep -ri "soil" ~/notes</code> searches the same text <code>/</code> does.</li><li><strong>Any editor:</strong> open a note in vim or VS Code, change it, and Paperkites picks it up.</li><li><strong>Sync:</strong> keep the folder in anything that syncs folders, and point Paperkites at it with <code>:vault</code>. See <a href="coming-soon.html#sync-it-yourself-today">Coming soon</a>.</li></ul>
+<ul><li><strong>Git:</strong> <code>cd ~/notes &amp;&amp; git init</code>, and commit whenever you like.</li><li><strong>grep:</strong> <code>grep -ri "soil" ~/notes</code> searches the same text <code>/</code> does.</li><li><strong>Any editor:</strong> open a note in vim or VS Code, change it, and Paperkites picks it up.</li><li><strong>Sync:</strong> keep the folder in anything that syncs folders, and point Paperkites at it with <code>:vault</code>. See <a href="coming-soon#sync-it-yourself-today">Coming soon</a>.</li></ul>
 <h2 id="the-trash">The trash</h2>
 <p><code>:delete</code> (or <code>:rm</code>) in a note moves it to <code>.trash/</code> in your vault. Nothing is deleted for good until you say so.</p>
 <div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:trash</code></td><td>lists trashed notes</td></tr><tr><td><kbd>⏎</kbd> on a trashed note</td><td>puts it back where it lived</td></tr><tr><td><code>:trash empty</code></td><td>deletes everything in the trash for good</td></tr></tbody></table></div>
 <p>The trash is also in <code>:settings</code>, under Vault. It's an ordinary folder; its name starts with a dot, so some file browsers hide it.</p>
 <h2 id="settings-and-themes-live-elsewhere">Settings and themes live elsewhere</h2>
-<p>Your settings are kept on this device, in the app's data folder, outside the vault. Theme files live in <code>~/.kites/themes/</code>. See <a href="settings.html">Settings</a> and <a href="themes.html">Themes</a>.</p>
-    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="themes.html"><span>previous</span>Themes</a><a class="next" href="locked-notes.html"><span>next</span>Locked notes</a></nav>
+<p>Your settings are kept on this device, in the app's data folder, outside the vault. Theme files live in <code>~/.kites/themes/</code>. See <a href="settings">Settings</a> and <a href="themes">Themes</a>.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="themes"><span>previous</span>Themes</a><a class="next" href="locked-notes"><span>next</span>Locked notes</a></nav>
     <footer data-file="colophon" class="colophon">
   <div class="row top">
     <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
-    <nav aria-label="Legal and support"><a href="../terms.html">terms</a><a href="../privacy.html">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+    <nav aria-label="Legal and support"><a href="../terms">terms</a><a href="../privacy">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
   </div>
   <div class="row bottom">
     <div class="left">
@@ -125,8 +125,8 @@ pinned: true
   <span class="name">paperkites</span>
   <span class="file">~/paperkites.app/docs/your-files.md</span>
   <span class="gap"></span>
-  <a href="../index.html">home</a>
-  <a href="../privacy.html">privacy</a>
+  <a href="../">home</a>
+  <a href="../privacy">privacy</a>
 </footer>
 
 </body>
