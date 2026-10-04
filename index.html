@@ -625,7 +625,7 @@ people/elizabeth.md
       <div style="display:flex;align-items:baseline;gap:12px;margin-top:12px"><span id="price-now" style="font-size:56px;font-weight:500;line-height:1;letter-spacing:-0.03em;color:#202020">$39</span><s id="price-was" style="font-size:24px;color:#8d8d8d">$49</s></div>
       <div id="price-note" style="margin-top:10px;font-family:var(--font-mono);font-size:13px;color:#a8541f">early bird until 5 November 2026</div>
       <ul style="display:flex;flex-direction:column;gap:10px;margin:24px 0 0;padding:0;list-style:none;font-size:16px;line-height:1.5;color:#424242"><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Everything in free, and:</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>People: <code style="font-family:var(--font-mono);font-size:14px">@mentions</code> and a page for each person</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>The graph of your notes</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Every theme, and your own in <code style="font-family:var(--font-mono);font-size:14px">~/.kites/themes</code></span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Vaults in iCloud Drive, Dropbox and other cloud folders</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Password-locked notes</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Every 1.x update, for good</span></li></ul>
-      <a id="buy" href="https://purchase.paperkites.app/buy" style="display:inline-flex;align-items:center;height:44px;margin-top:28px;padding:0 22px;border-radius:999px;background:#a8541f;color:#fcfcfc;font-family:var(--font-sans);font-size:15px;font-weight:500;text-decoration:none">Buy premium</a>
+      <a id="buy" href="/buy" style="display:inline-flex;align-items:center;height:44px;margin-top:28px;padding:0 22px;border-radius:999px;background:#a8541f;color:#fcfcfc;font-family:var(--font-sans);font-size:15px;font-weight:500;text-decoration:none">Buy premium</a>
     </div>
   </div>
   <p data-reveal="200" style="max-width:600px;margin:24px 0 0;font-size:15px;line-height:1.7;color:#6e6e6e;text-wrap:pretty">The key is checked on your machine, never online, and lives on your Mac, for every vault you open. Your notes are plain files either way, and a locked note always opens, licence or not.</p>
@@ -975,10 +975,10 @@ people/elizabeth.md
 
   new IntersectionObserver(es => es.forEach(en => { demoInView = en.isIntersecting; }), { threshold: 0.25 }).observe($('[data-demo]'));
 
-  // Buying: the purchase service, on this machine while the site is opened locally. /price keeps the numbers here in
-  // step with what Stripe will charge; the ones in the page stand in if it can't be reached.
-  const local = location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(location.hostname);
-  const purchase = local ? 'http://localhost:8080' : 'https://purchase.paperkites.app';
+  // Buying: the purchase service serves this site, so it's this origin; a page opened as a file asks a local one.
+  // /price keeps the numbers here in step with what Stripe will charge; the ones in the page stand in if it can't be
+  // reached.
+  const purchase = location.protocol === 'file:' ? 'http://localhost:8080' : '';
   $('#buy').href = purchase + '/buy';
   const money = c => '$' + (c % 100 ? (c / 100).toFixed(2) : c / 100);
   fetch(purchase + '/price').then(r => r.json()).then(p => {
