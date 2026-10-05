@@ -19,6 +19,6 @@
 .colophon .credit span:last-child { color: #6e6e6e; }
 .colophon .credit a.lh, .colophon .credit a.lh:hover { color: #f43f5e; }
 .colophon .logo { flex: 0 0 auto; }
-.colophon .logo img { display: block; }
+.colophon .logo svg { display: block; }
 @media (max-width: 760px) { .colophon .credit { text-align: left; } }
 @media (max-width: 440px) { .colophon .badge { overflow: hidden; } }
