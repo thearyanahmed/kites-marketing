@@ -232,6 +232,14 @@ button:disabled{opacity:0.5;cursor:not-allowed}
   </h1>
   <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px 48px;margin-top:48px">
     <p data-reveal="350" style="flex:1 1 360px;max-width:540px;margin:0;font-size:clamp(18px,1.9vw,21px);line-height:1.6;color:#424242;text-wrap:pretty">A quiet notes app for people who build things. Markdown files <span style="font-family:var(--font-serif)">you own</span>, one column to write in, and every key where your hands already are.</p>
+    <form id="waitlist" data-reveal="450" novalidate style="flex:0 1 420px;display:flex;flex-direction:column;gap:10px">
+      <label for="wl-email" style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">join the waitlist</label>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" aria-describedby="wl-msg" style="flex:1 1 220px;min-width:0;height:44px;padding:0 16px;border:1px solid #e0e0e0;border-radius:999px;background:#ffffff;color:#202020;font-family:var(--font-sans);font-size:15px;box-sizing:border-box">
+        <button type="submit" style="flex:0 0 auto;border:0;cursor:pointer;height:44px;padding:0 22px;border-radius:999px;background:#a8541f;color:#fcfcfc;font-family:var(--font-sans);font-size:15px;font-weight:500">Join waitlist</button>
+      </div>
+      <p id="wl-msg" role="status" aria-live="polite" style="min-height:1.6em;margin:0;font-size:14px;line-height:1.6;color:#6e6e6e"></p>
+    </form>
   </div>
 </header>
 
@@ -590,9 +598,9 @@ people/elizabeth.md
 </section>
 
 <section id="premium" data-file="tiers" style="max-width:1120px;margin:160px auto 0;padding:0 24px;box-sizing:border-box">
-  <div data-reveal="0" style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">free and premium</div>
+  <div data-reveal="0" style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">free and pro</div>
   <h2 data-reveal="60" style="margin:16px 0 0;font-size:clamp(34px,5vw,60px);font-weight:500;line-height:1.05;letter-spacing:-0.035em">Most of it is free<span style="color:#c2622f">.</span></h2>
-  <p data-reveal="100" style="max-width:600px;margin:20px 0 0;font-size:18px;line-height:1.7;color:#424242;text-wrap:pretty">Premium gates making things, never reading them. Turn a feature off and its files still open as plain markdown.</p>
+  <p data-reveal="100" style="max-width:600px;margin:20px 0 0;font-size:18px;line-height:1.7;color:#424242;text-wrap:pretty">Pro gates making things, never reading them. Turn a feature off and its files still open as plain markdown.</p>
   <div data-reveal="160" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:24px;align-items:stretch;margin-top:56px">
     <div style="display:flex;flex-direction:column;gap:20px;border-radius:20px;padding:clamp(24px,3.5vw,40px);background:#ffffff;box-shadow:var(--shadow-sm)">
       <div style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">free</div>
@@ -601,18 +609,18 @@ people/elizabeth.md
       <p style="margin:auto 0 0;font-size:14px;line-height:1.6;color:#6e6e6e">And splits, pins, trash, folders, <code style="font-family:var(--font-mono);color:#a8541f">:daily</code> and the rest.</p>
     </div>
     <div class="dark" style="display:flex;flex-direction:column;gap:20px;border-radius:20px;padding:clamp(24px,3.5vw,40px);background:#202020;color:#f4f4f4">
-      <div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;color:#e0915f">premium<span style="font-size:11px;line-height:1.6;color:#202020;background:#e0915f;border-radius:999px;padding:2px 8px">coming soon</span></div>
-      <div><div style="font-size:28px;line-height:1.15;font-weight:500;letter-spacing:-0.02em">One payment, kept</div><div style="margin-top:4px;font-size:15px;line-height:1.6;color:#c8c8c8">Everything in Free, plus:</div></div>
+      <div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;color:#e0915f">pro<span style="font-size:11px;line-height:1.6;color:#202020;background:#e0915f;border-radius:999px;padding:2px 8px">coming soon</span></div>
+      <div><div style="font-size:28px;line-height:1.15;font-weight:500;letter-spacing:-0.02em">Pro</div><div style="margin-top:4px;font-size:15px;line-height:1.6;color:#c8c8c8">Everything in Free, plus:</div></div>
       <ul><li>People<span><code>@mentions</code>, a page each</span></li><li>Areas and projects<span>today, upcoming, logbook</span></li><li>Task markers<span><code>[-]</code> <code>[&gt;]</code> <code>[&lt;]</code> <code>[/]</code> <code>[!]</code></span></li><li>Graph<span>a live canvas</span></li><li>Canvas mode<span>notes on a board</span></li><li>Charts<span>from tables and queries</span></li><li>OCR<span>search text in images</span></li><li>More themes<span>Daylight, Fjord, Studio, yours</span></li><li>Locked notes<span>password per note</span></li><li>CloudVaults<span>iCloud, Dropbox, Drive</span></li></ul>
-      <p style="margin:auto 0 0;font-size:14px;line-height:1.6;color:#a8a8a8">No subscription. Every 1.x release. Refunds within 7 days.</p>
+      <p style="margin:auto 0 0;font-size:14px;line-height:1.6;color:#a8a8a8">A subscription on your account, on every device. Cancel any time.</p>
     </div>
   </div>
 </section>
 
 <!-- pricing is off for now: remove hidden (and restore the nav link) to bring it back --><section id="pricing" hidden data-file="pricing" style="max-width:1120px;margin:160px auto 0;padding:0 24px;box-sizing:border-box">
   <div data-reveal="0" style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">pricing</div>
-  <h2 data-reveal="60" style="margin:16px 0 0;font-size:clamp(34px,5vw,60px);font-weight:500;line-height:1.05;letter-spacing:-0.035em">Free forever. Or pay once, keep it forever<span style="color:#c2622f">.</span></h2>
-  <p data-reveal="100" style="max-width:600px;margin:20px 0 0;font-size:18px;line-height:1.7;color:#424242;text-wrap:pretty">The base app is free for good: not a trial, no account, nothing expires. Premium is one payment, never a subscription, and it’s yours with every 1.x update.</p>
+  <h2 data-reveal="60" style="margin:16px 0 0;font-size:clamp(34px,5vw,60px);font-weight:500;line-height:1.05;letter-spacing:-0.035em">Free forever. Or go Pro<span style="color:#c2622f">.</span></h2>
+  <p data-reveal="100" style="max-width:600px;margin:20px 0 0;font-size:18px;line-height:1.7;color:#424242;text-wrap:pretty">The base app is free for good: not a trial, no account, nothing expires. Pro is a subscription on your account, for every device you sign in on.</p>
   <div data-reveal="160" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px;margin-top:48px">
     <div style="padding:32px;border:1px solid #e8e8e8;border-radius:12px;background:#ffffff">
       <div style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">free · forever</div>
@@ -621,11 +629,11 @@ people/elizabeth.md
       <ul style="display:flex;flex-direction:column;gap:10px;margin:24px 0 0;padding:0;list-style:none;font-size:16px;line-height:1.5;color:#424242"><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>The capture box and the list</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>A live-preview markdown editor, vim if you want it</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Tags, <code style="font-family:var(--font-mono);font-size:14px">[[links]]</code> and backlinks</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>⌘K and search across every note</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Todos with dates, and <code style="font-family:var(--font-mono);font-size:14px">:todos</code></span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Split view, math and Mermaid</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Image sizing and the lightbox</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>The Paper and Pine themes, light and dark</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Plain markdown files on your disk</span></li></ul>
     </div>
     <div style="padding:32px;border:1.5px solid #c2622f;border-radius:12px;background:#ffffff">
-      <div style="font-family:var(--font-mono);font-size:12px;color:#a8541f">premium · pay once, keep it</div>
+      <div style="font-family:var(--font-mono);font-size:12px;color:#a8541f">pro</div>
       <div style="display:flex;align-items:baseline;gap:12px;margin-top:12px"><span id="price-now" style="font-size:56px;font-weight:500;line-height:1;letter-spacing:-0.03em;color:#202020">$39</span><s id="price-was" style="font-size:24px;color:#8d8d8d">$49</s></div>
       <div id="price-note" style="margin-top:10px;font-family:var(--font-mono);font-size:13px;color:#a8541f">early bird until 5 November 2026</div>
-      <ul style="display:flex;flex-direction:column;gap:10px;margin:24px 0 0;padding:0;list-style:none;font-size:16px;line-height:1.5;color:#424242"><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Everything in free, and:</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>People: <code style="font-family:var(--font-mono);font-size:14px">@mentions</code> and a page for each person</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>The graph of your notes</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Every theme, and your own in <code style="font-family:var(--font-mono);font-size:14px">~/.kites/themes</code></span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Vaults in iCloud Drive, Dropbox and other cloud folders</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Password-locked notes</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Every 1.x update, for good</span></li></ul>
-      <a id="buy" href="/buy" style="display:inline-flex;align-items:center;height:44px;margin-top:28px;padding:0 22px;border-radius:999px;background:#a8541f;color:#fcfcfc;font-family:var(--font-sans);font-size:15px;font-weight:500;text-decoration:none">Buy premium</a>
+      <ul style="display:flex;flex-direction:column;gap:10px;margin:24px 0 0;padding:0;list-style:none;font-size:16px;line-height:1.5;color:#424242"><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Everything in free, and:</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>People: <code style="font-family:var(--font-mono);font-size:14px">@mentions</code> and a page for each person</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>The graph of your notes</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Every theme, and your own in <code style="font-family:var(--font-mono);font-size:14px">~/.kites/themes</code></span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Vaults in iCloud Drive, Dropbox and other cloud folders</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Password-locked notes</span></li></ul>
+      <a id="buy" href="/buy" style="display:inline-flex;align-items:center;height:44px;margin-top:28px;padding:0 22px;border-radius:999px;background:#a8541f;color:#fcfcfc;font-family:var(--font-sans);font-size:15px;font-weight:500;text-decoration:none">Get Pro</a>
     </div>
   </div>
   <p data-reveal="200" style="max-width:600px;margin:24px 0 0;font-size:15px;line-height:1.7;color:#6e6e6e;text-wrap:pretty">The key is checked on your machine, never online, and lives on your Mac, for every vault you open. Your notes are plain files either way, and a locked note always opens, licence or not.</p>
@@ -672,7 +680,7 @@ people/elizabeth.md
   <h2 data-reveal="0" style="margin:0;font-size:clamp(44px,8vw,104px);font-weight:500;line-height:1;letter-spacing:-0.05em">Ready to fly<span style="color:#c2622f">.</span></h2>
   <p data-reveal="150" style="max-width:520px;margin:28px 0 0;font-size:18px;color:#6e6e6e;text-wrap:pretty">Download it, open a folder, start writing. Your notes stay plain files on your Mac.</p>
   <button type="button" disabled style="border:0;cursor:not-allowed;display:inline-flex;align-items:center;height:44px;margin-top:32px;padding:0 22px;border-radius:999px;background:#a8541f;color:#fcfcfc;font-family:var(--font-sans);font-size:15px;font-weight:500;text-decoration:none">Download</button>
-  <p data-reveal="250" style="margin:20px 0 0;font-family:var(--font-mono);font-size:12px;line-height:1.8;color:#6e6e6e;text-wrap:balance">macOS 12+ · Apple silicon · Free, Premium is one purchase<br>Linux is coming soon.</p>
+  <p data-reveal="250" style="margin:20px 0 0;font-family:var(--font-mono);font-size:12px;line-height:1.8;color:#6e6e6e;text-wrap:balance">macOS 12+ · Apple silicon · Free, or go Pro<br>Linux is coming soon.</p>
 </section>
 
 <footer data-file="colophon" class="colophon">
@@ -992,6 +1000,38 @@ people/elizabeth.md
       $('#price-note').textContent = 'early bird until ' + end.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
     }
   }).catch(() => {});
+
+  // The waitlist: a fresh CSRF token from the server, then the email with it. Every way it can fail says so in words.
+  const wl = $('#waitlist'), wlMsg = $('#wl-msg'), wlBtn = wl.querySelector('button');
+  const wlSay = (text, bad) => { wlMsg.textContent = text; wlMsg.style.color = bad ? '#b3261e' : '#3f7a35'; };
+  const wlErrors = {
+    email: 'That email doesn’t look right. Check it and try again.',
+    rate: 'Too many tries from here. Please wait a bit and try again.',
+    csrf: 'This page has been open a while. Please try again.',
+  };
+  wl.addEventListener('submit', async e => {
+    e.preventDefault();
+    const input = $('#wl-email');
+    if (!input.checkValidity()) { wlSay(wlErrors.email, true); input.focus(); return; }
+    wlBtn.disabled = true;
+    wlSay('Joining…');
+    wlMsg.style.color = '#6e6e6e';
+    try {
+      const { token } = await fetch(purchase + '/v1/waitlist/token').then(r => r.json());
+      const r = await fetch(purchase + '/v1/waitlist', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email: input.value, token }),
+      });
+      const body = await r.json().catch(() => ({}));
+      if (r.ok) {
+        wlSay(body.status === 'already' ? 'You’re already on the list. We’ll be in touch.' : 'You’re on the list. We’ll email you when it’s ready.');
+        input.value = '';
+      } else wlSay(wlErrors[body.error] || 'Something went wrong on our side. Please try again.', true);
+    } catch {
+      wlSay('Couldn’t reach us. Check your connection and try again.', true);
+    }
+    wlBtn.disabled = false;
+  });
 
   renderNotes();
   syncStep();
