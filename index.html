@@ -198,6 +198,7 @@ button:disabled{opacity:0.5;cursor:not-allowed}
 #premium li span{font-family:var(--font-mono);font-size:12px;color:#6e6e6e}
 #premium li code{font-family:var(--font-mono);color:#a8541f}
 #premium .dark li{border-top-color:#3a3a3a;color:#f4f4f4}
+#premium .pro-group{margin-bottom:-12px;font-family:var(--font-mono);font-size:12px;color:#a8a8a8}
 #premium .dark li span{color:#a8a8a8}
 #premium .dark li code{color:#e0915f}
 
@@ -605,38 +606,21 @@ people/elizabeth.md
     <div style="display:flex;flex-direction:column;gap:20px;border-radius:20px;padding:clamp(24px,3.5vw,40px);background:#ffffff;box-shadow:var(--shadow-sm)">
       <div style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">free</div>
       <div><div style="font-size:28px;line-height:1.15;font-weight:500;letter-spacing:-0.02em;color:#202020">Free, for good</div><div style="margin-top:4px;font-size:15px;line-height:1.6;color:#6e6e6e">No account, no trial.</div></div>
-      <ul><li>Live-preview markdown<span>vim keys optional</span></li><li>Zen mode<span>fade all but the line you’re on</span></li><li>Wiki links and backlinks<span>follow a retitle</span></li><li>Tags, nested and multi-word<span>rename everywhere</span></li><li>Todos in any note<span><code>[ ]</code> <code>[x]</code> <code>@date</code></span></li><li>⌘K and full-text search<span>notes, tags, commands</span></li><li>Images, tables, Mermaid, LaTeX<span>rendered live</span></li><li>Embeds and Dataview queries<span>notes, media, Bases</span></li><li>Paper and Pine themes<span>light, dark, system</span></li><li>Plain .md files<span>no account, no telemetry</span></li><li>No machine learning model training on your notes<span>not now, not ever</span></li></ul>
+      <ul><li>Live-preview markdown<span>vim keys optional</span></li><li>Zen mode<span>fade all but the line you’re on</span></li><li>Wiki links and backlinks<span>follow a retitle</span></li><li>Tags, nested and multi-word<span>rename everywhere</span></li><li>Todos in any note<span><code>[ ]</code> <code>[x]</code> <code>@date</code></span></li><li>⌘K and full-text search<span>notes, tags, commands</span></li><li>Images, tables, Mermaid, LaTeX<span>rendered live</span></li><li>Embeds and Dataview queries<span>notes, media, Bases</span></li><li>Studio, Paper and Pine themes<span>light, dark, system</span></li><li>Plain .md files<span>no account, no telemetry</span></li><li>No machine learning model training on your notes<span>not now, not ever</span></li></ul>
       <p style="margin:auto 0 0;font-size:14px;line-height:1.6;color:#6e6e6e">And splits, pins, trash, folders, <code style="font-family:var(--font-mono);color:#a8541f">:daily</code> and the rest.</p>
     </div>
     <div class="dark" style="display:flex;flex-direction:column;gap:20px;border-radius:20px;padding:clamp(24px,3.5vw,40px);background:#202020;color:#f4f4f4">
       <div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;color:#e0915f">pro<span style="font-size:11px;line-height:1.6;color:#202020;background:#e0915f;border-radius:999px;padding:2px 8px">coming soon</span></div>
-      <div><div style="font-size:28px;line-height:1.15;font-weight:500;letter-spacing:-0.02em">Pro</div><div style="margin-top:4px;font-size:15px;line-height:1.6;color:#c8c8c8">Everything in Free, plus:</div></div>
-      <ul><li>People<span><code>@mentions</code>, a page each</span></li><li>Areas and projects<span>today, upcoming, logbook</span></li><li>Task markers<span><code>[-]</code> <code>[&gt;]</code> <code>[&lt;]</code> <code>[/]</code> <code>[!]</code></span></li><li>Graph<span>a live canvas</span></li><li>Canvas mode<span>notes on a board</span></li><li>Charts<span>from tables and queries</span></li><li>OCR<span>search text in images</span></li><li>More themes<span>Daylight, Fjord, Studio, yours</span></li><li>Locked notes<span>password per note</span></li><li>CloudVaults<span>iCloud, Dropbox, Drive</span></li></ul>
-      <p style="margin:auto 0 0;font-size:14px;line-height:1.6;color:#a8a8a8">A subscription on your account, on every device. Cancel any time.</p>
+      <div><div style="font-size:28px;line-height:1.15;font-weight:500;letter-spacing:-0.02em">Pro</div><div style="margin-top:4px;font-size:15px;line-height:1.6;color:#c8c8c8"><span id="price-year">$48</span> a year, or <span id="price-month">$5</span> a month. <span id="price-trial">14</span> days free to try, no card.</div></div>
+      <div class="pro-group">organise</div>
+      <ul><li>Areas and projects<span>today, upcoming, logbook</span></li><li>Task markers<span><code>[-]</code> <code>[&gt;]</code> <code>[&lt;]</code> <code>[/]</code> <code>[!]</code></span></li><li>People<span><code>@mentions</code>, a page each</span></li></ul>
+      <div class="pro-group">see</div>
+      <ul><li>Graph<span>a live canvas</span></li><li>Every theme<span>Daylight, Fjord, yours</span></li><li>Image sizing<span>S, M, L, full; open large</span></li></ul>
+      <div class="pro-group">everywhere</div>
+      <ul><li>Vaults in cloud folders<span>iCloud, Dropbox, Drive</span></li><li>Locked notes<span>password per note</span></li></ul>
+      <p style="margin:auto 0 0;font-size:14px;line-height:1.6;color:#a8a8a8">A subscription on your account, for every device you sign in on. Cancel any time. If Pro ends, every note still opens to read.</p>
     </div>
   </div>
-</section>
-
-<!-- pricing is off for now: remove hidden (and restore the nav link) to bring it back --><section id="pricing" hidden data-file="pricing" style="max-width:1120px;margin:160px auto 0;padding:0 24px;box-sizing:border-box">
-  <div data-reveal="0" style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">pricing</div>
-  <h2 data-reveal="60" style="margin:16px 0 0;font-size:clamp(34px,5vw,60px);font-weight:500;line-height:1.05;letter-spacing:-0.035em">Free forever. Or go Pro<span style="color:#c2622f">.</span></h2>
-  <p data-reveal="100" style="max-width:600px;margin:20px 0 0;font-size:18px;line-height:1.7;color:#424242;text-wrap:pretty">The base app is free for good: not a trial, no account, nothing expires. Pro is a subscription on your account, for every device you sign in on.</p>
-  <div data-reveal="160" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px;margin-top:48px">
-    <div style="padding:32px;border:1px solid #e8e8e8;border-radius:12px;background:#ffffff">
-      <div style="font-family:var(--font-mono);font-size:12px;color:#6e6e6e">free · forever</div>
-      <div style="margin-top:12px;font-size:56px;font-weight:500;line-height:1;letter-spacing:-0.03em;color:#202020">$0</div>
-      <div style="margin-top:10px;font-family:var(--font-mono);font-size:13px;color:#6e6e6e">no account, no trial</div>
-      <ul style="display:flex;flex-direction:column;gap:10px;margin:24px 0 0;padding:0;list-style:none;font-size:16px;line-height:1.5;color:#424242"><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>The capture box and the list</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>A live-preview markdown editor, vim if you want it</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Tags, <code style="font-family:var(--font-mono);font-size:14px">[[links]]</code> and backlinks</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>⌘K and search across every note</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Todos with dates, and <code style="font-family:var(--font-mono);font-size:14px">:todos</code></span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Split view, math and Mermaid</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Image sizing and the lightbox</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>The Paper and Pine themes, light and dark</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Plain markdown files on your disk</span></li></ul>
-    </div>
-    <div style="padding:32px;border:1.5px solid #c2622f;border-radius:12px;background:#ffffff">
-      <div style="font-family:var(--font-mono);font-size:12px;color:#a8541f">pro</div>
-      <div style="display:flex;align-items:baseline;gap:12px;margin-top:12px"><span id="price-now" style="font-size:56px;font-weight:500;line-height:1;letter-spacing:-0.03em;color:#202020">$48</span><span style="font-size:24px;color:#8d8d8d">a year</span></div>
-      <div id="price-note" style="margin-top:10px;font-family:var(--font-mono);font-size:13px;color:#a8541f">or $5 a month · 14 days free to try</div>
-      <ul style="display:flex;flex-direction:column;gap:10px;margin:24px 0 0;padding:0;list-style:none;font-size:16px;line-height:1.5;color:#424242"><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Everything in free, and:</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>People: <code style="font-family:var(--font-mono);font-size:14px">@mentions</code> and a page for each person</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>The graph of your notes</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Every theme, and your own in <code style="font-family:var(--font-mono);font-size:14px">~/.kites/themes</code></span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Vaults in iCloud Drive, Dropbox and other cloud folders</span></li><li style="display:flex;gap:10px"><span aria-hidden="true" style="color:#c2622f">–</span><span>Password-locked notes</span></li></ul>
-      <a id="buy" href="#waitlist" style="display:inline-flex;align-items:center;height:44px;margin-top:28px;padding:0 22px;border-radius:999px;background:#a8541f;color:#fcfcfc;font-family:var(--font-sans);font-size:15px;font-weight:500;text-decoration:none">Try Pro in the app</a>
-    </div>
-  </div>
-  <p data-reveal="200" style="max-width:600px;margin:24px 0 0;font-size:15px;line-height:1.7;color:#6e6e6e;text-wrap:pretty">Pro is on your account, for every device you sign in on, and keeps working offline for days at a time. Your notes are plain files either way: when Pro ends, every note is still there to read, and a locked note always opens.</p>
 </section>
 
 <section data-file="planet" aria-label="For the planet" style="max-width:1120px;margin:160px auto 0;padding:0 24px;box-sizing:border-box">
@@ -988,8 +972,9 @@ people/elizabeth.md
   const purchase = location.protocol === 'file:' ? 'http://localhost:8080' : '';
   const money = c => '$' + (c % 100 ? (c / 100).toFixed(2) : c / 100);
   fetch(purchase + '/price').then(r => r.json()).then(p => {
-    $('#price-now').textContent = money(p.yearly_cents);
-    $('#price-note').textContent = 'or ' + money(p.monthly_cents) + ' a month · ' + p.trial_days + ' days free to try';
+    $('#price-year').textContent = money(p.yearly_cents);
+    $('#price-month').textContent = money(p.monthly_cents);
+    $('#price-trial').textContent = p.trial_days;
   }).catch(() => {});
 
   // The waitlist: a fresh CSRF token from the server, then the email with it. Every way it can fail says so in words.
