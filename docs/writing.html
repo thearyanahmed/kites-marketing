@@ -68,6 +68,7 @@
 <h2 id="fragments-and-notes">Fragments and notes</h2>
 <p>There are two kinds of thing in Paperkites.</p>
 <div class="table-wrap"><table><thead><tr><th></th><th>Fragment</th><th>Note</th></tr></thead><tbody><tr><td>Title</td><td>none</td><td>yes</td></tr><tr><td>Made with</td><td><kbd>⌘↩</kbd> in the capture box</td><td><kbd>⌘E</kbd> in the capture box, <code>:new [title]</code>, or <code>:daily</code></td></tr><tr><td>In the list</td><td>shown whole</td><td>title and opening lines</td></tr><tr><td>On disk</td><td>a file in <code>fragments/</code></td><td><code>&lt;Title&gt;.md</code></td></tr></tbody></table></div>
+<p>A fragment can become a regular note at any time: <code>:note</code>, or <strong>Make it a note</strong> in its <code>⋯</code> menu. As with <kbd>⌘E</kbd>, its first line becomes the title when it reads like one; otherwise the title starts empty, with the caret in it. The file moves out of <code>fragments/</code> and keeps its pin, its tags and the links in it.</p>
 <p><code>:new</code> makes a new note, with an optional title: <code>:new Reading list</code>. <code>:daily</code> opens today's note, titled with today's date (<code>YYYY-MM-DD</code>), and makes it if it doesn't exist yet.</p>
 <h2 id="the-editor">The editor</h2>
 <p>Notes are markdown, shown as live preview. The editor speaks vim.</p>

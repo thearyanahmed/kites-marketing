@@ -108,7 +108,7 @@ database, no lock-in, no account needed. Edits made elsewhere (another editor, g
 runs. Front matter is left alone apart from `id`, `created` and `pinned`. No analytics, no telemetry.
 
 **Capture.** The app opens on a capture box. ⌘↩ keeps a thought as a *fragment* (a short note without a title); ⌘E
-opens it as a full note. ⏎ is a newline and never saves; `esc` never throws a draft away, even across a quit.
+opens it as a full note; `:note` later turns a fragment into a regular note with a title. ⏎ is a newline and never saves; `esc` never throws a draft away, even across a quit.
 
 **The list.** Everything, newest first; the date shows once per day in the gutter. `j` / `k` to move, `gg` / `G`,
 `[d` / `]d` jump by day, ⏎ opens, `x` pins. Previews show a note's first lines, its todos and up to two images. 10,000
