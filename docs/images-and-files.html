@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Images and files — Paperkites docs</title>
+<meta name="description" content="Add images and files to Paperkites notes on your Mac: drag or paste, image sizes and captions, a large view, and file cards that open in their app.">
+<link rel="canonical" href="https://paperkites.app/docs/images-and-files">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+<link rel="stylesheet" href="../colophon.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="../usecase/" class="btn btn-ghost btn-sm">Use cases</a>
+    <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="./">Overview</a></li>
+<li><a href="getting-started">Getting started</a></li>
+<li><a href="writing">Writing</a></li>
+<li><a href="images-and-files" aria-current="page">Images and files</a></li>
+<li><a href="tables-diagrams-math">Tables, diagrams and math</a></li>
+<li><a href="todos">Todos</a></li>
+<li><a href="areas-and-projects">Areas and projects</a></li>
+<li><a href="finding">Finding things</a></li>
+<li><a href="people">People</a></li>
+<li><a href="graph">The graph</a></li>
+<li><a href="sidebar-and-split">Sidebar and split</a></li>
+<li><a href="settings">Settings</a></li>
+<li><a href="themes">Themes</a></li>
+<li><a href="your-files">Your files</a></li>
+<li><a href="cloud-folders">Cloud folders</a></li>
+<li><a href="obsidian">Obsidian vaults</a></li>
+<li><a href="locked-notes">Locked notes</a></li>
+<li><a href="pro">Pro and your account</a></li>
+<li><a href="updates-and-help">Updates and help</a></li>
+<li><a href="keys-and-commands">Keys and commands</a></li>
+<li><a href="faq">FAQ</a></li>
+<li><a href="coming-soon" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / images-and-files</div>
+    <h1>Images and files<span class="dot">.</span></h1>
+<p>Drag images and files onto a note, or paste them. Paperkites copies each one into <code>attachments/</code> in your vault and writes the markdown that links it. Images show in the note; any other file becomes a card that opens with its app.</p>
+<h2 id="adding-files">Adding files</h2>
+<p>While you drag files over a note, a line shows where they'll land, between two lines of text, and a label under it says what will happen. Drop them there. Paste puts them under the line the caret is on.</p>
+<ul><li><strong>Copied, never moved.</strong> The original stays where it was, unchanged.</li><li><strong>Never over a file.</strong> If <code>attachments/</code> already has a file with that name, the copy gets <code>" 2"</code>, then <code>" 3"</code>, and so on.</li><li><strong>Already in the vault?</strong> A file that's already inside your vault is linked where it is, not copied.</li><li><strong>A screenshot</strong> pasted from the clipboard is saved under the time you pasted it, such as <code>Pasted image 2026-10-10 at 14.03.22.png</code>. An image dragged out of a browser keeps its own name.</li><li><strong>All or nothing.</strong> If one file can't be copied, none of them are added.</li><li><strong>Files only.</strong> Folders in a drop are left out, and the status pill says so.</li><li><strong>One undo.</strong> <kbd>⌘Z</kbd> takes the whole drop out of the note again.</li></ul>
+<p>Large files take a moment. While more than 50 MB is copying, the status pill says <em>Copying…</em>.</p>
+<h2 id="what-gets-written">What gets written</h2>
+<p>The links are plain markdown, relative to the note, so other apps open them too. Images come first, one per line, then each file:</p>
+<pre><code>![](attachments/harbour-dawn.jpg)
+![](attachments/harbour-noon.jpg)
+[Tide table.pdf](attachments/Tide%20table.pdf)</code></pre>
+<p>Spaces and other characters in a name are percent-encoded, as above. From a note in a folder, the link starts <code>../attachments/</code>.</p>
+<h2 id="images">Images</h2>
+<p>An image on a line of its own is drawn in place of its line. An image inside a sentence shows below its line. Paperkites shows images from your vault and nothing outside it.</p>
+<p>Two or more image lines one after another sit side by side, up to three a row, each with its file name under it. More wrap onto the next row. Click one to open its line's markdown.</p>
+<p>Notes show <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, <code>.gif</code>, <code>.webp</code>, <code>.svg</code>, <code>.avif</code>, <code>.heic</code> and <code>.heif</code> images. A HEIC photo is shown from a JPEG preview Paperkites makes for it; the file itself is left alone.</p>
+<h3 id="selecting-an-image">Selecting an image</h3>
+<p>Click an image, or move the caret onto its line, and it's selected: a ring goes round it and a small bar shows over it.</p>
+<div class="table-wrap"><table><thead><tr><th>Bar</th><th>Key</th><th>Does</th></tr></thead><tbody><tr><td>S · M · L · Full</td><td><kbd>1</kbd> – <kbd>4</kbd></td><td>size it</td></tr><tr><td>Caption</td><td><kbd>c</kbd></td><td>write a caption</td></tr><tr><td>Markdown</td><td></td><td>show its markdown, until the caret leaves the line</td></tr><tr><td>Remove</td><td><kbd>⌫</kbd></td><td>take the image out of the note</td></tr><tr><td></td><td><kbd>⏎</kbd></td><td>start a new line under it</td></tr></tbody></table></div>
+<p>The keys work while you're writing. In vim's NORMAL mode, keys keep their vim meaning, and the bar is how you act on an image. While an image is selected, anything else you type goes nowhere, so you can't write into markup you can't see.</p>
+<p>Remove takes the line out of the note. The file stays in <code>attachments/</code>.</p>
+<h2 id="sizes">Sizes</h2>
+<div class="table-wrap"><table><thead><tr><th>Size</th><th>Width</th></tr></thead><tbody><tr><td>S</td><td>200 px</td></tr><tr><td>M</td><td>360 px</td></tr><tr><td>L</td><td>520 px</td></tr><tr><td>Full</td><td>the width of the text column</td></tr></tbody></table></div>
+<p>You can also drag the handle on the image's right edge to any width. Dragged to the edge of the column, it's full width again.</p>
+<p>The width is written the way Obsidian reads it, after a <code>|</code> in the alt text. Full width takes it out:</p>
+<pre><code>![harbour at dawn|360](attachments/harbour-dawn.jpg)</code></pre>
+<h2 id="captions">Captions</h2>
+<p>Press <kbd>c</kbd> on a selected image, or Caption in its bar, and write. <kbd>⏎</kbd> or clicking away keeps it, and <kbd>esc</kbd> leaves it as it was. An empty caption takes it out. Until an image has a caption, its file name shows faintly under it.</p>
+<p>The caption is the image's title in the markdown:</p>
+<pre><code>![](attachments/harbour-dawn.jpg "The harbour at six")</code></pre>
+<h2 id="the-large-view">The large view</h2>
+<p>Double-click an image to see it as large as the window allows. A click, <kbd>esc</kbd> or any key closes it.</p>
+<h2 id="other-files">Other files</h2>
+<p>A line that's only a link to a file, not a note or a web page, is drawn as a card: an icon, the file's name, its kind and size, and an arrow.</p>
+<div class="table-wrap"><table><thead><tr><th>Action</th><th>Does</th></tr></thead><tbody><tr><td>click the card</td><td>open the file with the app it belongs to</td></tr><tr><td>⌥-click the card</td><td>show the file in Finder</td></tr></tbody></table></div>
+<p>With the caret in its paragraph, a card shows its markdown, like any link.</p>
+<h3 id="what-opens">What opens</h3>
+<p>A click opens these kinds of file with their app:</p>
+<ul><li><strong>Documents:</strong> <code>.pdf</code>, <code>.txt</code>, <code>.md</code>, <code>.rtf</code>, <code>.csv</code>, <code>.json</code>, <code>.epub</code>, <code>.docx</code>, <code>.xlsx</code>, <code>.pptx</code>, <code>.pages</code>, <code>.numbers</code>, <code>.key</code>, <code>.odt</code>, <code>.ods</code>, <code>.odp</code>, <code>.canvas</code>, <code>.base</code></li><li><strong>Images:</strong> <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, <code>.gif</code>, <code>.webp</code>, <code>.avif</code>, <code>.heic</code>, <code>.heif</code>, <code>.tif</code>, <code>.tiff</code>, <code>.bmp</code></li><li><strong>Audio:</strong> <code>.mp3</code>, <code>.wav</code>, <code>.m4a</code>, <code>.ogg</code>, <code>.flac</code></li><li><strong>Video:</strong> <code>.mp4</code>, <code>.mov</code>, <code>.webm</code>, <code>.mkv</code>, <code>.ogv</code>, <code>.3gp</code></li></ul>
+<p>Any other file is shown in Finder instead of opened. That includes anything your Mac would run, such as a script or an app, and a few kinds that can carry something that runs: an <code>.svg</code>, a <code>.zip</code>, and older Office files.</p>
+<h2 id="in-locked-notes">In locked notes</h2>
+<p>A <a href="locked-notes">locked note</a> takes images only. An image dropped or pasted into it is encrypted with the note's key before it's written, as <code>attachments/&lt;id&gt;.age</code>. Other files are refused. See <a href="locked-notes#images">Locked notes</a>.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="writing"><span>previous</span>Writing</a><a class="next" href="tables-diagrams-math"><span>next</span>Tables, diagrams and math</a></nav>
+    <footer data-file="colophon" class="colophon">
+  <div class="row top">
+    <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+    <nav aria-label="Legal and support"><a href="../terms">terms</a><a href="../privacy">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+  </div>
+  <div class="row bottom">
+    <div class="left">
+      <div class="badge"><iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US"></iframe></div>
+      <span class="copy">© 2026 paperkites</span>
+    </div>
+    <div class="right">
+      <div class="credit">
+        <span>a product by <a class="lh" href="https://projectlighthouse.io" target="_blank" rel="noopener">projectlighthouse</a>;</span>
+        <span>built for humans and machines.</span>
+      </div>
+      <a class="logo" href="https://projectlighthouse.io" target="_blank" rel="noopener" aria-label="Project Lighthouse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="56" height="56" aria-hidden="true"><path d="M9.5 3.5H4.5V28.5H27.5V3.5H22.5" fill="none" stroke="#202020" stroke-width="2.76" stroke-linecap="square"></path><path d="M11.8 28.5 13.9 13.6H18.1L20.2 28.5Z" fill="#202020"></path><rect x="12.6" y="11.4" width="6.8" height="1.9" fill="#202020"></rect><rect x="13.9" y="7.2" width="4.2" height="3.8" fill="#f2a41f"></rect><path d="M13.2 6.8 16 3.8 18.8 6.8Z" fill="#202020"></path></svg></a>
+    </div>
+  </div>
+</footer>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/images-and-files.md</span>
+  <span class="gap"></span>
+  <a href="../">home</a>
+  <a href="../privacy">privacy</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* Use cases: the docs' tokens and reading column (docs.css), one column wide, no page list. */
+.article { max-width: 720px; margin: 0 auto; padding: 48px 24px 120px; }
+.article .eyebrow a { color: inherit; text-decoration: none; }
+.article .eyebrow a:hover { color: var(--ink); }
+.meta { margin: 12px 0 0; font-family: var(--font-mono); font-size: 13px; color: var(--ink-label); }
+
+.onpage { margin: 32px 0 0; padding: 16px 20px; border-radius: var(--radius-md); background: var(--surface-sunken); box-shadow: var(--shadow-sm); }
+.onpage .toc-label { margin: 0 0 6px; }
+.onpage ol { margin: 0; padding-left: 20px; font-size: 15px; }
+.onpage ol:empty, .onpage:has(ol:empty) { display: none; }
+
+.article img { display: block; max-width: 100%; height: auto; margin: 24px 0 0; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
+.article blockquote { margin: 24px 0 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--kite); color: var(--ink-secondary); }
+.article blockquote p:first-child { margin-top: 0; }
+.article hr { margin: 48px 0 0; border: 0; border-top: 1px solid var(--surface-muted); }
+.article .footnote-definition { font-size: 15px; color: var(--ink-label); }
+
+.cta { margin: 72px 0 0; padding: 28px; border-radius: var(--radius-md); background: var(--surface-raised); box-shadow: var(--shadow-md); }
+.cta p { margin: 8px 0 0; }
+.cta .cta-title { margin: 0; font-size: 21px; font-weight: 500; line-height: 1.35; color: var(--ink); }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px !important; }
+.cta .btn { height: 40px; padding: 0 18px; font-size: 15px; }
+.btn-kite { background: var(--kite-text); color: #fcfcfc; }
+.btn-kite:hover { color: #fcfcfc; box-shadow: var(--shadow-md); }
+
+.articles { list-style: none; margin: 40px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.articles li + li { margin-top: 0; }
+.articles a { display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; border-radius: var(--radius-md); background: var(--surface-raised); box-shadow: var(--shadow-sm); color: var(--ink-secondary); text-decoration: none; }
+.articles a:hover { box-shadow: var(--shadow-md); color: var(--ink-secondary); }
+.articles .date { font-family: var(--font-mono); font-size: 12px; color: var(--ink-label); }
+.articles strong { font-size: 19px; font-weight: 500; color: var(--ink); }
+.articles .desc { font-size: 15px; line-height: 1.6; }
+.articles:not(:has(li))::after { content: "The first articles are on their way."; color: var(--ink-label); }
+
+@media (max-width: 860px) {
+  .article { padding: 24px 16px 96px; }
+}

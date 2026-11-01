@@ -21,6 +21,7 @@
   <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
   <div class="nav-links">
     <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="../usecase/" class="btn btn-ghost btn-sm">Use cases</a>
     <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
     <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
   </div>
@@ -34,7 +35,10 @@
 <li><a href="./">Overview</a></li>
 <li><a href="getting-started">Getting started</a></li>
 <li><a href="writing" aria-current="page">Writing</a></li>
+<li><a href="images-and-files">Images and files</a></li>
+<li><a href="tables-diagrams-math">Tables, diagrams and math</a></li>
 <li><a href="todos">Todos</a></li>
+<li><a href="areas-and-projects">Areas and projects</a></li>
 <li><a href="finding">Finding things</a></li>
 <li><a href="people">People</a></li>
 <li><a href="graph">The graph</a></li>
@@ -42,7 +46,11 @@
 <li><a href="settings">Settings</a></li>
 <li><a href="themes">Themes</a></li>
 <li><a href="your-files">Your files</a></li>
+<li><a href="cloud-folders">Cloud folders</a></li>
+<li><a href="obsidian">Obsidian vaults</a></li>
 <li><a href="locked-notes">Locked notes</a></li>
+<li><a href="pro">Pro and your account</a></li>
+<li><a href="updates-and-help">Updates and help</a></li>
 <li><a href="keys-and-commands">Keys and commands</a></li>
 <li><a href="faq">FAQ</a></li>
 <li><a href="coming-soon" class="soon-link">Coming soon</a></li>
@@ -74,7 +82,7 @@
 <p>Tags complete as you type. With the caret on a tag, <kbd>gt</kbd> opens its page. See <a href="finding#tag-pages">Finding things</a> for tag pages and renaming a tag everywhere.</p>
 <h2 id="links">Links</h2>
 <p>A link is another note's title in double brackets.</p>
-<div class="table-wrap"><table><thead><tr><th>Written as</th><th>Means</th></tr></thead><tbody><tr><td><code>[[Keys]]</code></td><td>a link to the note titled Keys</td></tr><tr><td><code>[[Keys|the keymap]]</code></td><td>the same link, shown as "the keymap"</td></tr><tr><td><code>[[Keys#Summon]]</code></td><td>a link to the Summon heading in Keys</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>Written as</th><th>Means</th></tr></thead><tbody><tr><td><code>[[Keys]]</code></td><td>a link to the note Keys: matched by path and file name first, then by title, then by alias</td></tr><tr><td><code>[[Keys|the keymap]]</code></td><td>the same link, shown as "the keymap"</td></tr><tr><td><code>[[Keys#Summon]]</code></td><td>a link to the Summon heading in Keys</td></tr></tbody></table></div>
 <p>Links complete as you type <code>[[</code>. You can also select text and press <kbd>⌘K</kbd> to make it a link.</p>
 <h2 id="moving-around">Moving around</h2>
 <p>With the caret on a link, tag or person, in NORMAL:</p>
@@ -86,7 +94,7 @@
 <h2 id="images">Images</h2>
 <p>Write an image the markdown way, with a path inside your vault:</p>
 <pre><code>![the view from the ridge](Pics/photo.png)</code></pre>
-<p>The image shows below its line. Images are served from your vault and nothing outside it. In lists, a note's preview shows up to two of its images.</p>
+<p>An image on a line of its own is drawn in place of that line; one inside a sentence shows below it. Dragging, pasting, sizes and captions are in <a href="images-and-files">Images and files</a>. Images are served from your vault and nothing outside it. In lists, a note's preview shows up to two of its images.</p>
 <h2 id="tidying-format">Tidying: <code>:format</code></h2>
 <p><code>:format</code> tidies the markdown of the note you're in: tables, lists and blank lines. It never touches your words.</p>
 <h2 id="mentions">Mentions</h2>
@@ -96,7 +104,7 @@
 <div class="table-wrap"><table><thead><tr><th>Type</th><th>Becomes</th></tr></thead><tbody><tr><td><code>@date</code></td><td>today's date</td></tr><tr><td><code>@date:tom</code> or <code>@date:tomorrow</code></td><td>tomorrow's date</td></tr><tr><td><code>@date:yes</code> or <code>@date:yesterday</code></td><td>yesterday's date</td></tr></tbody></table></div>
 <h2 id="deleting">Deleting</h2>
 <p><code>:delete</code> moves the note you're in to the trash. <code>:trash</code> shows the trash, and <kbd>⏎</kbd> on a note puts it back where it lived. See <a href="your-files#the-trash">Your files</a>.</p>
-    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="getting-started"><span>previous</span>Getting started</a><a class="next" href="todos"><span>next</span>Todos</a></nav>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="getting-started"><span>previous</span>Getting started</a><a class="next" href="images-and-files"><span>next</span>Images and files</a></nav>
     <footer data-file="colophon" class="colophon">
   <div class="row top">
     <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>

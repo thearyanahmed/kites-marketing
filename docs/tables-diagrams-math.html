@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tables, diagrams and math — Paperkites docs</title>
+<meta name="description" content="Tables, Mermaid diagrams and LaTeX math in Paperkites markdown notes, plus icons in text, :format to tidy a note and :zen to write undisturbed.">
+<link rel="canonical" href="https://paperkites.app/docs/tables-diagrams-math">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+<link rel="stylesheet" href="../colophon.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="../usecase/" class="btn btn-ghost btn-sm">Use cases</a>
+    <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="./">Overview</a></li>
+<li><a href="getting-started">Getting started</a></li>
+<li><a href="writing">Writing</a></li>
+<li><a href="images-and-files">Images and files</a></li>
+<li><a href="tables-diagrams-math" aria-current="page">Tables, diagrams and math</a></li>
+<li><a href="todos">Todos</a></li>
+<li><a href="areas-and-projects">Areas and projects</a></li>
+<li><a href="finding">Finding things</a></li>
+<li><a href="people">People</a></li>
+<li><a href="graph">The graph</a></li>
+<li><a href="sidebar-and-split">Sidebar and split</a></li>
+<li><a href="settings">Settings</a></li>
+<li><a href="themes">Themes</a></li>
+<li><a href="your-files">Your files</a></li>
+<li><a href="cloud-folders">Cloud folders</a></li>
+<li><a href="obsidian">Obsidian vaults</a></li>
+<li><a href="locked-notes">Locked notes</a></li>
+<li><a href="pro">Pro and your account</a></li>
+<li><a href="updates-and-help">Updates and help</a></li>
+<li><a href="keys-and-commands">Keys and commands</a></li>
+<li><a href="faq">FAQ</a></li>
+<li><a href="coming-soon" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / tables-diagrams-math</div>
+    <h1>Tables, diagrams and math<span class="dot">.</span></h1>
+<p>Notes take more than prose. Tables, diagrams, math and icons are all written as plain text in the markdown, and drawn in place while the caret is elsewhere. Put the caret in one and you see its source, to change it.</p>
+<h2 id="tables">Tables</h2>
+<p>Write a table the GitHub way, with pipes, and a line of dashes under the header:</p>
+<pre><code>| Port   | Opens | Tide  |
+| :----- | :---: | ----: |
+| Leith  | 06:00 | 4.2 m |
+| Oban   | 07:30 | 3.1 m |</code></pre>
+<ul><li><strong>Alignment</strong> comes from the colons in the dashes line: <code>:---</code> left, <code>:---:</code> centred, <code>---:</code> right.</li><li><strong>A line break in a cell</strong> is written <code>&lt;br&gt;</code>, since a row is one line.</li><li><strong>Click a row</strong> to put the caret on its line and see the markdown.</li><li><strong>Links in a cell</strong> open with a click. <kbd>⌘</kbd>-click a tag to open it.</li></ul>
+<p>You don't have to line the pipes up by hand. <code>:format</code> pads every table in the note into columns (see <a href="#tidying-format">below</a>).</p>
+<h2 id="diagrams">Diagrams</h2>
+<p>A fenced block marked <code>mermaid</code> is drawn as its diagram:</p>
+<pre><code>```mermaid
+graph LR
+  Draft --&gt; Review --&gt; Published
+```</code></pre>
+<p>Diagrams are drawn by <a href="https://mermaid.js.org" target="_blank" rel="noopener">Mermaid</a>, so its syntax is what you write. They take the note's own colours and font, and follow light and dark.</p>
+<p>Diagrams are drawn strictly: no scripts run, and nothing in a diagram is a clickable link.</p>
+<h2 id="math">Math</h2>
+<p>Write LaTeX between dollar signs, and it's drawn with <a href="https://katex.org" target="_blank" rel="noopener">KaTeX</a>.</p>
+<div class="table-wrap"><table><thead><tr><th>Written as</th><th>Shows</th></tr></thead><tbody><tr><td><code>$e^{i\pi} + 1 = 0$</code></td><td>math inside a sentence</td></tr><tr><td><code>$$ … $$</code></td><td>a block of math, on one line or across several</td></tr><tr><td><code>```math</code></td><td>a block too, as a fenced block</td></tr></tbody></table></div>
+<pre><code>$$
+\int_0^1 x^2 \, dx = \frac{1}{3}
+$$</code></pre>
+<p>Prices stay prices. Inline math needs a character other than a space straight after the opening <code>$</code> and straight before the closing one, all on one line, and the closing <code>$</code> can't be followed by a digit. So <code>$5 and $10</code> stays as text. Write <code>\$</code> for a dollar sign that never starts math.</p>
+<p>A formula KaTeX can't read stays as its source, dimmed. Hover it to see why.</p>
+<h2 id="icons">Icons in the text</h2>
+<p>Write <code>:icon:</code> and a name to put an icon in a line, at the size and colour of the text around it:</p>
+<pre><code>- :icon:camera Photos from the trip
+- :icon:list-todo Packing list</code></pre>
+<p>The icon starts a word, so <code>a:icon:folder</code> stays as text. A name that isn't in the set stays as text too. With the caret on it, you see what you wrote.</p>
+<p>The set is hand-picked, and the same one areas and projects use:</p>
+<p><code>archive</code> <code>book-open</code> <code>bookmark</code> <code>briefcase</code> <code>calendar</code> <code>calendar-clock</code> <code>camera</code> <code>check</code> <code>chevron-right</code> <code>clock</code> <code>code</code> <code>coffee</code> <code>file-text</code> <code>flag</code> <code>folder</code> <code>folder-open</code> <code>globe</code> <code>graduation-cap</code> <code>heart</code> <code>house</code> <code>inbox</code> <code>layers</code> <code>leaf</code> <code>lightbulb</code> <code>list-todo</code> <code>lock</code> <code>minus</code> <code>music</code> <code>notebook</code> <code>pen-line</code> <code>pin</code> <code>plane</code> <code>plus</code> <code>rocket</code> <code>settings</code> <code>square-check</code> <code>star</code> <code>sun</code> <code>tag</code> <code>trash-2</code> <code>user</code> <code>users</code> <code>waypoints</code></p>
+<h2 id="tidying-format">Tidying: <code>:format</code></h2>
+<p><code>:format</code> tidies the markdown of the note you're in. It changes the shape and never the words.</p>
+<ul><li><strong>Tables</strong> are padded into even columns.</li><li><strong>Lists</strong> get consistent markers and indents.</li><li><strong>Blocks</strong> get one blank line between them.</li><li><strong>Emphasis</strong> is written with asterisks: <code>*italic*</code> and <code>**bold**</code>.</li></ul>
+<p>Lines are never re-wrapped, and code blocks stay as written. Links, tags, mentions and todo markers pass through untouched. If the note can't be read as markdown, <code>:format</code> leaves it exactly as it was rather than tidy half of it.</p>
+<h2 id="zen">Zen: <code>:zen</code></h2>
+<p>Zen is for writing and for presenting. The sidebar, the header, the gutter, backlinks and the format bar go, and in a note only the part under the caret stays lit. The rest fades.</p>
+<div class="table-wrap"><table><thead><tr><th>Key or command</th><th>Does</th></tr></thead><tbody><tr><td><kbd>⌘.</kbd> or <code>:zen</code></td><td>Zen on or off</td></tr><tr><td><code>:zen paragraph</code></td><td>light the paragraph you're in (the default)</td></tr><tr><td><code>:zen sentence</code></td><td>light only the sentence you're in</td></tr><tr><td><code>:zen page</code></td><td>light the whole note, for presenting it</td></tr><tr><td><code>:zen off</code></td><td>leave Zen</td></tr><tr><td><kbd>⇟</kbd> / <kbd>⇞</kbd> (PageDown / PageUp)</td><td>light the next or previous block, centred</td></tr><tr><td><kbd>esc</kbd>, outside the text</td><td>leave Zen</td></tr></tbody></table></div>
+<p>PageDown and PageUp are what a presenter remote sends, so you can show a note a paragraph at a time. In a list, the lit block is the item you're on.</p>
+<p>Zen keeps the scope you last picked for next time. It doesn't last past a quit: Paperkites always starts out of Zen.</p>
+<h2 id="callouts-highlights-and-more">Callouts, highlights and more</h2>
+<p>Paperkites also reads the parts of Obsidian's markdown that notes are made of: callouts, <code>==highlights==</code>, <code>%%comments%%</code>, footnotes and embeds. They work in any vault. See <a href="obsidian">Obsidian vaults</a>.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="images-and-files"><span>previous</span>Images and files</a><a class="next" href="todos"><span>next</span>Todos</a></nav>
+    <footer data-file="colophon" class="colophon">
+  <div class="row top">
+    <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+    <nav aria-label="Legal and support"><a href="../terms">terms</a><a href="../privacy">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+  </div>
+  <div class="row bottom">
+    <div class="left">
+      <div class="badge"><iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US"></iframe></div>
+      <span class="copy">© 2026 paperkites</span>
+    </div>
+    <div class="right">
+      <div class="credit">
+        <span>a product by <a class="lh" href="https://projectlighthouse.io" target="_blank" rel="noopener">projectlighthouse</a>;</span>
+        <span>built for humans and machines.</span>
+      </div>
+      <a class="logo" href="https://projectlighthouse.io" target="_blank" rel="noopener" aria-label="Project Lighthouse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="56" height="56" aria-hidden="true"><path d="M9.5 3.5H4.5V28.5H27.5V3.5H22.5" fill="none" stroke="#202020" stroke-width="2.76" stroke-linecap="square"></path><path d="M11.8 28.5 13.9 13.6H18.1L20.2 28.5Z" fill="#202020"></path><rect x="12.6" y="11.4" width="6.8" height="1.9" fill="#202020"></rect><rect x="13.9" y="7.2" width="4.2" height="3.8" fill="#f2a41f"></rect><path d="M13.2 6.8 16 3.8 18.8 6.8Z" fill="#202020"></path></svg></a>
+    </div>
+  </div>
+</footer>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/tables-diagrams-math.md</span>
+  <span class="gap"></span>
+  <a href="../">home</a>
+  <a href="../privacy">privacy</a>
+</footer>
+
+</body>
+</html>

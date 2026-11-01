@@ -21,6 +21,7 @@
   <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
   <div class="nav-links">
     <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="../usecase/" class="btn btn-ghost btn-sm">Use cases</a>
     <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
     <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
   </div>
@@ -34,7 +35,10 @@
 <li><a href="./">Overview</a></li>
 <li><a href="getting-started">Getting started</a></li>
 <li><a href="writing">Writing</a></li>
+<li><a href="images-and-files">Images and files</a></li>
+<li><a href="tables-diagrams-math">Tables, diagrams and math</a></li>
 <li><a href="todos">Todos</a></li>
+<li><a href="areas-and-projects">Areas and projects</a></li>
 <li><a href="finding">Finding things</a></li>
 <li><a href="people">People</a></li>
 <li><a href="graph">The graph</a></li>
@@ -42,7 +46,11 @@
 <li><a href="settings">Settings</a></li>
 <li><a href="themes">Themes</a></li>
 <li><a href="your-files">Your files</a></li>
+<li><a href="cloud-folders">Cloud folders</a></li>
+<li><a href="obsidian">Obsidian vaults</a></li>
 <li><a href="locked-notes">Locked notes</a></li>
+<li><a href="pro">Pro and your account</a></li>
+<li><a href="updates-and-help">Updates and help</a></li>
 <li><a href="keys-and-commands">Keys and commands</a></li>
 <li><a href="faq" aria-current="page">FAQ</a></li>
 <li><a href="coming-soon" class="soon-link">Coming soon</a></li>
@@ -56,7 +64,7 @@
 <h2 id="where-are-my-notes">Where are my notes?</h2>
 <p>In <code>~/notes</code>, unless you've chosen another folder. Run <code>:vault</code> to see which folder Paperkites is using. Each note is a <code>.md</code> file named after its title; fragments are in <code>fragments/</code> and people in <code>people/</code>. See <a href="your-files">Your files</a>.</p>
 <h2 id="is-there-sync">Is there sync?</h2>
-<p>Not built in yet; it's <a href="coming-soon">coming</a>. Your notes are ordinary files, so you can keep the folder in git or anything else that syncs a folder on your Mac (iCloud Drive and Dropbox with Pro), and point Paperkites at it with <code>:vault &lt;folder&gt;</code>. Your settings stay on each device.</p>
+<p>Not built in yet; it's <a href="coming-soon">coming</a>. Your notes are ordinary files, so you can keep the folder in git or anything else that syncs a folder on your Mac (iCloud Drive, Dropbox, Google Drive or OneDrive <a href="cloud-folders">with Pro</a>), and point Paperkites at it with <code>:vault &lt;folder&gt;</code>. Your settings stay on each device.</p>
 <h2 id="can-i-edit-my-notes-in-another-editor">Can I edit my notes in another editor?</h2>
 <p>Yes. Paperkites watches the folder while it runs, so changes made elsewhere show up within a moment. If the note is open in Paperkites with edits you haven't saved, it asks you to choose: <code>:reload</code> takes the file's version, and <code>:w</code> writes yours over it.</p>
 <h2 id="do-i-need-to-save">Do I need to save?</h2>

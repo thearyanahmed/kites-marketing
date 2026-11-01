@@ -21,6 +21,7 @@
   <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
   <div class="nav-links">
     <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="../usecase/" class="btn btn-ghost btn-sm">Use cases</a>
     <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
     <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
   </div>
@@ -34,7 +35,10 @@
 <li><a href="./">Overview</a></li>
 <li><a href="getting-started">Getting started</a></li>
 <li><a href="writing">Writing</a></li>
+<li><a href="images-and-files">Images and files</a></li>
+<li><a href="tables-diagrams-math">Tables, diagrams and math</a></li>
 <li><a href="todos" aria-current="page">Todos</a></li>
+<li><a href="areas-and-projects">Areas and projects</a></li>
 <li><a href="finding">Finding things</a></li>
 <li><a href="people">People</a></li>
 <li><a href="graph">The graph</a></li>
@@ -42,7 +46,11 @@
 <li><a href="settings">Settings</a></li>
 <li><a href="themes">Themes</a></li>
 <li><a href="your-files">Your files</a></li>
+<li><a href="cloud-folders">Cloud folders</a></li>
+<li><a href="obsidian">Obsidian vaults</a></li>
 <li><a href="locked-notes">Locked notes</a></li>
+<li><a href="pro">Pro and your account</a></li>
+<li><a href="updates-and-help">Updates and help</a></li>
 <li><a href="keys-and-commands">Keys and commands</a></li>
 <li><a href="faq">FAQ</a></li>
 <li><a href="coming-soon" class="soon-link">Coming soon</a></li>
@@ -55,9 +63,9 @@
     <h1>Todos<span class="dot">.</span></h1>
 <p>A todo is a list item with a box: <code>- [ ] buy milk</code>. You write todos in notes like any other text, and the file stays plain markdown.</p>
 <h2 id="the-seven-states">The seven states</h2>
-<p>Each state has its own marker, the character inside the box.</p>
+<p>Each state has its own marker, the character inside the box. Open and done work for everyone; the other five are part of <a href="pro">Pro</a>, and without it any other marker stays plain text.</p>
 <div class="table-wrap"><table><thead><tr><th>Marker</th><th>State</th><th>Shown as</th></tr></thead><tbody><tr><td><code>[ ]</code></td><td>open</td><td>an empty box</td></tr><tr><td><code>[x]</code></td><td>done</td><td>struck through</td></tr><tr><td><code>[-]</code></td><td>cancelled</td><td>greyed and labelled</td></tr><tr><td><code>[&gt;]</code></td><td>moved</td><td>greyed and labelled</td></tr><tr><td><code>[&lt;]</code></td><td>scheduled</td><td>its own marker</td></tr><tr><td><code>[/]</code></td><td>in progress</td><td>its own marker</td></tr><tr><td><code>[!]</code></td><td>priority</td><td>its own marker</td></tr></tbody></table></div>
-<p>Any other character in the box is left as plain text.</p>
+<p>With Pro, any other single character in the box is a todo too, as in Obsidian; without it, only <code>[ ]</code> and <code>[x]</code> are todos and anything else is plain text.</p>
 <h2 id="changing-a-state">Changing a state</h2>
 <div class="table-wrap"><table><thead><tr><th>Key or action</th><th>Does</th></tr></thead><tbody><tr><td>click the marker</td><td>toggle open ↔ done</td></tr><tr><td><kbd>⌘↩</kbd> on the line</td><td>toggle open ↔ done</td></tr><tr><td><kbd>⌘⇧↩</kbd> on the line</td><td>open a picker of all seven states</td></tr><tr><td>alt-click or right-click the marker</td><td>open the same picker</td></tr></tbody></table></div>
 <p>In the picker, one key sets the state. Every change is one undo step.</p>
@@ -69,7 +77,7 @@
 - [ ] re-run the bench</code></pre>
 <h2 id="in-lists">In lists</h2>
 <p>A note's preview in the list draws its todos as <code>[ ]</code> and <code>[x]</code>, so you can see what's open without opening the note.</p>
-    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="writing"><span>previous</span>Writing</a><a class="next" href="finding"><span>next</span>Finding things</a></nav>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="tables-diagrams-math"><span>previous</span>Tables, diagrams and math</a><a class="next" href="areas-and-projects"><span>next</span>Areas and projects</a></nav>
     <footer data-file="colophon" class="colophon">
   <div class="row top">
     <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>

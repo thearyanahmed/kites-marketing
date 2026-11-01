@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Areas and projects — Paperkites docs</title>
+<meta name="description" content="Areas, projects and todo lists in Paperkites: Inbox, Today, Upcoming, Anytime, Someday and Logbook, the :todos view, and the markdown files behind them.">
+<link rel="canonical" href="https://paperkites.app/docs/areas-and-projects">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+<link rel="stylesheet" href="../colophon.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="../usecase/" class="btn btn-ghost btn-sm">Use cases</a>
+    <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="./">Overview</a></li>
+<li><a href="getting-started">Getting started</a></li>
+<li><a href="writing">Writing</a></li>
+<li><a href="images-and-files">Images and files</a></li>
+<li><a href="tables-diagrams-math">Tables, diagrams and math</a></li>
+<li><a href="todos">Todos</a></li>
+<li><a href="areas-and-projects" aria-current="page">Areas and projects</a></li>
+<li><a href="finding">Finding things</a></li>
+<li><a href="people">People</a></li>
+<li><a href="graph">The graph</a></li>
+<li><a href="sidebar-and-split">Sidebar and split</a></li>
+<li><a href="settings">Settings</a></li>
+<li><a href="themes">Themes</a></li>
+<li><a href="your-files">Your files</a></li>
+<li><a href="cloud-folders">Cloud folders</a></li>
+<li><a href="obsidian">Obsidian vaults</a></li>
+<li><a href="locked-notes">Locked notes</a></li>
+<li><a href="pro">Pro and your account</a></li>
+<li><a href="updates-and-help">Updates and help</a></li>
+<li><a href="keys-and-commands">Keys and commands</a></li>
+<li><a href="faq">FAQ</a></li>
+<li><a href="coming-soon" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / areas-and-projects</div>
+    <h1>Areas and projects<span class="dot">.</span></h1>
+<p>Areas and projects give your todos somewhere to live, and your notes too. An area is a part of your life that goes on, such as Home or Work. A project is something you finish, such as a kitchen or a talk, usually inside an area. Todos sit in a project or an area, or wait in the Inbox until you sort them.</p>
+<p>Areas and projects are part of <a href="pro">Pro</a>. So are the task markers beyond <code>[ ]</code> and <code>[x]</code>. <code>:todos</code> is free.</p>
+<h2 id="areas">Areas</h2>
+<p><code>:area Home</code> makes an area called Home. An area's page shows its description, its projects, the todos kept in the area itself, and the notes filed in it.</p>
+<p>The description is the first paragraph of the area's file. Each area can have an icon from the same <a href="tables-diagrams-math#icons">set as icons in text</a>.</p>
+<h2 id="projects">Projects</h2>
+<p><code>:project Kitchen</code> makes a project called Kitchen, in the area you're on. A project's page shows its progress, its deadline and its area, then its todos, grouped under its headings, and its notes folded to one line.</p>
+<ul><li><strong>Headings</strong> split a project's todos into parts. Drag a todo onto a heading to move it under it, and drag headings to reorder them.</li><li><strong><kbd>⌘⇧N</kbd></strong> on a project's page swaps what's open: the notes, or the todos.</li><li><strong><code>:finish</code></strong> marks the project you're on as done. It leaves Home and goes to the Logbook.</li></ul>
+<p>A project with no area is listed under <em>No area</em>.</p>
+<h2 id="todos-in-projects">Todos in projects</h2>
+<p>On Home, a project's page and the six lists below:</p>
+<div class="table-wrap"><table><thead><tr><th>Key</th><th>Does</th></tr></thead><tbody><tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td>move through the todos</td></tr><tr><td><kbd>x</kbd></td><td>tick the todo, or untick it</td></tr><tr><td><kbd>⏎</kbd></td><td>open the todo in place, under its row, to write its notes and deadline</td></tr></tbody></table></div>
+<p><kbd>n</kbd> makes a new todo on Home, on an area's or a project's page, and in the Inbox, Today, Anytime and Someday. A new todo is written as a row where it will sit. <kbd>⏎</kbd> makes it and leaves an empty row for the next one; <kbd>esc</kbd>, or leaving the row empty, stops. A todo made on Today is for today; one made on Anytime or Someday is marked that way; one made in the Inbox is in no project and has no date.</p>
+<p>Double-click a todo to open it in place, and <kbd>esc</kbd> to close it. Done is struck through; cancelled has a wavy strike.</p>
+<h2 id="the-lists">The lists</h2>
+<p>Six lists gather todos from every project and area. Each has a command.</p>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Shows</th></tr></thead><tbody><tr><td><code>:inbox</code></td><td>open todos in no project or area, with no date</td></tr><tr><td><code>:today</code></td><td>open todos for today or this evening, dated today or earlier, or with a deadline that's today or gone by</td></tr><tr><td><code>:upcoming</code></td><td>open todos dated after today, soonest first</td></tr><tr><td><code>:anytime</code></td><td>open todos marked anytime, and those in a project or area with no date</td></tr><tr><td><code>:someday</code></td><td>open todos marked someday</td></tr><tr><td><code>:logbook</code></td><td>done and cancelled todos, and done or dropped projects</td></tr></tbody></table></div>
+<p><kbd>⌘1</kbd> opens Today, the first row of the sidebar.</p>
+<h2 id="home">Home</h2>
+<p>Once you have areas or projects, Home (<kbd>gh</kbd>) is theirs: today's date, the todos for today with <em>This Evening</em> under them, then every area with its projects, and <em>No area</em> last. Before then, Home is the capture box and the list, as it always was.</p>
+<h2 id="the-sidebar">The sidebar</h2>
+<p>In <code>:settings</code>, <em>Organise the sidebar by</em> picks areas and projects, or folders. With areas, the sidebar lists each area with its projects under it. <em>Show projects as</em> marks each project with its progress ring or its icon.</p>
+<div class="table-wrap"><table><thead><tr><th>Key</th><th>Does</th></tr></thead><tbody><tr><td><kbd>l</kbd> / <kbd>h</kbd></td><td>open an area, or close it</td></tr><tr><td><kbd>r</kbd></td><td>rename the area or project you're on</td></tr><tr><td><kbd>i</kbd></td><td>change its icon</td></tr><tr><td><kbd>x</kbd> · <kbd>p</kbd></td><td>pick up a project, and put it down in the area you're on</td></tr><tr><td><kbd>⌘⇧F</kbd>, or type</td><td>filter the projects by name; <kbd>⏎</kbd> opens the first, <kbd>esc</kbd> clears</td></tr></tbody></table></div>
+<p>Right-click an area or project to rename it or change its icon too. ⌘K finds areas, projects and todos along with everything else.</p>
+<h2 id="notes-in-projects">Notes in projects</h2>
+<p>A note can be filed in one project or one area. Its file stays in whatever folder it's in.</p>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:file Kitchen</code></td><td>file the note you're in under the project or area called Kitchen</td></tr><tr><td><code>:unfile</code></td><td>take it out of its project or area</td></tr></tbody></table></div>
+<p>The note's menu does the same under <em>Add to project or area</em>, where typing a name no project has makes one. Filing a note in a project takes it out of any area, and the other way round.</p>
+<h2 id="moving-todos-out-of-a-note">Moving todos out of a note</h2>
+<p>Todos often start as a checklist in a note, such as meeting notes. <kbd>⇧⌘M</kbd> moves a note's todos into a project, or under one of its headings. Each todo becomes a todo of its own in the project, and the note keeps one line in their place, drawn as a card that links to them:</p>
+<pre><code>&gt; [!todos] 4 action items → [[projects/01J…|Kitchen › Plan]] ^td-7k2q</code></pre>
+<p>Undo puts the note and the project back as they were. Bringing the todos back returns the ones still open to the note, as checklist lines.</p>
+<p>On the <code>:todos</code> page, <kbd>p</kbd> makes the todo under the caret a todo of its own, in a project or area you pick. The line stays in its note, its text now a link to the new todo.</p>
+<h2 id="every-todo-todos">Every todo: <code>:todos</code></h2>
+<p><code>:todos</code> lists every checklist todo in your notes, grouped by when it's due: <strong>Overdue · Today · Upcoming · No date</strong>, and inside each group, by note. The date is the first <code>@date</code> on the todo's line, such as <code>@2026-10-01</code>.</p>
+<pre><code>- [ ] book the tiler @2026-10-01
+- [ ] choose a worktop</code></pre>
+<div class="table-wrap"><table><thead><tr><th>Key</th><th>Does</th></tr></thead><tbody><tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td>move through the todos</td></tr><tr><td><kbd>x</kbd> or <kbd>⌘↩</kbd></td><td>open ↔ done</td></tr><tr><td><kbd>s</kbd> then a state's key</td><td>set a state: <kbd>␣</kbd> <kbd>x</kbd> <kbd>-</kbd> <kbd>&gt;</kbd> <kbd>&lt;</kbd> <kbd>/</kbd> <kbd>!</kbd></td></tr><tr><td><kbd>.</kbd></td><td>show or hide the done, cancelled and moved ones</td></tr><tr><td><kbd>⏎</kbd></td><td>open the note at the todo</td></tr><tr><td><kbd>p</kbd></td><td>make it a todo of its own, in a project or area (<a href="pro">Pro</a>)</td></tr></tbody></table></div>
+<p>A todo you tick stays where it is until you leave the page. Changes are written a moment after the last one, in one save per note.</p>
+<h2 id="task-markers">Task markers</h2>
+<p>Every vault has <code>[ ]</code> open and <code>[x]</code> done. The other five markers, <code>[-]</code> cancelled, <code>[&gt;]</code> moved, <code>[&lt;]</code> scheduled, <code>[/]</code> in progress and <code>[!]</code> priority, come with <a href="pro">Pro</a>. See <a href="todos">Todos</a> for all seven states and the keys that set them.</p>
+<p>Without Pro, a line with one of those five markers is plain text: it isn't listed as a todo, and Paperkites never rewrites it.</p>
+<h2 id="on-disk">On disk</h2>
+<p>Areas, projects and todos are markdown files, one each, kept in three folders in your vault:</p>
+<pre><code>~/notes/
+  areas/
+    01J8Z3K4QW7T9V2N5M6B1C0D8E.md
+  projects/
+    01J8Z4A2C9R8X0H3T6Y5W1M7PB.md
+  todos/
+    01J8Z5D0F4G7J2K9M3N6P8Q1RS.md</code></pre>
+<p>Each file is named after its id. What it is, and where it belongs, is in its front matter. The body is free text, for the area's description, the project's notes or the todo's notes.</p>
+<pre><code>---
+id: 01J8Z4A2C9R8X0H3T6Y5W1M7PB
+kind: project
+title: Kitchen
+area: 01J8Z3K4QW7T9V2N5M6B1C0D8E
+deadline: 2026-12-01
+headings: [Plan, Build]
+status: active
+---</code></pre>
+<pre><code>---
+id: 01J8Z5D0F4G7J2K9M3N6P8Q1RS
+kind: todo
+title: Order the tiles
+project: 01J8Z4A2C9R8X0H3T6Y5W1M7PB
+heading: Plan
+status: open
+when: today
+---</code></pre>
+<div class="table-wrap"><table><thead><tr><th>Key</th><th>On</th><th>Means</th></tr></thead><tbody><tr><td><code>kind</code></td><td>all</td><td><code>area</code>, <code>project</code> or <code>todo</code></td></tr><tr><td><code>id</code></td><td>all</td><td>its id, a ULID; links between them use it</td></tr><tr><td><code>title</code></td><td>all</td><td>its name</td></tr><tr><td><code>icon</code></td><td>area, project</td><td>an icon's name, such as <code>layers</code></td></tr><tr><td><code>area</code></td><td>project, todo</td><td>the id of the area it's in</td></tr><tr><td><code>status</code></td><td>project</td><td><code>active</code>, <code>done</code> or <code>dropped</code></td></tr><tr><td><code>headings</code></td><td>project</td><td>its headings, in order</td></tr><tr><td><code>deadline</code></td><td>project, todo</td><td>a date, <code>YYYY-MM-DD</code></td></tr><tr><td><code>project</code></td><td>todo</td><td>the id of the project it's in</td></tr><tr><td><code>heading</code></td><td>todo</td><td>which of the project's headings it's under</td></tr><tr><td><code>status</code></td><td>todo</td><td><code>open</code>, <code>done</code> or <code>cancelled</code></td></tr><tr><td><code>when</code></td><td>todo</td><td>a date, or <code>today</code>, <code>evening</code>, <code>anytime</code> or <code>someday</code></td></tr><tr><td><code>repeat</code></td><td>todo</td><td><code>daily</code>, <code>weekly</code>, <code>weekly:mon</code>, <code>monthly</code> or <code>yearly</code></td></tr><tr><td><code>reminder</code></td><td>todo</td><td>a time, <code>HH:MM</code></td></tr></tbody></table></div>
+<p>A todo is in a project or an area, never both. Moving one is a change to one line, and its file stays where it is.</p>
+<p>When you tick a todo that repeats, the next one is made for you. A repeat or a reminder needs the todo to be in a project or an area. A reminder is a notification at that time, on every Mac where Paperkites is open.</p>
+<p>A note filed in a project or area gets a <code>project:</code> or <code>area:</code> line in its own front matter, with the id.</p>
+<p>These files are kept out of your notes: they don't show in the notes list, in search (<kbd>/</kbd>) or in the graph. A value Paperkites can't read is ignored rather than the file refused, and keys it doesn't know are left as you wrote them.</p>
+<h2 id="without-pro">Without Pro</h2>
+<p>If your trial ends, areas, projects and their pages still open and read, and nothing in them is lost. You can't make or change them until you buy Pro. The files are plain markdown either way, and checklists in notes keep working. See <a href="pro">Pro and your account</a>.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="todos"><span>previous</span>Todos</a><a class="next" href="finding"><span>next</span>Finding things</a></nav>
+    <footer data-file="colophon" class="colophon">
+  <div class="row top">
+    <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+    <nav aria-label="Legal and support"><a href="../terms">terms</a><a href="../privacy">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+  </div>
+  <div class="row bottom">
+    <div class="left">
+      <div class="badge"><iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US"></iframe></div>
+      <span class="copy">© 2026 paperkites</span>
+    </div>
+    <div class="right">
+      <div class="credit">
+        <span>a product by <a class="lh" href="https://projectlighthouse.io" target="_blank" rel="noopener">projectlighthouse</a>;</span>
+        <span>built for humans and machines.</span>
+      </div>
+      <a class="logo" href="https://projectlighthouse.io" target="_blank" rel="noopener" aria-label="Project Lighthouse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="56" height="56" aria-hidden="true"><path d="M9.5 3.5H4.5V28.5H27.5V3.5H22.5" fill="none" stroke="#202020" stroke-width="2.76" stroke-linecap="square"></path><path d="M11.8 28.5 13.9 13.6H18.1L20.2 28.5Z" fill="#202020"></path><rect x="12.6" y="11.4" width="6.8" height="1.9" fill="#202020"></rect><rect x="13.9" y="7.2" width="4.2" height="3.8" fill="#f2a41f"></rect><path d="M13.2 6.8 16 3.8 18.8 6.8Z" fill="#202020"></path></svg></a>
+    </div>
+  </div>
+</footer>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/areas-and-projects.md</span>
+  <span class="gap"></span>
+  <a href="../">home</a>
+  <a href="../privacy">privacy</a>
+</footer>
+
+</body>
+</html>

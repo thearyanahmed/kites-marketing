@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obsidian vaults — Paperkites docs</title>
+<meta name="description" content="Open an Obsidian vault in Paperkites on your Mac: wiki links, embeds, callouts, footnotes, Dataview and Bases queries, and front matter tags, as written.">
+<link rel="canonical" href="https://paperkites.app/docs/obsidian">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+<link rel="stylesheet" href="../colophon.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="../usecase/" class="btn btn-ghost btn-sm">Use cases</a>
+    <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="./">Overview</a></li>
+<li><a href="getting-started">Getting started</a></li>
+<li><a href="writing">Writing</a></li>
+<li><a href="images-and-files">Images and files</a></li>
+<li><a href="tables-diagrams-math">Tables, diagrams and math</a></li>
+<li><a href="todos">Todos</a></li>
+<li><a href="areas-and-projects">Areas and projects</a></li>
+<li><a href="finding">Finding things</a></li>
+<li><a href="people">People</a></li>
+<li><a href="graph">The graph</a></li>
+<li><a href="sidebar-and-split">Sidebar and split</a></li>
+<li><a href="settings">Settings</a></li>
+<li><a href="themes">Themes</a></li>
+<li><a href="your-files">Your files</a></li>
+<li><a href="cloud-folders">Cloud folders</a></li>
+<li><a href="obsidian" aria-current="page">Obsidian vaults</a></li>
+<li><a href="locked-notes">Locked notes</a></li>
+<li><a href="pro">Pro and your account</a></li>
+<li><a href="updates-and-help">Updates and help</a></li>
+<li><a href="keys-and-commands">Keys and commands</a></li>
+<li><a href="faq">FAQ</a></li>
+<li><a href="coming-soon" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / obsidian</div>
+    <h1>Obsidian vaults<span class="dot">.</span></h1>
+<p>An Obsidian vault is a folder of markdown files, so Paperkites opens one as it is. Point Paperkites at the folder with <code>:vault</code>, such as <code>:vault ~/Documents/Obsidian</code>, and your links, embeds, callouts and queries work as written. Nothing is converted or moved.</p>
+<h2 id="opening-a-vault">Opening a vault</h2>
+<p>Switching vaults copies and moves nothing (see <a href="your-files#the-vault">Your files</a>). As it reads the folder, Paperkites gives each note that has no <code>id:</code> line one in its front matter, keeping the file's modified time. Everything else in a note stays byte for byte.</p>
+<p>Paperkites skips hidden folders. It doesn't read <code>.obsidian/</code>, where Obsidian keeps its settings, plugins and themes, and it doesn't show it among your folders. Since Obsidian's settings aren't read, files you drop into a note go to <code>attachments/</code>, wherever Obsidian puts them (see <a href="images-and-files">Images and files</a>).</p>
+<h2 id="links">Links</h2>
+<p>A link finds its note the way Obsidian finds it, trying each of these in turn:</p>
+<ol><li><strong>By path:</strong> the path in the vault (<code>[[Folder/Note]]</code>, <code>[[Note.md]]</code>), the end of one (<code>[[Sub/Note]]</code> finds <code>Folder/Sub/Note.md</code>), or the file name (<code>[[Note]]</code>). When two files match, the shorter path wins.</li><li><strong>By title:</strong> a note's <code># heading</code>.</li><li><strong>By alias:</strong> a name listed under <code>aliases:</code> (or <code>alias:</code>) in its front matter.</li></ol>
+<p>Case doesn't matter. Backlinks, link counts and the graph all count links found this way.</p>
+<div class="table-wrap"><table><thead><tr><th>Written as</th><th>Points at</th></tr></thead><tbody><tr><td><code>[[Note#Heading]]</code></td><td>a heading in a note</td></tr><tr><td><code>[[Note#Part#Sub]]</code></td><td>a heading under another</td></tr><tr><td><code>[[Note#^b15695]]</code></td><td>a block, by its id</td></tr><tr><td><code>[[#Heading]]</code> · <code>[[#^b15695]]</code></td><td>a heading or block in the same note</td></tr></tbody></table></div>
+<h2 id="embeds">Embeds</h2>
+<p><code>![[…]]</code> embeds a note or a file. While the caret is elsewhere, it's drawn in place.</p>
+<div class="table-wrap"><table><thead><tr><th>Written as</th><th>Shows</th></tr></thead><tbody><tr><td><code>![[Note]]</code></td><td>the note's text, read-only, in a quiet panel under a line naming it</td></tr><tr><td><code>![[Note#Heading]]</code></td><td>that heading and everything under it</td></tr><tr><td><code>![[Note#^b15695]]</code></td><td>that one block</td></tr><tr><td><code>![[photo.png]]</code> · <code>![[photo.png|300]]</code></td><td>the image, at a width if you give one</td></tr><tr><td><code>![[talk.mp3]]</code> · <code>![[clip.mp4]]</code></td><td>audio or video, with play controls</td></tr><tr><td><code>![[paper.pdf#page=3]]</code></td><td>the PDF in a viewer; <code>#height=400</code> sets its height</td></tr><tr><td><code>![[Reading.base]]</code></td><td>the base's results</td></tr><tr><td><code>![[board.canvas]]</code></td><td>a card with its name and kind, which opens the file</td></tr></tbody></table></div>
+<p>A file named on its own, such as <code>photo.png</code>, is found anywhere in the vault, as Obsidian finds it. Embedded notes nest two deep; past that, or for a note that embeds itself, the embed is a link. An embed whose note isn't there stays as written.</p>
+<p>An image alone on its line is drawn at its size. Inside a sentence, it's the height of the text, so an embedded SVG can be an icon.</p>
+<h2 id="callouts">Callouts</h2>
+<p>A quote that starts with <code>[!type]</code> is a callout, drawn as a tinted panel with the type's icon and its title.</p>
+<pre><code>&gt; [!tip] Low tide
+&gt; The causeway is open two hours either side.
+
+&gt; [!warning]- Spoilers
+&gt; Hidden until you open it.</code></pre>
+<p>A <code>+</code> or <code>-</code> after the <code>]</code> makes it foldable, starting open or closed, with a button at the end of its title. Folding is only how you're looking at it: nothing is written to the file. With no title, the type is the title.</p>
+<div class="table-wrap"><table><thead><tr><th>Type</th><th>Also written as</th></tr></thead><tbody><tr><td><code>note</code></td><td></td></tr><tr><td><code>abstract</code></td><td><code>summary</code>, <code>tldr</code></td></tr><tr><td><code>info</code></td><td></td></tr><tr><td><code>todo</code></td><td></td></tr><tr><td><code>tip</code></td><td><code>hint</code>, <code>important</code></td></tr><tr><td><code>success</code></td><td><code>check</code>, <code>done</code></td></tr><tr><td><code>question</code></td><td><code>help</code>, <code>faq</code></td></tr><tr><td><code>warning</code></td><td><code>caution</code>, <code>attention</code></td></tr><tr><td><code>failure</code></td><td><code>fail</code>, <code>missing</code></td></tr><tr><td><code>danger</code></td><td><code>error</code></td></tr><tr><td><code>bug</code></td><td></td></tr><tr><td><code>example</code></td><td></td></tr><tr><td><code>quote</code></td><td><code>cite</code></td></tr></tbody></table></div>
+<p>Types are case-insensitive. A type Obsidian doesn't know looks like a note.</p>
+<h2 id="highlights-comments-and-block-ids">Highlights, comments and block ids</h2>
+<div class="table-wrap"><table><thead><tr><th>Written as</th><th>Shows</th></tr></thead><tbody><tr><td><code>==text==</code></td><td>highlighted</td></tr><tr><td><code>%%text%%</code></td><td>nothing: a comment is hidden in the note</td></tr><tr><td><code>%%</code> on its own line, to the next <code>%%</code></td><td>a comment over several lines, hidden too</td></tr><tr><td><code>Some text ^b15695</code></td><td>the text; the block id is hidden</td></tr></tbody></table></div>
+<p>While you write in a block, its comments and block ids show, dimmed. A tag, link or todo inside a comment doesn't count as one.</p>
+<p>A line that's only a block id, under a list, quote or table, gives that block its id, and is hidden too.</p>
+<h2 id="footnotes">Footnotes</h2>
+<pre><code>The tide tables are from the harbour office.[^1]
+Or write one inline.^[Like this.]
+
+[^1]: Printed every October.</code></pre>
+<p>References become small numbers, counted in the order they first appear in the note. Hover a number to read its footnote.</p>
+<h2 id="task-statuses">Task statuses</h2>
+<p>Besides the seven <a href="todos">todo states</a>, a box can hold any other single character, such as <code>[?]</code> or <code>[*]</code>. Paperkites reads it as a todo that's checked, as Obsidian does. Ticking it sets it back to open. Task markers beyond <code>[ ]</code> and <code>[x]</code> come with <a href="pro">Pro</a>; without it, those lines are plain text.</p>
+<h2 id="html">HTML</h2>
+<p>HTML in a note is drawn safely. Paperkites keeps the tags notes use for text and structure, such as <code>&lt;kbd&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;mark&gt;</code>, <code>&lt;sup&gt;</code>, <code>&lt;br&gt;</code>, tables, lists and <code>&lt;details&gt;</code>, which still opens and closes.</p>
+<ul><li><strong>Dropped:</strong> scripts, styles, forms and anything that loads, with everything inside them. No <code>style</code>, <code>class</code> or event handler survives.</li><li><strong>Links</strong> keep only <code>http</code>, <code>https</code> and <code>mailto</code> addresses.</li><li><strong>Images</strong> come from your vault only, never from the web.</li><li><strong>An <code>&lt;iframe&gt;</code></strong> is never loaded. It becomes a card with a button that opens its page in your browser.</li><li><strong>A tag Paperkites doesn't know</strong> is unwrapped to its text.</li></ul>
+<h2 id="queries">Queries</h2>
+<p>Three kinds of query block show what they find while the caret is elsewhere, and update as your notes change. They read notes only: fragments, area, project and todo files, and <a href="locked-notes">locked notes</a> are left out.</p>
+<p>A block Paperkites can't read shows one line saying why, above its source. It never shows results for a query it only half understood.</p>
+<h3 id="search-blocks">Search: <code>```query</code></h3>
+<p>Obsidian's embedded search. The block lists the notes it finds, by file name, with how often each matches.</p>
+<pre><code>```query
+tag:#garden "raised bed" -path:archive
+```</code></pre>
+<ul><li>Every word, or <code>"quoted phrase"</code>, must match. <code>OR</code> offers either, <code>-</code> leaves out what follows, and <code>( )</code> groups.</li><li><code>file:</code>, <code>path:</code>, <code>content:</code>, <code>tag:</code>, and <code>[prop]</code> or <code>[prop:value]</code> for front matter.</li><li><code>line:( )</code>, <code>block:( )</code>, <code>section:( )</code>: all of it on one line, in one paragraph, or under one heading.</li><li><code>task:</code>, <code>task-todo:</code>, <code>task-done:</code>: in a todo's text.</li><li><code>match-case:</code> and <code>ignore-case:</code>.</li></ul>
+<p>Regular expressions aren't supported: <code>/\d{4}/</code> is searched for as the text between the slashes.</p>
+<h3 id="dataview-blocks">Dataview: <code>```dataview</code></h3>
+<p>The part of Dataview's query language most notes use:</p>
+<pre><code>```dataview
+TABLE status, due FROM #project and "Work"
+WHERE status != "done"
+SORT due ASC
+LIMIT 10
+```</code></pre>
+<ul><li><strong>Queries:</strong> <code>LIST</code> and <code>TABLE</code> (with <code>AS "Name"</code> for a column), each with or without <code>WITHOUT ID</code>, and <code>TASK</code>.</li><li><strong><code>FROM</code>:</strong> <code>#tag</code>, <code>"folder"</code>, <code>[[Note]]</code> (the notes linking to it) and <code>outgoing([[Note]])</code>, joined with <code>and</code> or <code>or</code>, <code>-</code> to leave out, <code>( )</code> to group.</li><li><strong><code>WHERE</code>, <code>SORT</code> (<code>ASC</code> or <code>DESC</code>) and <code>LIMIT</code>.</strong></li><li><strong>In a <code>TASK</code> query,</strong> <code>WHERE</code> reads each todo: <code>completed</code>, <code>checked</code>, <code>status</code>, <code>text</code>, <code>line</code>, <code>due</code> (its <code>@date</code>), then its note's fields.</li></ul>
+<p><code>GROUP BY</code>, <code>FLATTEN</code> and <code>CALENDAR</code> aren't supported, and the block says so.</p>
+<p><strong>DataviewJS is never run.</strong> A <code>```dataviewjs</code> block is JavaScript, and stays code, labelled <em>Dataview JS · not run in Paperkites</em>.</p>
+<h3 id="bases">Bases: <code>```base</code> and <code>.base</code> files</h3>
+<p>Obsidian Bases, as a <code>```base</code> block or an embedded <code>.base</code> file.</p>
+<pre><code>```base
+filters:
+  and:
+    - file.hasTag("book")
+    - status != "done"
+views:
+  - type: table
+    name: Reading
+    order: [file.name, author, status]
+    sort:
+      - property: author
+        direction: ASC
+    limit: 20
+```</code></pre>
+<ul><li><strong>Filters</strong> at the top and in each view: a statement, or <code>and:</code>, <code>or:</code> and <code>not:</code> lists of them, nested.</li><li><strong>Views</strong> of <code>type: table</code> (columns from <code>order:</code>), <code>cards</code> and <code>list</code>, each with <code>name</code>, <code>limit</code> and <code>sort</code>. <code>properties</code> names the columns.</li><li>Left out, and said so under the results: <code>formulas</code> (their columns are empty), <code>summaries</code> and <code>groupBy</code>. A view of another type is drawn as a list.</li></ul>
+<h3 id="expressions">Expressions</h3>
+<p>Dataview's <code>WHERE</code> and a base's filters share one set of expressions:</p>
+<ul><li><strong>Fields:</strong> <code>file.name</code>, <code>status</code>, <code>note.status</code> and the like.</li><li><strong>Values:</strong> <code>"text"</code>, <code>3</code>, <code>true</code>, <code>[[Note]]</code>, <code>date(today)</code>, <code>dur(1 week)</code>.</li><li><strong>Operators:</strong> <code>=</code> or <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>+</code> and <code>-</code> on numbers and dates, <code>and</code> or <code>&amp;&amp;</code>, <code>or</code> or <code>||</code>, and <code>!</code>.</li><li><strong>Functions:</strong> <code>contains</code>, <code>icontains</code>, <code>econtains</code>, <code>startswith</code>, <code>endswith</code>, <code>lower</code>, <code>upper</code>, <code>length</code>, <code>date</code>, <code>dur</code>, <code>today</code>, <code>now</code>, <code>number</code>, <code>string</code>.</li><li><strong>Methods:</strong> <code>hasTag</code>, <code>inFolder</code>, <code>hasLink</code>, <code>hasProperty</code>, <code>contains</code>, <code>containsAll</code>, <code>containsAny</code>, <code>startsWith</code>, <code>endsWith</code>, <code>lower</code>, <code>upper</code>, <code>isEmpty</code>, <code>toString</code>.</li></ul>
+<p>Anything else is refused when the block is read.</p>
+<h2 id="front-matter-tags">Front matter tags</h2>
+<p>Tags in front matter count like tags written in the text. Paperkites reads them as Obsidian does: <code>tags:</code> or <code>tag:</code>, as a list or as names split by commas or spaces, each with or without its <code>#</code>.</p>
+<pre><code>---
+tags: [garden, "#garden/soil"]
+aliases: [Allotment]
+---</code></pre>
+<p>Renaming a tag everywhere (<kbd>⌃r</kbd>, see <a href="finding">Finding things</a>) renames it in front matter too.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="cloud-folders"><span>previous</span>Cloud folders</a><a class="next" href="locked-notes"><span>next</span>Locked notes</a></nav>
+    <footer data-file="colophon" class="colophon">
+  <div class="row top">
+    <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+    <nav aria-label="Legal and support"><a href="../terms">terms</a><a href="../privacy">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+  </div>
+  <div class="row bottom">
+    <div class="left">
+      <div class="badge"><iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US"></iframe></div>
+      <span class="copy">© 2026 paperkites</span>
+    </div>
+    <div class="right">
+      <div class="credit">
+        <span>a product by <a class="lh" href="https://projectlighthouse.io" target="_blank" rel="noopener">projectlighthouse</a>;</span>
+        <span>built for humans and machines.</span>
+      </div>
+      <a class="logo" href="https://projectlighthouse.io" target="_blank" rel="noopener" aria-label="Project Lighthouse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="56" height="56" aria-hidden="true"><path d="M9.5 3.5H4.5V28.5H27.5V3.5H22.5" fill="none" stroke="#202020" stroke-width="2.76" stroke-linecap="square"></path><path d="M11.8 28.5 13.9 13.6H18.1L20.2 28.5Z" fill="#202020"></path><rect x="12.6" y="11.4" width="6.8" height="1.9" fill="#202020"></rect><rect x="13.9" y="7.2" width="4.2" height="3.8" fill="#f2a41f"></rect><path d="M13.2 6.8 16 3.8 18.8 6.8Z" fill="#202020"></path></svg></a>
+    </div>
+  </div>
+</footer>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/obsidian.md</span>
+  <span class="gap"></span>
+  <a href="../">home</a>
+  <a href="../privacy">privacy</a>
+</footer>
+
+</body>
+</html>

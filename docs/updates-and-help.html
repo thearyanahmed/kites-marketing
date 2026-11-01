@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Updates and help — Paperkites docs</title>
+<meta name="description" content="How Paperkites for Mac updates itself, :update to check now, :bug and :logs to report a problem, where the log is, support by email, and no telemetry.">
+<link rel="canonical" href="https://paperkites.app/docs/updates-and-help">
+<meta name="theme-color" content="#fcfcfc">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2299%22%20height%3D%2299%22%20rx%3D%2222%22%20fill%3D%22%23fcfcfc%22%20stroke%3D%22%23e8e8e8%22/%3E%3Cg%20transform%3D%22rotate%28-14%2050%2050%29%22%3E%3Cpath%20d%3D%22M50%2012%20L70%2036%20L50%2086%20L30%2036%20Z%22%20fill%3D%22%23c2622f%22/%3E%3Cpath%20d%3D%22M50%2012%20V86%20M30%2036%20H70%22%20stroke%3D%22%23fcfcfc%22%20stroke-width%3D%224.5%22/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="docs.css">
+<link rel="stylesheet" href="../colophon.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="../"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+  <div class="nav-links">
+    <button type="button" class="btn btn-ghost btn-sm menu-btn" popovertarget="toc" aria-label="Docs pages"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <a href="../usecase/" class="btn btn-ghost btn-sm">Use cases</a>
+    <a href="./" class="btn btn-ghost btn-sm" aria-current="true">Docs</a>
+    <button type="button" disabled class="btn btn-ghost btn-sm">Download</button>
+  </div>
+</nav>
+
+<div class="docs">
+  <aside class="toc" id="toc" popover aria-label="Docs pages">
+    <div class="toc-inner">
+      <p class="toc-label">docs</p>
+      <ol>
+<li><a href="./">Overview</a></li>
+<li><a href="getting-started">Getting started</a></li>
+<li><a href="writing">Writing</a></li>
+<li><a href="images-and-files">Images and files</a></li>
+<li><a href="tables-diagrams-math">Tables, diagrams and math</a></li>
+<li><a href="todos">Todos</a></li>
+<li><a href="areas-and-projects">Areas and projects</a></li>
+<li><a href="finding">Finding things</a></li>
+<li><a href="people">People</a></li>
+<li><a href="graph">The graph</a></li>
+<li><a href="sidebar-and-split">Sidebar and split</a></li>
+<li><a href="settings">Settings</a></li>
+<li><a href="themes">Themes</a></li>
+<li><a href="your-files">Your files</a></li>
+<li><a href="cloud-folders">Cloud folders</a></li>
+<li><a href="obsidian">Obsidian vaults</a></li>
+<li><a href="locked-notes">Locked notes</a></li>
+<li><a href="pro">Pro and your account</a></li>
+<li><a href="updates-and-help" aria-current="page">Updates and help</a></li>
+<li><a href="keys-and-commands">Keys and commands</a></li>
+<li><a href="faq">FAQ</a></li>
+<li><a href="coming-soon" class="soon-link">Coming soon</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="eyebrow">docs / updates-and-help</div>
+    <h1>Updates and help<span class="dot">.</span></h1>
+<p>Paperkites keeps itself up to date. When something goes wrong, the bug form and the log are one command away.</p>
+<h2 id="updates">Updates</h2>
+<p>Paperkites checks for a new version at launch and every six hours. A new one downloads in the background, and the status pill says it's ready, with <code>:update</code> to restart into it. You don't have to: a downloaded update installs the next time you quit.</p>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:update</code></td><td>restart into a downloaded update; with none, check for one now</td></tr><tr><td><code>:update &lt;version&gt;</code></td><td>download that release, an older one too; <code>:update</code> restarts into it once it's down</td></tr></tbody></table></div>
+<p>Settings › Updates shows the version you're on and where updates stand. <strong>Check for updates</strong> checks now, and turns into <strong>Restart to update</strong> once one is ready. <strong>Install a version</strong> installs any release by its version, an older one too.</p>
+<p>A version you pick that way stays. Automatic updates leave it alone until you check for updates again.</p>
+<p>Updates come from Paperkites' public releases on GitHub. If a check fails, Settings says <em>Couldn't check · :logs has why</em>.</p>
+<h2 id="reporting-a-bug">Reporting a bug</h2>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Does</th></tr></thead><tbody><tr><td><code>:bug</code></td><td>open the bug form in your browser, with the Paperkites and macOS versions filled in</td></tr><tr><td><code>:logs</code></td><td>show the log file in Finder, to attach to the report</td></tr></tbody></table></div>
+<p>The Help menu has the same, as <strong>Report a Bug…</strong> and <strong>Reveal Logs</strong>, along with <strong>Paperkites Docs</strong> and <strong>Contact Support…</strong>.</p>
+<p>The bug form is on GitHub, and reports there are public.</p>
+<h2 id="the-log">The log</h2>
+<p>The log is a file called <code>main.log</code>; <code>:logs</code> shows it in Finder. It records what the app can't show you: the window hanging, calls to the core that fail or are slow, and the core's own errors. It starts over once it grows past about 2 MB.</p>
+<p>Your home folder is written in it as <code>~</code>, but the names of folders and notes under it can still show. Read it before you attach it to a public report.</p>
+<h2 id="if-paperkites-crashes">If Paperkites crashes</h2>
+<p>Your notes are handled by a separate part of the app, the core. If the core stops, Paperkites starts it again by itself, and it opens your vault again. If it stops again straight after a restart, it's left stopped rather than restarted over and over. Quit Paperkites, open it again, and send a bug report with the log.</p>
+<h2 id="support">Support</h2>
+<p>Write to <a href="mailto:support@paperkites.app">support@paperkites.app</a>. Help › <strong>Contact Support…</strong> starts an email with your Paperkites version in the subject.</p>
+<p>For Pro, your account and refunds, see <a href="pro">Pro and your account</a>.</p>
+<h2 id="privacy">Privacy</h2>
+<p>Paperkites has no analytics and no telemetry, and no crash reporter. Your notes stay on your Mac and never reach us.</p>
+<p>The app goes online only to check for updates, to sign you in or open the purchase page in your browser when you ask, and, when you're signed in, to check your Pro licence (see <a href="pro#how-the-app-checks-your-licence">How the app checks your licence</a>). The bug form and the log go anywhere only when you send them. See the <a href="../privacy">privacy policy</a>.</p>
+    <nav class="pager" aria-label="Previous and next page"><a class="prev" href="pro"><span>previous</span>Pro and your account</a><a class="next" href="keys-and-commands"><span>next</span>Keys and commands</a></nav>
+    <footer data-file="colophon" class="colophon">
+  <div class="row top">
+    <a class="brand" href="../"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 100 100" style="display:block;flex:0 0 auto"><rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fcfcfc" stroke="#e8e8e8"></rect><g transform="rotate(-14 50 50)"><path d="M50 12 L70 36 L50 86 L30 36 Z" fill="#c2622f"></path><path d="M50 12 V86 M30 36 H70" stroke="#fcfcfc" stroke-width="3.5"></path></g></svg>paperkites</a>
+    <nav aria-label="Legal and support"><a href="../terms">terms</a><a href="../privacy">privacy</a><a href="mailto:support@paperkites.app">support@paperkites.app</a></nav>
+  </div>
+  <div class="row bottom">
+    <div class="left">
+      <div class="badge"><iframe width="380" height="38" style="border:0;" src="https://climate.stripe.com/badge/Ibjv8C?theme=light&amp;size=small&amp;locale=en-US"></iframe></div>
+      <span class="copy">© 2026 paperkites</span>
+    </div>
+    <div class="right">
+      <div class="credit">
+        <span>a product by <a class="lh" href="https://projectlighthouse.io" target="_blank" rel="noopener">projectlighthouse</a>;</span>
+        <span>built for humans and machines.</span>
+      </div>
+      <a class="logo" href="https://projectlighthouse.io" target="_blank" rel="noopener" aria-label="Project Lighthouse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="56" height="56" aria-hidden="true"><path d="M9.5 3.5H4.5V28.5H27.5V3.5H22.5" fill="none" stroke="#202020" stroke-width="2.76" stroke-linecap="square"></path><path d="M11.8 28.5 13.9 13.6H18.1L20.2 28.5Z" fill="#202020"></path><rect x="12.6" y="11.4" width="6.8" height="1.9" fill="#202020"></rect><rect x="13.9" y="7.2" width="4.2" height="3.8" fill="#f2a41f"></rect><path d="M13.2 6.8 16 3.8 18.8 6.8Z" fill="#202020"></path></svg></a>
+    </div>
+  </div>
+</footer>
+  </main>
+</div>
+
+<footer class="statusline">
+  <span class="mode">NORMAL</span>
+  <span class="name">paperkites</span>
+  <span class="file">~/paperkites.app/docs/updates-and-help.md</span>
+  <span class="gap"></span>
+  <a href="../">home</a>
+  <a href="../privacy">privacy</a>
+</footer>
+
+</body>
+</html>
